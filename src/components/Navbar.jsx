@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import { ShieldCheck, Cpu, Building2, ArrowRight, Globe, Mail, Phone, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -32,7 +33,7 @@ export default function Navbar() {
           <span className="text-2xl">🧠</span> TechnoBrain
         </Link>
 
-        {/* Desktop Nav Links (Hidden on small screens) */}
+        {/* Desktop Nav Links */}
         <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
           
           {/* Solutions */}
@@ -47,51 +48,51 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Enterprise */}
+          {/* Engineering */}
           <div 
             className="h-full flex items-center"
-            onMouseEnter={() => handleMouseEnter("enterprise")}
+            onMouseEnter={() => handleMouseEnter("engineering")}
             onMouseLeave={handleMouseLeave}
           >
-            <button className={`relative group py-2 text-sm font-extrabold tracking-wider uppercase transition-colors ${activeDropdown === "enterprise" ? "text-white" : isOpen ? "text-white/90" : "text-[#1e1e28]"}`}>
-              Enterprise
-              <span className={`absolute bottom-0 left-0 w-full h-[3px] transform transition-transform duration-300 origin-left ${activeDropdown === "enterprise" ? "scale-x-100 bg-white" : isOpen ? "scale-x-0 bg-white" : "scale-x-0 group-hover:scale-x-100 bg-[#f97316]"}`}></span>
+            <button className={`relative group py-2 text-sm font-extrabold tracking-wider uppercase transition-colors ${activeDropdown === "engineering" ? "text-white" : isOpen ? "text-white/90" : "text-[#1e1e28]"}`}>
+              Engineering
+              <span className={`absolute bottom-0 left-0 w-full h-[3px] transform transition-transform duration-300 origin-left ${activeDropdown === "engineering" ? "scale-x-100 bg-white" : isOpen ? "scale-x-0 bg-white" : "scale-x-0 group-hover:scale-x-100 bg-[#f97316]"}`}></span>
             </button>
           </div>
 
-          {/* Industries */}
+          {/* Cloud Services */}
           <div 
             className="h-full flex items-center"
-            onMouseEnter={() => handleMouseEnter("industries")}
+            onMouseEnter={() => handleMouseEnter("cloud-services")}
             onMouseLeave={handleMouseLeave}
           >
-            <button className={`relative group py-2 text-sm font-extrabold tracking-wider uppercase transition-colors ${activeDropdown === "industries" ? "text-white" : isOpen ? "text-white/90" : "text-[#1e1e28]"}`}>
-              Industries
-              <span className={`absolute bottom-0 left-0 w-full h-[3px] transform transition-transform duration-300 origin-left ${activeDropdown === "industries" ? "scale-x-100 bg-white" : isOpen ? "scale-x-0 bg-white" : "scale-x-0 group-hover:scale-x-100 bg-[#f97316]"}`}></span>
+            <button className={`relative group py-2 text-sm font-extrabold tracking-wider uppercase transition-colors ${activeDropdown === "cloud-services" ? "text-white" : isOpen ? "text-white/90" : "text-[#1e1e28]"}`}>
+              Cloud Services
+              <span className={`absolute bottom-0 left-0 w-full h-[3px] transform transition-transform duration-300 origin-left ${activeDropdown === "cloud-services" ? "scale-x-100 bg-white" : isOpen ? "scale-x-0 bg-white" : "scale-x-0 group-hover:scale-x-100 bg-[#f97316]"}`}></span>
             </button>
           </div>
 
-          {/* Case Studies */}
+          {/* BPO */}
           <div 
             className="h-full flex items-center"
-            onMouseEnter={() => handleMouseEnter("case-studies")}
+            onMouseEnter={() => handleMouseEnter("bpo")}
             onMouseLeave={handleMouseLeave}
           >
-            <button className={`relative group py-2 text-sm font-extrabold tracking-wider uppercase transition-colors ${activeDropdown === "case-studies" ? "text-white" : isOpen ? "text-white/90" : "text-[#1e1e28]"}`}>
-              Case Studies
-              <span className={`absolute bottom-0 left-0 w-full h-[3px] transform transition-transform duration-300 origin-left ${activeDropdown === "case-studies" ? "scale-x-100 bg-white" : isOpen ? "scale-x-0 bg-white" : "scale-x-0 group-hover:scale-x-100 bg-[#f97316]"}`}></span>
+            <button className={`relative group py-2 text-sm font-extrabold tracking-wider uppercase transition-colors ${activeDropdown === "bpo" ? "text-white" : isOpen ? "text-white/90" : "text-[#1e1e28]"}`}>
+              BPO
+              <span className={`absolute bottom-0 left-0 w-full h-[3px] transform transition-transform duration-300 origin-left ${activeDropdown === "bpo" ? "scale-x-100 bg-white" : isOpen ? "scale-x-0 bg-white" : "scale-x-0 group-hover:scale-x-100 bg-[#f97316]"}`}></span>
             </button>
           </div>
 
-          {/* Careers */}
+          {/* About Us */}
           <div 
             className="h-full flex items-center"
-            onMouseEnter={() => handleMouseEnter("careers")}
+            onMouseEnter={() => handleMouseEnter("about-us")}
             onMouseLeave={handleMouseLeave}
           >
-            <button className={`relative group py-2 text-sm font-extrabold tracking-wider uppercase transition-colors ${activeDropdown === "careers" ? "text-white" : isOpen ? "text-white/90" : "text-[#1e1e28]"}`}>
-              Careers
-              <span className={`absolute bottom-0 left-0 w-full h-[3px] transform transition-transform duration-300 origin-left ${activeDropdown === "careers" ? "scale-x-100 bg-white" : isOpen ? "scale-x-0 bg-white" : "scale-x-0 group-hover:scale-x-100 bg-[#f97316]"}`}></span>
+            <button className={`relative group py-2 text-sm font-extrabold tracking-wider uppercase transition-colors ${activeDropdown === "about-us" ? "text-white" : isOpen ? "text-white/90" : "text-[#1e1e28]"}`}>
+              About Us
+              <span className={`absolute bottom-0 left-0 w-full h-[3px] transform transition-transform duration-300 origin-left ${activeDropdown === "about-us" ? "scale-x-100 bg-white" : isOpen ? "scale-x-0 bg-white" : "scale-x-0 group-hover:scale-x-100 bg-[#f97316]"}`}></span>
             </button>
           </div>
 
@@ -106,48 +107,13 @@ export default function Navbar() {
             Contact Us
           </Link>
 
-          {/* Text Mobile Menu Button */}
+          {/* Mobile Menu Button with Lucide Icons */}
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden bg-[#f8f9fa] border-2 border-[#1e1e28] text-[#1e1e28] px-5 py-2.5 rounded-full font-extrabold text-xs tracking-wider uppercase shadow-[3px_3px_0px_0px_#1e1e28] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1px_1px_0px_0px_#1e1e28] transition-all"
+            className="lg:hidden bg-[#f8f9fa] border-2 border-[#1e1e28] text-[#1e1e28] p-2.5 rounded-full font-extrabold text-xs tracking-wider uppercase shadow-[3px_3px_0px_0px_#1e1e28] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1px_1px_0px_0px_#1e1e28] transition-all flex items-center justify-center"
+            aria-label="Toggle Menu"
           >
-            {mobileMenuOpen ? "Close" : "Menu"}
-          </button>
-
-          {/* Hamburger Mobile Menu Button */}  
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden bg-[#f8f9fa] border-2 border-[#1e1e28] text-[#1e1e28] px-5 py-2.5 rounded-full font-extrabold text-xs tracking-wider uppercase shadow-[3px_3px_0px_0px_#1e1e28] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1px_1px_0px_0px_#1e1e28] transition-all"
-          >
-            {mobileMenuOpen ? (
-            <span className="text-sm font-black">✕</span>
-            ) : (
-            <span className="text-base font-black">☰</span>
-            )}
-          </button>
-
-          {/* Horizontal Dots Mobile Menu Button */}
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden bg-[#f8f9fa] border-2 border-[#1e1e28] text-[#1e1e28] px-5 py-2.5 rounded-full font-extrabold text-xs tracking-wider uppercase shadow-[3px_3px_0px_0px_#1e1e28] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1px_1px_0px_0px_#1e1e28] transition-all"
-          >
-            {mobileMenuOpen ? (
-              <span className="text-sm font-black">✕</span>
-            ) : (
-              <span className="text-lg tracking-widest leading-none block -mt-1">...</span>
-            )}
-          </button>
-
-          {/* Vertical Dots Mobile Menu Button */}
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden bg-[#f8f9fa] border-2 border-[#1e1e28] text-[#1e1e28] px-5 py-2.5 rounded-full font-extrabold text-xs tracking-wider uppercase shadow-[3px_3px_0px_0px_#1e1e28] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1px_1px_0px_0px_#1e1e28] transition-all"
-          >
-            {mobileMenuOpen ? (
-              <span className="text-sm font-black">✕</span>
-            ) : (
-              <span className="text-lg font-black leading-none block">⋮</span>
-            )}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -155,7 +121,7 @@ export default function Navbar() {
       {/* Desktop Deep Sliding Dropdown Panel */}
       <div 
         className={`hidden lg:block absolute top-full left-0 w-full bg-[#f97316] border-b-2 border-[#1e1e28] shadow-[0px_25px_0px_0px_#1e1e28] overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-[800px] opacity-100 py-12" : "max-h-0 opacity-0 py-0 pointer-events-none"
+          isOpen ? "max-h-[900px] opacity-100 py-12" : "max-h-0 opacity-0 py-0 pointer-events-none"
         }`}
         onMouseEnter={() => {
           if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -168,146 +134,332 @@ export default function Navbar() {
           {activeDropdown === "solutions" && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               
-              {/* Left Column */}
-              <div className="lg:col-span-7 flex flex-col">
+              {/* Left Column: Public Sector */}
+              <div className="lg:col-span-6 flex flex-col">
                 <span className="text-xs font-extrabold tracking-wider uppercase text-white mb-2">
-                  SOLUTIONS
+                  PUBLIC SECTOR
                 </span>
 
-                <Link href="/solutions/all" className="group inline-block mb-2 w-max">
+                <Link href="/solutions/public-sector" className="group inline-block mb-2 w-max">
                   <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight transform group-hover:translate-x-2 transition-transform duration-300">
-                    View all solutions
+                    Government Solutions
                   </h2>
                 </Link>
                 <p className="text-sm font-medium text-white/90 mb-8">
-                  Full catalog & how we scale
+                  Harnessing Africa's Ingenuity
                 </p>
 
                 {/* Core Nav Links */}
                 <div className="space-y-6 border-t border-black/20 pt-6">
+                  <Link href="/solutions/identity-management" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">
+                      Identity Management
+                    </span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+
+                  <Link href="/solutions/public-finance-management" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">
+                      Public Finance Management
+                    </span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+
+                  <Link href="/solutions/revenue-management" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">
+                      Revenue Management System
+                    </span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
                   
-                  <Link href="/solutions/public-sector" className="group relative inline-block">
+                  <Link href="/solutions/tax-and-customs" className="group relative inline-block">
                     <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">
-                      Public Sector Automation
-                    </span>
-                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                  </Link>
-
-                  <Link href="/solutions/digital-identity" className="group relative inline-block">
-                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">
-                      Digital Identity & Systems
-                    </span>
-                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                  </Link>
-
-                  <Link href="/solutions/it-infrastructure" className="group relative inline-block">
-                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">
-                      IT Infrastructure & Cloud
+                      Tax and Customs
                     </span>
                     <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                   </Link>
                 </div>
               </div>
 
-              {/* Right Column */}
-              <div className="lg:col-span-5 flex flex-col">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-extrabold tracking-wider uppercase text-white">
-                    FEATURED
-                  </span>
-                  <Link 
-                    href="/contact"
-                    className="bg-[#f8f9fa] border-2 border-[#1e1e28] text-[#1e1e28] px-5 py-2 rounded-full font-extrabold text-xs tracking-wider uppercase shadow-[3px_3px_0px_0px_#1e1e28] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_0px_#1e1e28] transition-all"
-                  >
-                    Start a Project
+              {/* Right Column: Private Sector */}
+              <div className="lg:col-span-6 flex flex-col">
+                <span className="text-xs font-extrabold tracking-wider uppercase text-white mb-2">
+                  PRIVATE SECTOR
+                </span>
+
+                <Link href="/solutions/private-sector" className="group inline-block mb-2 w-max">
+                  <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight transform group-hover:translate-x-2 transition-transform duration-300">
+                    Enterprise Solutions
+                  </h2>
+                </Link>
+                <p className="text-sm font-medium text-white/90 mb-8">
+                  Empowering swift and agile operations
+                </p>
+
+                {/* Core Nav Links */}
+                <div className="space-y-6 border-t border-black/20 pt-6">
+                  <Link href="/solutions/grant-management" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">
+                      Grant Management
+                    </span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+
+                  <Link href="/solutions/document-management" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">
+                      Document Management
+                    </span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+
+                  <Link href="/solutions/monitoring-and-evaluation" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">
+                      Monitoring and Evaluation
+                    </span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                  
+                  <Link href="/solutions/robotic-process-automation" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">
+                      Robotic Process Automation
+                    </span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                  
+                  <Link href="/solutions/power-bi" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">
+                      Power BI
+                    </span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                   </Link>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  
-                  {/* Card 1: Public Sector Automation */}
-                <Link href="/solutions/public-sector" className="group bg-[#f8f9fa] border-2 border-[#1e1e28] rounded-2xl p-4 shadow-[4px_4px_0px_0px_#1e1e28] hover:translate-y-[-2px] transition-all flex flex-col justify-between">
-                  <div>
-                    <div className="w-full h-24 bg-[#f97316]/10 border border-[#1e1e28]/20 rounded-xl mb-3 flex items-center justify-center p-2">
-                      <img 
-                        src="/Computer login-amico.svg" 
-                        alt="Public Sector Automation" 
-                        className="h-12 w-auto object-contain" 
-                      />
-                    </div>
-                    <h4 className="font-serif font-bold text-base text-[#1e1e28] group-hover:underline leading-tight">
-                      Public Sector Automation
-                    </h4>
-                    <p className="text-xs text-[#1e1e28]/70 mt-1">
-                      Systems that streamline governance
-                    </p>
-                  </div>
-                </Link>
-
-                {/* Card 2: Digital Identity Suite */}
-                <Link href="/solutions/digital-identity" className="group bg-[#f8f9fa] border-2 border-[#1e1e28] rounded-2xl p-4 shadow-[4px_4px_0px_0px_#1e1e28] hover:translate-y-[-2px] transition-all flex flex-col justify-between">
-                  <div>
-                    <div className="w-full h-24 bg-[#f97316]/10 border border-[#1e1e28]/20 rounded-xl mb-3 flex items-center justify-center p-2">
-                      <img 
-                        src="/Computer login-amico.svg" 
-                        alt="Digital Identity Suite" 
-                        className="h-12 w-auto object-contain" 
-                      />
-                    </div>
-                    <h4 className="font-serif font-bold text-base text-[#1e1e28] group-hover:underline leading-tight">
-                      Digital Identity Suite
-                    </h4>
-                    <p className="text-xs text-[#1e1e28]/70 mt-1">
-                      Secure national & corporate IDs
-                    </p>
-                  </div>
-                </Link>
-
-                {/* Card 3: Cloud & Data Infrastructure */}
-                <Link href="/solutions/it-infrastructure" className="group bg-[#f8f9fa] border-2 border-[#1e1e28] rounded-2xl p-4 shadow-[4px_4px_0px_0px_#1e1e28] hover:translate-y-[-2px] transition-all flex flex-col justify-between">
-                  <div>
-                    <div className="w-full h-24 bg-[#f97316]/10 border border-[#1e1e28]/20 rounded-xl mb-3 flex items-center justify-center p-2">
-                      <img 
-                        src="/Computer login-amico.svg" 
-                        alt="Cloud & Data Infrastructure" 
-                        className="h-12 w-auto object-contain" 
-                      />
-                    </div>
-                    <h4 className="font-serif font-bold text-base text-[#1e1e28] group-hover:underline leading-tight">
-                      Cloud & Data Infrastructure
-                    </h4>
-                    <p className="text-xs text-[#1e1e28]/70 mt-1">
-                      Resilient architectures
-                    </p>
-                  </div>
-                </Link>
-
-              </div>
               </div>
 
             </div>
           )}
 
-          {/* EMPTY CONTENT FOR OTHER TABS */}
-          {activeDropdown && activeDropdown !== "solutions" && (
-            <div className="py-16 text-center text-white">
-              <span className="text-xs font-extrabold tracking-wider uppercase bg-[#1e1e28] px-3.5 py-1.5 rounded-full border border-[#1e1e28] mb-4 inline-block">
-                {activeDropdown.toUpperCase()}
-              </span>
-              <h2 className="text-3xl font-bold tracking-tight mb-2">Content Coming Soon</h2>
-              <p className="text-sm text-white/80">I'm currently setting up the enterprise portfolio for this section, then I'll replace this placeholder lol </p>
+          {/* ENGINEERING CONTENT */}
+          {activeDropdown === "engineering" && (
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+              <div className="lg:col-span-6 flex flex-col">
+                <span className="text-xs font-extrabold tracking-wider uppercase text-white mb-2">ENGINEERING</span>
+                <Link href="/engineering" className="group inline-block mb-2 w-max">
+                  <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight transform group-hover:translate-x-2 transition-transform duration-300">
+                    World Class Software
+                  </h2>
+                </Link>
+                <p className="text-sm font-medium text-white/90 mb-8">Delivered from the Silicon Savannah</p>
+                
+                <div className="space-y-6 border-t border-black/20 pt-6">
+                  <Link href="/engineering/compatibility" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">App & Software Compatibility</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                  <Link href="/engineering/security-testing" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">Security & Privacy Validation</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                  <Link href="/engineering/devops" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">DevOps & Automation</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="lg:col-span-6 flex flex-col">
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-xs font-extrabold tracking-wider uppercase text-white">CAPABILITIES</span>
+                </div>
+                <div className="grid grid-cols-3 gap-6">
+                  <Link href="/engineering/data-analytics" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <img src="/Computer login-amico.svg" alt="Data Analytics" className="h-50 w-full object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform" />
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Data Analytics</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">ML & Actionable Insights</p>
+                  </Link>
+                  <Link href="/engineering/development" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <img src="/Computer login-amico.svg" alt="Development Services" className="h-50 w-full object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform" />
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Development</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">Tailored software solutions</p>
+                  </Link>
+                  <Link href="/engineering/accessibility" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <img src="/Computer login-amico.svg" alt="Accessibility Testing" className="h-50 w-full object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform" />
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Accessibility Testing</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">Inclusive digital products</p>
+                  </Link>
+                </div>
+              </div>
             </div>
           )}
 
+          {/* CLOUD SERVICES CONTENT */}
+          {activeDropdown === "cloud-services" && (
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+              <div className="lg:col-span-6 flex flex-col">
+                <span className="text-xs font-extrabold tracking-wider uppercase text-white mb-2">CLOUD EXPERTISE</span>
+                <Link href="/cloud-services" className="group inline-block mb-2 w-max">
+                  <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight transform group-hover:translate-x-2 transition-transform duration-300">
+                    Elevate Your Business
+                  </h2>
+                </Link>
+                <p className="text-sm font-medium text-white/90 mb-8">AWS & Microsoft Azure Partnerships</p>
+                
+                <div className="space-y-6 border-t border-black/20 pt-6">
+                  <Link href="/cloud-services/managed" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">Managed Cloud Services</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                  <Link href="/cloud-services/migration" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">Cloud Migration</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                  <Link href="/cloud-services/finops" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">FinOps & Optimization</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="lg:col-span-6 flex flex-col">
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-xs font-extrabold tracking-wider uppercase text-white">INNOVATION</span>
+                </div>
+                <div className="grid grid-cols-3 gap-6">
+                  <Link href="/cloud-services/gen-ai" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <img src="/Computer login-amico.svg" alt="Generative AI" className="h-50 w-full object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform" />
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Generative AI</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">Gen-AI Solutions</p>
+                  </Link>
+                  <Link href="/cloud-services/devops-cloud" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <img src="/Computer login-amico.svg" alt="DevOps on the Cloud" className="h-50 w-full object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform" />
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">DevOps Cloud</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">Streamlined Pipelines</p>
+                  </Link>
+                  <Link href="/cloud-services/microsoft-workload" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <img src="/Computer login-amico.svg" alt="Microsoft Workload" className="h-50 w-full object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform" />
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Microsoft Workload</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">Dedicated Solutions</p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* BPO CONTENT */}
+          {activeDropdown === "bpo" && (
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+              <div className="lg:col-span-6 flex flex-col">
+                <span className="text-xs font-extrabold tracking-wider uppercase text-white mb-2">BPO</span>
+                <Link href="/bpo" className="group inline-block mb-2 w-max">
+                  <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight transform group-hover:translate-x-2 transition-transform duration-300">
+                    Entire Customer Life Cycle
+                  </h2>
+                </Link>
+                <p className="text-sm font-medium text-white/90 mb-8">Managed under one roof in Kenya</p>
+                
+                <div className="space-y-6 border-t border-black/20 pt-6">
+                  <Link href="/bpo/solutions" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">BPO Solutions</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                  <Link href="/bpo/compliance" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">BPO Compliance</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                  <Link href="/bpo/industry-verticals" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">Industry Verticals</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="lg:col-span-6 flex flex-col">
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-xs font-extrabold tracking-wider uppercase text-white">ADVANTAGE</span>
+                </div>
+                <div className="grid grid-cols-3 gap-6">
+                  <Link href="/bpo/impact-sourcing" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <img src="/Computer login-amico.svg" alt="Impact Sourcing" className="h-50 w-full object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform" />
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Impact Sourcing</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">Empowering local talent</p>
+                  </Link>
+                  <Link href="/bpo/process-automation" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <img src="/Computer login-amico.svg" alt="Process Automation" className="h-50 w-full object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform" />
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Automation</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">Increased Efficiency</p>
+                  </Link>
+                  <Link href="/bpo/quality" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <img src="/Computer login-amico.svg" alt="High Quality" className="h-50 w-full object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform" />
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">World Class Quality</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">Standardized processes</p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* ABOUT US CONTENT */}
+          {activeDropdown === "about-us" && (
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+              <div className="lg:col-span-6 flex flex-col">
+                <span className="text-xs font-extrabold tracking-wider uppercase text-white mb-2">ABOUT US</span>
+                <Link href="/about" className="group inline-block mb-2 w-max">
+                  <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight transform group-hover:translate-x-2 transition-transform duration-300">
+                    Global Leaders
+                  </h2>
+                </Link>
+                <p className="text-sm font-medium text-white/90 mb-8">Next-generation digital solutions & consulting</p>
+                
+                <div className="space-y-6 border-t border-black/20 pt-6">
+                  <Link href="/about/history" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">Company History</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                  <Link href="/about/governance" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">Corporate Governance</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                  <Link href="/about/people" className="group relative inline-block">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-white block">Our People</span>
+                    <span className="absolute bottom-[-4px] left-0 w-full h-[3px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="lg:col-span-6 flex flex-col">
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-xs font-extrabold tracking-wider uppercase text-white">REACH OUT</span>
+                </div>
+                <div className="grid grid-cols-3 gap-6">
+                  <Link href="/about/foundation" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <img src="/Computer login-amico.svg" alt="Foundation" className="h-50 w-full object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform" />
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Foundation</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">Our global impact</p>
+                  </Link>
+                  <Link href="/contact" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <img src="/Computer login-amico.svg" alt="Contacts" className="h-50 w-full object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform" />
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Contacts</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">US & Kenya Offices</p>
+                  </Link>
+                  <div className="group flex flex-col items-center text-center transition-transform">
+                    <div className="h-50 w-full flex items-center justify-center mb-3">
+                      <span className="text-4xl font-serif font-black text-white">15+</span>
+                    </div>
+                    <h4 className="font-serif font-bold text-base text-white leading-tight">Countries</h4>
+                    <p className="text-xs text-white/80 mt-1 font-medium">Customer footprint</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* FIXED MOBILE FULL-SCREEN MENU */}
+      {/* MOBILE FULL-SCREEN MENU */}
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-x-0 top-24 bottom-0 bg-[#f97316] border-b-2 border-[#1e1e28] shadow-[0px_25px_0px_0px_#1e1e28] py-8 px-6 z-50 overflow-y-auto">
           <div className="space-y-4 max-w-xl mx-auto pb-12">
             
-            {/* Accordion Item 1: Solutions */}
+            {/* Accordion 1: Solutions */}
             <div className="bg-[#f8f9fa] border-2 border-[#1e1e28] rounded-2xl p-6 shadow-[4px_4px_0px_0px_#1e1e28]">
               <button 
                 onClick={() => setMobileAccordion(mobileAccordion === "solutions" ? null : "solutions")}
@@ -322,90 +474,138 @@ export default function Navbar() {
 
               {mobileAccordion === "solutions" && (
                 <div className="mt-6 pt-6 border-t-2 border-[#1e1e28]/20 space-y-4">
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-[#1e1e28]/60 block">Solutions</span>
-                  <Link href="/solutions/public-sector" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
-                    Public Sector Automation
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-[#1e1e28]/60 block">Public Sector</span>
+                  <Link href="/solutions/identity-management" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
+                    Identity Management
                   </Link>
-                  <Link href="/solutions/digital-identity" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
-                    Digital Identity & Systems
+                  <Link href="/solutions/public-finance-management" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
+                    Public Finance Management
                   </Link>
-                  <Link href="/solutions/it-infrastructure" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
-                    IT Infrastructure & Cloud
+                  <Link href="/solutions/revenue-management" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
+                    Revenue Management System
                   </Link>
-                  <Link href="/solutions/all" onClick={() => setMobileMenuOpen(false)} className="inline-block pt-2 text-xs font-extrabold uppercase tracking-wider text-[#f97316] underline">
-                    View all solutions →
+                  <Link href="/solutions/tax-and-customs" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
+                    Tax and Customs
+                  </Link>
+
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-[#1e1e28]/60 block mt-6">Private Sector</span>
+                  <Link href="/solutions/grant-management" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
+                    Grant Management
+                  </Link>
+                  <Link href="/solutions/document-management" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
+                    Document Management
+                  </Link>
+                  <Link href="/solutions/monitoring-and-evaluation" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
+                    Monitoring and Evaluation
+                  </Link>
+                  <Link href="/solutions/robotic-process-automation" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
+                    Robotic Process Automation
+                  </Link>
+                  <Link href="/solutions/power-bi" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">
+                    Power BI
                   </Link>
                 </div>
               )}
             </div>
 
-            {/* Accordion Item 2: Enterprise */}
+            {/* Accordion 2: Engineering */}
             <div className="bg-[#f8f9fa] border-2 border-[#1e1e28] rounded-2xl p-6 shadow-[4px_4px_0px_0px_#1e1e28]">
               <button 
-                onClick={() => setMobileAccordion(mobileAccordion === "enterprise" ? null : "enterprise")}
+                onClick={() => setMobileAccordion(mobileAccordion === "engineering" ? null : "engineering")}
                 className="w-full flex items-center justify-between font-serif font-bold text-2xl text-[#1e1e28]"
               >
                 <span className="flex items-center gap-3">
-                  <span className={`text-xs font-extrabold text-white px-2.5 py-1 rounded-full ${mobileAccordion === "enterprise" ? "bg-[#f97316] border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>02</span>
-                  Enterprise
+                  <span className={`text-xs font-extrabold text-white px-2.5 py-1 rounded-full ${mobileAccordion === "engineering" ? "bg-[#f97316] border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>02</span>
+                  Engineering
                 </span>
-                <span>{mobileAccordion === "enterprise" ? "▲" : "▼"}</span>
+                <span>{mobileAccordion === "engineering" ? "▲" : "▼"}</span>
               </button>
+
+              {mobileAccordion === "engineering" && (
+                <div className="mt-6 pt-6 border-t-2 border-[#1e1e28]/20 space-y-4">
+                  <Link href="/engineering/compatibility" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">App & Software Compatibility</Link>
+                  <Link href="/engineering/security-testing" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Security Validation</Link>
+                  <Link href="/engineering/devops" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">DevOps & Automation</Link>
+                </div>
+              )}
             </div>
 
-            {/* Accordion Item 3: Industries */}
+            {/* Accordion 3: Cloud Services */}
             <div className="bg-[#f8f9fa] border-2 border-[#1e1e28] rounded-2xl p-6 shadow-[4px_4px_0px_0px_#1e1e28]">
               <button 
-                onClick={() => setMobileAccordion(mobileAccordion === "industries" ? null : "industries")}
+                onClick={() => setMobileAccordion(mobileAccordion === "cloud" ? null : "cloud")}
                 className="w-full flex items-center justify-between font-serif font-bold text-2xl text-[#1e1e28]"
               >
                 <span className="flex items-center gap-3">
-                  <span className={`text-xs font-extrabold text-white px-2.5 py-1 rounded-full ${mobileAccordion === "industries" ? "bg-[#f97316] border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>03</span>
-                  Industries
+                  <span className={`text-xs font-extrabold text-white px-2.5 py-1 rounded-full ${mobileAccordion === "cloud" ? "bg-[#f97316] border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>03</span>
+                  Cloud Services
                 </span>
-                <span>{mobileAccordion === "industries" ? "▲" : "▼"}</span>
+                <span>{mobileAccordion === "cloud" ? "▲" : "▼"}</span>
               </button>
+              
+              {mobileAccordion === "cloud" && (
+                <div className="mt-6 pt-6 border-t-2 border-[#1e1e28]/20 space-y-4">
+                  <Link href="/cloud-services/managed" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Managed Cloud Services</Link>
+                  <Link href="/cloud-services/migration" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Cloud Migration</Link>
+                  <Link href="/cloud-services/finops" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">FinOps & Optimization</Link>
+                </div>
+              )}
             </div>
 
-            {/* Accordion Item 4: Case Studies */}
+            {/* Accordion 4: BPO */}
             <div className="bg-[#f8f9fa] border-2 border-[#1e1e28] rounded-2xl p-6 shadow-[4px_4px_0px_0px_#1e1e28]">
               <button 
-                onClick={() => setMobileAccordion(mobileAccordion === "case-studies" ? null : "case-studies")}
+                onClick={() => setMobileAccordion(mobileAccordion === "bpo" ? null : "bpo")}
                 className="w-full flex items-center justify-between font-serif font-bold text-2xl text-[#1e1e28]"
               >
                 <span className="flex items-center gap-3">
-                  <span className={`text-xs font-extrabold text-white px-2.5 py-1 rounded-full ${mobileAccordion === "case-studies" ? "bg-[#f97316] border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>04</span>
-                  Case Studies
+                  <span className={`text-xs font-extrabold text-white px-2.5 py-1 rounded-full ${mobileAccordion === "bpo" ? "bg-[#f97316] border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>04</span>
+                  BPO
                 </span>
-                <span>{mobileAccordion === "case-studies" ? "▲" : "▼"}</span>
+                <span>{mobileAccordion === "bpo" ? "▲" : "▼"}</span>
               </button>
+              
+              {mobileAccordion === "bpo" && (
+                <div className="mt-6 pt-6 border-t-2 border-[#1e1e28]/20 space-y-4">
+                  <Link href="/bpo/solutions" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">BPO Solutions</Link>
+                  <Link href="/bpo/compliance" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Compliance</Link>
+                  <Link href="/bpo/industry-verticals" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Industry Verticals</Link>
+                </div>
+              )}
             </div>
-
-            {/* Accordion Item 5: Careers */}
+            
+            {/* Accordion 5: About Us */}
             <div className="bg-[#f8f9fa] border-2 border-[#1e1e28] rounded-2xl p-6 shadow-[4px_4px_0px_0px_#1e1e28]">
               <button 
-                onClick={() => setMobileAccordion(mobileAccordion === "careers" ? null : "careers")}
+                onClick={() => setMobileAccordion(mobileAccordion === "about" ? null : "about")}
                 className="w-full flex items-center justify-between font-serif font-bold text-2xl text-[#1e1e28]"
               >
                 <span className="flex items-center gap-3">
-                  <span className={`text-xs font-extrabold text-white px-2.5 py-1 rounded-full ${mobileAccordion === "careers" ? "bg-[#f97316] border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>05</span>
-                  Careers
+                  <span className={`text-xs font-extrabold text-white px-2.5 py-1 rounded-full ${mobileAccordion === "about" ? "bg-[#f97316] border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>05</span>
+                  About Us
                 </span>
-                <span>{mobileAccordion === "careers" ? "▲" : "▼"}</span>
+                <span>{mobileAccordion === "about" ? "▲" : "▼"}</span>
               </button>
+              
+              {mobileAccordion === "about" && (
+                <div className="mt-6 pt-6 border-t-2 border-[#1e1e28]/20 space-y-4">
+                  <Link href="/about/history" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Company History</Link>
+                  <Link href="/about/governance" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Corporate Governance</Link>
+                  <Link href="/about/people" onClick={() => setMobileMenuOpen(false)} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Our People</Link>
+                </div>
+              )}
             </div>
 
-            {/* Mobile Footer CTA */}
-            <div className="pt-4 text-center">
+            {/* Mobile Contact Button */}
+            <div className="pt-6">
               <Link 
                 href="/contact" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full block bg-[#1e1e28] text-white py-4 rounded-full font-extrabold text-sm tracking-wider uppercase border-2 border-[#1e1e28] shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[5px_5px_0px_0px_rgba(255,255,255,0.3)] transition-all"
+                className="block w-full text-center bg-[#1e1e28] text-white px-6 py-4 rounded-full font-extrabold text-sm tracking-wider uppercase shadow-[3px_3px_0px_0px_#ffffff] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1px_1px_0px_0px_#ffffff] transition-all"
               >
-                Contact Us
+                Get in Touch
               </Link>
             </div>
-
           </div>
         </div>
       )}
