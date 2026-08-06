@@ -1,7 +1,52 @@
+"use client";
+
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export default function Page() {
+  // Form State and Handlers
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    designation: '',
+    companyName: '',
+    email: '',
+    countryCode: '+1',
+    phone: '',
+    message: '',
+    interests: [],
+    agreePrivacy: false,
+  });
+
+  const productOptions = [
+    'Artificial Intelligence',
+    'Robotic Process Automation',
+    'Chatbot',
+    'Engineering Business',
+    'Digital Agriculture',
+    'Internet Of Things (IoT/Locate 365)',
+    'Virtual Reality',
+    'Others',
+  ];
+
+  const handleCheckboxChange = (product) => {
+    setFormData((prev) => {
+      const exists = prev.interests.includes(product);
+      return {
+        ...prev,
+        interests: exists
+          ? prev.interests.filter((item) => item !== product)
+          : [...prev.interests, product],
+      };
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Submitted:', formData);
+  };
+
   return (
     <div className="relative min-h-screen bg-[#f8f9fa] overflow-x-hidden">
       
@@ -27,7 +72,7 @@ export default function Page() {
 
         <div className="relative z-20 max-w-7xl mx-auto px-6 text-center text-white">
         <h1 className="text-5xl sm:text-7xl font-black uppercase tracking-tight">
-          Welcome to <span className="text-[#FF4500]">Techno Brain</span>
+          Welcome to <span className="text-[#f97316]">Techno Brain</span>
         </h1>
           <p className="mt-4 text-lg sm:text-xl font-medium max-w-2xl mx-auto text-gray-200">
             Global leaders in next-generation digital solutions and consulting services.
@@ -210,6 +255,273 @@ export default function Page() {
       </section>
 
       {/* =========================================
+          SQUARE 4.5: Talk To Us Form Section
+          ========================================= */}
+      <section id="contact" className="w-full bg-[#e8ebe9] text-[#1c201a] py-24 px-6 sm:px-12 lg:px-24 border-t-2 border-[#1e1e28] font-sans">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          {/* ================= LEFT COLUMN ================= */}
+          <div className="lg:col-span-5 space-y-6">
+            
+            {/* Pill Badge */}
+            <div className="inline-block border border-[#1c201a] rounded-full px-5 py-1 text-xs font-bold tracking-wider uppercase bg-transparent">
+              GET IN TOUCH
+            </div>
+            
+
+            {/* Serif Headline */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-black tracking-tight leading-none text-[#1c201a]">
+              Tell us about your digital goals.
+            </h1>
+
+            {/* Subtext */}
+            <div className="space-y-1 text-sm sm:text-base text-[#4a4e46] font-medium leading-relaxed">
+              <p>Share a bit about your operational challenges and how we can assist.</p>
+              <p>Fields marked with <span className="text-[#d9381e]">*</span> are required.</p>
+            </div>
+
+            <hr className="border-t border-[#d8d3c5] my-6" />
+
+            {/* Bullet List */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 text-sm font-semibold text-[#1c201a]">
+                <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#f97316] text-[#1c201a] text-xs font-bold">
+                  ✓
+                </span>
+                Enterprise & Government Solutions — our specialization
+              </div>
+              <div className="flex items-center gap-3 text-sm font-semibold text-[#1c201a]">
+                <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#f97316] text-[#1c201a] text-xs font-bold">
+                  ✓
+                </span>
+                Response within one business day
+              </div>
+              <div className="flex items-center gap-3 text-sm font-semibold text-[#1c201a]">
+                <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#f97316] text-[#1c201a] text-xs font-bold">
+                  ✓
+                </span>
+                Free technical consultation available
+              </div>
+            </div>
+
+            {/* Call Link */}
+            <p className="text-sm font-medium text-[#1c201a] pt-2">
+              Prefer to talk live?{' '}
+              <a href="#book" className="underline font-semibold decoration-1 underline-offset-2">
+                Book a virtual call
+              </a>.
+            </p>
+
+            {/* Illustration Box / Mascot */}
+            {/* <div className="pt-8 flex justify-start">
+              <div className="w-28 h-36 relative flex items-center justify-center">
+                <svg viewBox="0 0 100 120" className="w-full h-full drop-shadow-sm"> */}
+                  {/* Hat */}
+                  {/* <ellipse cx="50" cy="25" rx="35" ry="8" fill="#4a7c59" stroke="#1c201a" strokeWidth="3" />
+                  <path d="M 30 25 C 30 10, 70 10, 70 25 Z" fill="#4a7c59" stroke="#1c201a" strokeWidth="3" /> */}
+                  {/* Head */}
+                  {/* <circle cx="50" cy="40" r="16" fill="#fbcfe8" stroke="#1c201a" strokeWidth="3" /> */}
+                  {/* Eyes & Smile */}
+                  {/* <circle cx="44" cy="38" r="2" fill="#1c201a" />
+                  <circle cx="56" cy="38" r="2" fill="#1c201a" />
+                  <path d="M 45 44 Q 50 48 55 44" fill="none" stroke="#1c201a" strokeWidth="2" strokeLinecap="round" /> */}
+                  {/* Body / Overalls */}
+                  {/* <path d="M 32 58 L 68 58 L 72 100 L 28 100 Z" fill="#eab308" stroke="#1c201a" strokeWidth="3" /> */}
+                  {/* Shirt Sleeves */}
+                  {/* <path d="M 25 58 Q 18 70 24 80" fill="none" stroke="#4a7c59" strokeWidth="10" strokeLinecap="round" />
+                  <path d="M 75 58 Q 82 70 76 80" fill="none" stroke="#4a7c59" strokeWidth="10" strokeLinecap="round" /> */}
+                  {/* Boots */}
+                  {/* <rect x="30" y="100" width="16" height="12" rx="4" fill="#1c201a" />
+                  <rect x="54" y="100" width="16" height="12" rx="4" fill="#1c201a" />
+                </svg>
+              </div>
+            </div> */}
+
+          </div>
+
+          {/* ================= RIGHT COLUMN (FORM) ================= */}
+          <div className="lg:col-span-7 lg:pl-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              
+              {/* First Name & Last Name */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
+                    FIRST NAME <span className="text-[#d9381e]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={formData.firstName}
+                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                    className="w-full px-4 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none focus:border-[#1c201a] font-medium transition"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
+                    LAST NAME <span className="text-[#d9381e]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={formData.lastName}
+                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                    className="w-full px-4 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none focus:border-[#1c201a] font-medium transition"
+                  />
+                </div>
+              </div>
+
+              {/* Designation & Company Name */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
+                    JOB TITLE / ROLE
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.designation}
+                    onChange={(e) => setFormData({ ...formData, designation: e.target.value })}
+                    className="w-full px-4 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none focus:border-[#1c201a] font-medium transition"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
+                    ORGANIZATION <span className="text-[#d9381e]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={formData.companyName}
+                    onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                    className="w-full px-4 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none focus:border-[#1c201a] font-medium transition"
+                  />
+                </div>
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
+                  BUSINESS EMAIL <span className="text-[#d9381e]">*</span>
+                </label>
+                <input
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-4 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none focus:border-[#1c201a] font-medium transition"
+                />
+              </div>
+
+              {/* Phone/Mobile */}
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
+                  PHONE/MOBILE
+                </label>
+                <div className="flex gap-2">
+                  <select
+                    value={formData.countryCode}
+                    onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
+                    className="px-3 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none font-medium text-sm text-[#1c201a]"
+                  >
+                    <option value="+1">United States +1</option>
+                    <option value="+254">Kenya +254</option>
+                    <option value="+44">United Kingdom +44</option>
+                    <option value="+91">India +91</option>
+                  </select>
+                  <input
+                    type="tel"
+                    placeholder="+1 (555) 000-0000"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="flex-1 px-4 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none focus:border-[#1c201a] font-medium transition"
+                  />
+                </div>
+                <p className="text-xs text-[#6b6e68] mt-1.5 font-medium">
+                  Optional — include country / area code when relevant.
+                </p>
+              </div>
+
+              {/* Digital Solutions / Products Checklist */}
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider mb-3 text-[#1c201a]">
+                  DIGITAL SOLUTIONS/PRODUCTS INTERESTED IN
+                </label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {productOptions.map((product) => {
+                    const isChecked = formData.interests.includes(product);
+                    return (
+                      <label
+                        key={product}
+                        onClick={() => handleCheckboxChange(product)}
+                        className={`flex items-center gap-3 p-3 border rounded-xl cursor-pointer text-xs font-semibold transition select-none ${
+                          isChecked
+                            ? 'bg-[#1c201a] text-white border-[#1c201a]'
+                            : 'bg-[#ebe6da] border-[#a8a396] text-[#1c201a] hover:border-[#1c201a]'
+                        }`}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={isChecked}
+                          onChange={() => {}}
+                          className="w-4 h-4 rounded accent-[#a3e635] border-[#a8a396]"
+                        />
+                        {product}
+                      </label>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Message */}
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
+                  MESSAGE <span className="text-[#d9381e]">*</span>
+                </label>
+                <textarea
+                  rows="5"
+                  required
+                  maxLength={5000}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className="w-full px-4 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-2xl focus:outline-none focus:border-[#1c201a] font-medium transition resize-none"
+                />
+                <p className="text-xs text-[#6b6e68] mt-1.5 font-medium">
+                  Max 5000 characters.
+                </p>
+              </div>
+
+              {/* Privacy Checkbox */}
+              <div className="flex items-center gap-3 pt-1">
+                <input
+                  type="checkbox"
+                  id="privacy-check"
+                  required
+                  checked={formData.agreePrivacy}
+                  onChange={(e) => setFormData({ ...formData, agreePrivacy: e.target.checked })}
+                  className="w-4 h-4 rounded border-[#a8a396] accent-[#1c201a] cursor-pointer"
+                />
+                <label htmlFor="privacy-check" className="text-sm font-semibold text-[#1c201a] cursor-pointer">
+                  I agree to the <span className="underline decoration-1 underline-offset-2">Privacy Policy</span>. <span className="text-[#d9381e]">*</span>
+                </label>
+              </div>
+
+              {/* Submit Button */}
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  className="px-8 py-3.5 bg-[#f97316] hover:bg-[#f97316] text-[#1c201a] font-bold text-xs uppercase tracking-wider rounded-full border border-[#1c201a] shadow-[2px_2px_0px_0px_#1c201a] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all"
+                >
+                  SEND MESSAGE
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================
           SQUARE 5: Dark Charcoal Footer (CauseHouse Clone)
           ========================================= */}
       <footer className="w-full bg-[#1e1e28] text-[#f8f9fa] pt-20 pb-12 px-6 sm:px-8 lg:px-12 border-t-2 border-[#1e1e28]">
@@ -240,24 +552,24 @@ export default function Page() {
               </div>
 
               <div className="pt-4 flex gap-4">
-  <a 
-    href="https://www.linkedin.com/company/techno-brain-limited/" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="border border-white/20 px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-white hover:text-[#18201a] transition-colors"
-  >
-    LinkedIn
-  </a>
-  <a 
-    href="https://x.com/TechnoBrainLtd" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="border border-white/20 px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-white hover:text-[#18201a] transition-colors"
-  >
-    Twitter
-  </a>
-</div>
-</div> {/* This closing div was missing right here */}
+                <a 
+                  href="https://www.linkedin.com/company/techno-brain-limited/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="border border-white/20 px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-white hover:text-[#18201a] transition-colors"
+                >
+                  LinkedIn
+                </a>
+                <a 
+                  href="https://x.com/TechnoBrainLtd" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="border border-white/20 px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-white hover:text-[#18201a] transition-colors"
+                >
+                  Twitter
+                </a>
+              </div>
+            </div>
 
             {/* Col 3: Solutions */}
             <div className="space-y-4">
@@ -339,7 +651,7 @@ export default function Page() {
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
               <a href="#" className="hover:text-white transition-colors">Accessibility</a>
-            </div> */
+            </div>
           </div>
 
         </div>
