@@ -230,23 +230,28 @@ export default function Navbar() {
                   <span className="text-xs font-extrabold tracking-wider uppercase text-white">CAPABILITIES</span>
                 </div>
                 <div className="grid grid-cols-3 gap-6">
+                  {/* Data Analytics */}
                   <Link href="/engineering/data-analytics" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <img src="/Computer login-amico.svg" alt="Data Analytics" className="w-full h-auto max-h-48 object-contain" />
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/dataanalytics.svg" alt="Data Analytics" className="h-full max-h-40 w-auto object-contain" />
                     </div>
                     <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Data Analytics</h4>
                     <p className="text-xs text-white/80 mt-1 font-medium">ML & Actionable Insights</p>
                   </Link>
+
+                  {/* Development */}
                   <Link href="/engineering/development" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <img src="/Computer login-amico.svg" alt="Development Services" className="w-full h-auto max-h-48 object-contain" />
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/development.svg" alt="Development Services" className="h-full max-h-40 w-auto object-contain" />
                     </div>
                     <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Development</h4>
                     <p className="text-xs text-white/80 mt-1 font-medium">Tailored software solutions</p>
                   </Link>
+
+                  {/* Accessibility Testing */}
                   <Link href="/engineering/accessibility" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <img src="/Computer login-amico.svg" alt="Accessibility Testing" className="w-full h-auto max-h-48 object-contain" />
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/access2.svg" alt="Accessibility Testing" className="h-full max-h-40 w-auto object-contain" />
                     </div>
                     <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Accessibility Testing</h4>
                     <p className="text-xs text-white/80 mt-1 font-medium">Inclusive digital products</p>
@@ -289,22 +294,22 @@ export default function Navbar() {
                 </div>
                 <div className="grid grid-cols-3 gap-6">
                   <Link href="/cloud-services/gen-ai" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <img src="/Computer login-amico.svg" alt="Generative AI" className="w-full h-auto max-h-48 object-contain" />
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/generativeAI.svg" alt="Generative AI" className="h-full max-h-40 w-auto object-contain" />
                     </div>
                     <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Generative AI</h4>
                     <p className="text-xs text-white/80 mt-1 font-medium">Gen-AI Solutions</p>
                   </Link>
                   <Link href="/cloud-services/devops-cloud" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <img src="/Computer login-amico.svg" alt="DevOps on the Cloud" className="w-full h-auto max-h-48 object-contain" />
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/devops.svg" alt="DevOps on the Cloud" className="h-full max-h-40 w-auto object-contain" />
                     </div>
                     <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">DevOps Cloud</h4>
                     <p className="text-xs text-white/80 mt-1 font-medium">Streamlined Pipelines</p>
                   </Link>
                   <Link href="/cloud-services/microsoft-workload" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <img src="/Computer login-amico.svg" alt="Microsoft Workload" className="w-full h-auto max-h-48 object-contain" />
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/workload.svg" alt="Microsoft Workload" className="h-full max-h-40 w-auto object-contain" />
                     </div>
                     <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Microsoft Workload</h4>
                     <p className="text-xs text-white/80 mt-1 font-medium">Dedicated Solutions</p>
@@ -347,22 +352,22 @@ export default function Navbar() {
                 </div>
                 <div className="grid grid-cols-3 gap-6">
                   <Link href="/bpo/impact-sourcing" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <img src="/Computer login-amico.svg" alt="Impact Sourcing" className="w-full h-auto max-h-48 object-contain" />
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/impactsourcing.svg" alt="Impact Sourcing" className="h-full max-h-40 w-auto object-contain" />
                     </div>
                     <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Impact Sourcing</h4>
-                    <p className="text-xs text-white/80 mt-1 font-medium">Empowering local talent</p>
+                    <p className="text-xs text-white/80 mt-1 font-medium">Socially Responsible BPO</p>
                   </Link>
                   <Link href="/bpo/process-automation" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <img src="/Computer login-amico.svg" alt="Process Automation" className="w-full h-auto max-h-48 object-contain" />
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/automation.svg" alt="Process Automation" className="h-full max-h-40 w-auto object-contain" />
                     </div>
-                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Automation</h4>
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Process Automation</h4>
                     <p className="text-xs text-white/80 mt-1 font-medium">Increased Efficiency</p>
                   </Link>
                   <Link href="/bpo/quality" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <img src="/Computer login-amico.svg" alt="High Quality" className="w-full h-auto max-h-48 object-contain" />
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/quality.svg" alt="World Class Quality" className="h-full max-h-40 w-auto object-contain" />
                     </div>
                     <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">World Class Quality</h4>
                     <p className="text-xs text-white/80 mt-1 font-medium">Standardized processes</p>
@@ -405,26 +410,26 @@ export default function Navbar() {
                 </div>
                 <div className="grid grid-cols-3 gap-6">
                   <Link href="/about/foundation" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <img src="/Computer login-amico.svg" alt="Foundation" className="w-full h-auto max-h-48 object-contain" />
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/foundation.svg" alt="Foundation" className="h-full max-h-40 w-auto object-contain" />
                     </div>
                     <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Foundation</h4>
                     <p className="text-xs text-white/80 mt-1 font-medium">Our global impact</p>
                   </Link>
                   <Link href="/contact" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <img src="/Computer login-amico.svg" alt="Contacts" className="w-full h-auto max-h-48 object-contain" />
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/contact.svg" alt="Contacts" className="h-full max-h-40 w-auto object-contain" />
                     </div>
                     <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Contacts</h4>
                     <p className="text-xs text-white/80 mt-1 font-medium">US & Kenya Offices</p>
                   </Link>
-                  <div className="group flex flex-col items-center text-center transition-transform">
-                    <div className="bg-white rounded-xl p-4 w-full flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
-                      <span className="text-4xl font-serif font-black text-[#1e1e28]">15+</span>
+                  <Link href="/countries" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+                    <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
+                      <img src="/countries.svg" alt="Countries" className="h-full max-h-40 w-auto object-contain" />
                     </div>
-                    <h4 className="font-serif font-bold text-base text-white leading-tight">Countries</h4>
+                    <h4 className="font-serif font-bold text-base text-white group-hover:underline leading-tight">Countries</h4>
                     <p className="text-xs text-white/80 mt-1 font-medium">Customer footprint</p>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
