@@ -4,9 +4,27 @@ import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
+// =========================================
+// Type Definitions
+// =========================================
+interface FormData {
+  firstName: string;
+  lastName: string;
+  designation: string;
+  companyName: string;
+  email: string;
+  countryCode: string;
+  phone: string;
+  message: string;
+  interests: string[];   // ← Explicitly typed as string[]
+  agreePrivacy: boolean;
+}
+
 export default function Page() {
-  // Form State and Handlers
-  const [formData, setFormData] = useState({
+  // =========================================
+  // Form State – properly typed
+  // =========================================
+  const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
     designation: '',
@@ -25,12 +43,15 @@ export default function Page() {
     'Chatbot',
     'Engineering Business',
     'Digital Agriculture',
-    'Internet Of Things (IoT/Locate 365)',
+    'Internet Of Things',
     'Virtual Reality',
     'Others',
   ];
 
-  const handleCheckboxChange = (product) => {
+  // =========================================
+  // Handlers – fully typed
+  // =========================================
+  const handleCheckboxChange = (product: string) => {
     setFormData((prev) => {
       const exists = prev.interests.includes(product);
       return {
@@ -42,9 +63,10 @@ export default function Page() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form Submitted:', formData);
+    // TODO: Send to API
   };
 
   return (
@@ -312,31 +334,6 @@ export default function Page() {
               </a>.
             </p>
 
-            {/* Illustration Box / Mascot */}
-            {/* <div className="pt-8 flex justify-start">
-              <div className="w-28 h-36 relative flex items-center justify-center">
-                <svg viewBox="0 0 100 120" className="w-full h-full drop-shadow-sm"> */}
-                  {/* Hat */}
-                  {/* <ellipse cx="50" cy="25" rx="35" ry="8" fill="#4a7c59" stroke="#1c201a" strokeWidth="3" />
-                  <path d="M 30 25 C 30 10, 70 10, 70 25 Z" fill="#4a7c59" stroke="#1c201a" strokeWidth="3" /> */}
-                  {/* Head */}
-                  {/* <circle cx="50" cy="40" r="16" fill="#fbcfe8" stroke="#1c201a" strokeWidth="3" /> */}
-                  {/* Eyes & Smile */}
-                  {/* <circle cx="44" cy="38" r="2" fill="#1c201a" />
-                  <circle cx="56" cy="38" r="2" fill="#1c201a" />
-                  <path d="M 45 44 Q 50 48 55 44" fill="none" stroke="#1c201a" strokeWidth="2" strokeLinecap="round" /> */}
-                  {/* Body / Overalls */}
-                  {/* <path d="M 32 58 L 68 58 L 72 100 L 28 100 Z" fill="#eab308" stroke="#1c201a" strokeWidth="3" /> */}
-                  {/* Shirt Sleeves */}
-                  {/* <path d="M 25 58 Q 18 70 24 80" fill="none" stroke="#4a7c59" strokeWidth="10" strokeLinecap="round" />
-                  <path d="M 75 58 Q 82 70 76 80" fill="none" stroke="#4a7c59" strokeWidth="10" strokeLinecap="round" /> */}
-                  {/* Boots */}
-                  {/* <rect x="30" y="100" width="16" height="12" rx="4" fill="#1c201a" />
-                  <rect x="54" y="100" width="16" height="12" rx="4" fill="#1c201a" />
-                </svg>
-              </div>
-            </div> */}
-
           </div>
 
           {/* ================= RIGHT COLUMN (FORM) ================= */}
@@ -463,7 +460,7 @@ export default function Page() {
                           type="checkbox"
                           checked={isChecked}
                           onChange={() => {}}
-                          className="w-4 h-4 rounded accent-[#a3e635] border-[#a8a396]"
+                          className="w-4 h-4 rounded accent-[#F97316] border-[#a8a396]"
                         />
                         {product}
                       </label>
