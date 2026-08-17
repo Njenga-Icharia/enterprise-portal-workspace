@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import LogoMarquee from "@/components/LogoMarquee";
 
 // =========================================
 // Type Definitions
@@ -253,6 +254,10 @@ export default function Page() {
           </div>
         </div>
       </section>
+        {/* =========================================
+          Square 3.5: LOGO CAROUSEL COMPONENT
+          ========================================= */}
+      <LogoMarquee />
 
       {/* =========================================
           SQUARE 4: CauseHouse-Style Orange CTA 
