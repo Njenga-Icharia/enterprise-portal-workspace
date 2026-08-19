@@ -4,11 +4,14 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { ShieldCheck, Cpu, Building2, ArrowRight, Globe, Mail, Phone, Menu, X } from "lucide-react";
 
+type DropdownMenu = "solutions" | "engineering" | "cloud-services" | "bpo" | "about-us" | null;
+type MobileAccordion = "solutions" | "engineering" | "cloud" | "bpo" | "about" | null;
+
 export default function Navbar() {
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileAccordion, setMobileAccordion] = useState("solutions");
-  const timeoutRef = useRef(null);
+  const [activeDropdown, setActiveDropdown] = useState<DropdownMenu>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [mobileAccordion, setMobileAccordion] = useState<MobileAccordion>("solutions");
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -22,7 +25,7 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
-  const handleMouseEnter = (menu) => {
+  const handleMouseEnter = (menu: NonNullable<DropdownMenu>) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setActiveDropdown(menu);
   };
@@ -230,7 +233,6 @@ export default function Navbar() {
                   <span className="text-xs font-extrabold tracking-wider uppercase text-white">CAPABILITIES</span>
                 </div>
                 <div className="grid grid-cols-3 gap-6">
-                  {/* Data Analytics */}
                   <Link href="/engineering/data-analytics" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
                     <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
                       <img src="/dataanalytics.svg" alt="Data Analytics" className="h-full max-h-40 w-auto object-contain" />
@@ -239,7 +241,6 @@ export default function Navbar() {
                     <p className="text-xs text-white/80 mt-1 font-medium">ML & Actionable Insights</p>
                   </Link>
 
-                  {/* Development */}
                   <Link href="/engineering/development" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
                     <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
                       <img src="/development.svg" alt="Development Services" className="h-full max-h-40 w-auto object-contain" />
@@ -248,7 +249,6 @@ export default function Navbar() {
                     <p className="text-xs text-white/80 mt-1 font-medium">Tailored software solutions</p>
                   </Link>
 
-                  {/* Accessibility Testing */}
                   <Link href="/engineering/accessibility" className="group flex flex-col items-center text-center transition-transform hover:-translate-y-1">
                     <div className="bg-white rounded-xl p-4 w-full aspect-square flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform">
                       <img src="/access2.svg" alt="Accessibility Testing" className="h-full max-h-40 w-auto object-contain" />
@@ -438,7 +438,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE FULL-SCREEN MENU – unchanged */}
+      {/* MOBILE FULL-SCREEN MENU */}
       <div 
         className={`lg:hidden fixed top-24 inset-x-0 bottom-0 bg-[#f97316] border-b-2 border-[#1e1e28] shadow-[0px_25px_0px_0px_#1e1e28] px-6 py-8 z-50 flex flex-col overflow-y-auto overscroll-contain transition-all duration-300 ease-in-out ${
           mobileMenuOpen 
@@ -504,7 +504,7 @@ export default function Navbar() {
               className="w-full flex items-center justify-between font-serif font-bold text-2xl text-[#1e1e28]"
             >
               <span className="flex items-center gap-3">
-                <span className={`text-xs font-extrabold text-white px-2.5 py-1 rounded-full ${mobileAccordion === "cloud" ? "bg-[#f97316] border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>03</span>
+                <span className={`text-xs font-extrabold text-[#f8f9fa] px-2.5 py-1 rounded-full ${mobileAccordion === "cloud" ? "bg-[#f97316] border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>03</span>
                 Cloud Services
               </span>
               <span>{mobileAccordion === "cloud" ? "▲" : "▼"}</span>
@@ -575,4 +575,3 @@ export default function Navbar() {
     </header>
   );
 }
-
