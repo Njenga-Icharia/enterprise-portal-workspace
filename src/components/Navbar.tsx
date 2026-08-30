@@ -206,7 +206,7 @@ export default function Navbar() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-5 flex flex-col">
                 <span className="text-xs font-extrabold tracking-wider uppercase text-white mb-2">Engineering</span>
-                <Link href="/engineering" className="group inline-block mb-2 w-max">
+                <Link href="/Engineering" className="group inline-block mb-2 w-max">
                   <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight transform group-hover:translate-x-2 transition-transform duration-300">Engineering</h2>
                 </Link>
                 <p className="text-sm font-medium text-white/90 mb-8">Delivered from the Silicon Savannah</p>
