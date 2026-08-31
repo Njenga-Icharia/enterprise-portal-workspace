@@ -46,9 +46,9 @@ const PARTNER_LOGOS: LogoItem[] = [
 
 export default function LogoMarquee() {
   return (
-    <section className="w-full bg-[#f8f9fa] py-20 border-t-2 border-[#1e1e28] overflow-hidden">
+    <section className="w-full bg-[#4b456f] py-20 border-t-2 border-[#1e1e28] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
-        <p className="text-sm font-extrabold uppercase tracking-widest text-[#1e1e28]/70">
+        <p className="text-sm font-extrabold uppercase tracking-widest text-[#f8f9fa]/70">
           Trusted by global leaders, enterprises, and partners worldwide
         </p>
       </div>

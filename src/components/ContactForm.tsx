@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Logo from "@/components/technobrainlogo"; // Adjust this path if your Logo file is named differently
 
 interface FormData {
   firstName: string;
@@ -95,10 +96,15 @@ export default function ContactForm() {
 
           <p className="text-sm font-medium text-[#1c201a] pt-2">
             Prefer to talk live?{' '}
-            <a href="#book" className="underline font-semibold decoration-1 underline-offset-2">
+            <a href="#book" className="underline font-semibold decoration-1 underline-offset-2 hover:text-[#f97316] transition-colors">
               Book a virtual call
             </a>.
           </p>
+
+          {/* Render the Custom Logo Component */}
+          <div className="pt-10 transform scale-90 origin-left">
+            <Logo />
+          </div>
         </div>
 
         {/* Right Column Form */}
