@@ -1,12 +1,11 @@
 "use client";
 
 import dynamic from "next/dynamic";
-//import Navbar from "@/components/Navbar";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
 import EngineeringCardCarousel from "@/components/CardCarouselEnigineering";
 import ToolsWeUse from "@/components/ToolsWeUse";
-import LogoMarquee from "@/components/LogoMarquee";
+
 
 // Client-only import — prevents the spiral's heavy math/DOM from blocking initial render
 const EngineeringSpiral = dynamic(() => import("@/components/EngineeringSpiral"), {
