@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
-import EngineeringCardCarousel from "@/components/EngineeringCardCarousel";
+import EngineeringCardCarousel from "@/components/CardCarouselEnigineering";
 import ToolsWeUse from "@/components/ToolsWeUse";
 import LogoMarquee from "@/components/LogoMarquee";
 
