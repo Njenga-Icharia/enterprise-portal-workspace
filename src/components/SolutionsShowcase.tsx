@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -18,7 +18,7 @@ export interface SolutionItem {
 const PUBLIC_SOLUTIONS: SolutionItem[] = [
   {
     id: "01",
-    badge: "CASE 01 — PUBLIC INFRASTRUCTURE",
+    badge: "// 001 — PUBLIC INFRASTRUCTURE",
     title: "Identity Management",
     subtitle: "SecuRegister Multi-Modal Biometric Platform",
     description: "Device and algorithm independent biometric platform for on-premise and cloud identity verification across national government services.",
@@ -28,7 +28,7 @@ const PUBLIC_SOLUTIONS: SolutionItem[] = [
   },
   {
     id: "02",
-    badge: "CASE 02 — PUBLIC FINANCE",
+    badge: "// 002 — PUBLIC FINANCE",
     title: "Public Finance Management",
     subtitle: "IFMIS Core Government Automation",
     description: "Integrated financial systems deployed across 25+ national governments to automate budget allocation, procurement, and audit transparency.",
@@ -38,7 +38,7 @@ const PUBLIC_SOLUTIONS: SolutionItem[] = [
   },
   {
     id: "03",
-    badge: "CASE 03 — MUNICIPAL REVENUE",
+    badge: "// 003 — MUNICIPAL REVENUE",
     title: "Revenue Management System",
     subtitle: "RevenueACA GIS-Supported Collection",
     description: "Cloud-based revenue assessment and billing platform empowering local authorities with GIS-driven collection tracking and business intelligence.",
@@ -48,7 +48,7 @@ const PUBLIC_SOLUTIONS: SolutionItem[] = [
   },
   {
     id: "04",
-    badge: "CASE 04 — REVENUE & TRADE",
+    badge: "// 004 — REVENUE & TRADE",
     title: "Tax and Customs",
     subtitle: "Automated Duty & Compliance Platforms",
     description: "Scalable trade facilitation systems deployed across 25 countries to eliminate revenue leakage, streamline border checks, and automate tax filing.",
@@ -61,7 +61,7 @@ const PUBLIC_SOLUTIONS: SolutionItem[] = [
 const PRIVATE_SOLUTIONS: SolutionItem[] = [
   {
     id: "01",
-    badge: "// CASE 01 — ENTERPRISE AUTOMATION",
+    badge: "// 001 — ENTERPRISE AUTOMATION",
     title: "Robotic Process Automation",
     subtitle: "Safaricom & Enterprise Scale Bots",
     description: "Intelligent software bots mimicking complex manual workflows for telecom and financial leaders to streamline account creation and vetting.",
@@ -71,7 +71,7 @@ const PRIVATE_SOLUTIONS: SolutionItem[] = [
   },
   {
     id: "02",
-    badge: "// CASE 02 — NGO & ENTERPRISE",
+    badge: "// 002 — NGO & ENTERPRISE",
     title: "Grant Management",
     subtitle: "Serenic Software Partnership Suite",
     description: "Cloud-hosted fund accounting and grant tracking tailored for Non-Governmental Organizations operating across fast-shifting global markets.",
@@ -81,7 +81,7 @@ const PRIVATE_SOLUTIONS: SolutionItem[] = [
   },
   {
     id: "03",
-    badge: "// CASE 03 — COMPLIANCE & REPOSITORY",
+    badge: "// 003 — COMPLIANCE & REPOSITORY",
     title: "Document Management",
     subtitle: "Zero-Trust Records & Retention",
     description: "Enterprise records management solutions optimizing data security, workflow automation, and automated document retention policies.",
@@ -91,7 +91,7 @@ const PRIVATE_SOLUTIONS: SolutionItem[] = [
   },
   {
     id: "04",
-    badge: "// CASE 04 — ANALYTICS & MONITORING",
+    badge: "// 004 — ANALYTICS & MONITORING",
     title: "Monitoring and Evaluation",
     subtitle: "Impact Analysis Value Chain",
     description: "Real-time programmatic assessment dashboards giving leadership complete control over outcome measurement and field metrics.",
@@ -101,7 +101,7 @@ const PRIVATE_SOLUTIONS: SolutionItem[] = [
   },
   {
     id: "05",
-    badge: "// CASE 05 — BUSINESS INTELLIGENCE",
+    badge: "// 005 — BUSINESS INTELLIGENCE",
     title: "Power BI Solutions",
     subtitle: "Self-Service Enterprise Intelligence",
     description: "End-to-end Microsoft Power BI modeling, user training, and custom dashboard delivery for enterprise decision makers.",
@@ -133,16 +133,25 @@ const scopeVariants = {
   exit: { y: 15, opacity: 0, transition: { duration: 0.2 } }
 };
 
-export default function SolutionsShowcase() {
-  const [sector, setSector] = useState<"public" | "private">("public");
+
+interface SolutionsShowcaseProps {
+  activeSector: "public" | "private";
+  onSectorChange: (sector: "public" | "private") => void;
+}
+
+export default function SolutionsShowcase({ activeSector, onSectorChange }: SolutionsShowcaseProps) {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
-  const activeList = sector === "public" ? PUBLIC_SOLUTIONS : PRIVATE_SOLUTIONS;
+  // Automatically reset to the first item when the global tab changes
+  useEffect(() => {
+    setSelectedIndex(0);
+  }, [activeSector]);
+
+  const activeList = activeSector === "public" ? PUBLIC_SOLUTIONS : PRIVATE_SOLUTIONS;
   const currentItem = activeList[selectedIndex] || activeList[0];
 
   const handleSectorSwitch = (newSector: "public" | "private") => {
-    setSector(newSector);
-    setSelectedIndex(0);
+    onSectorChange(newSector);
   };
 
   const titleWords = currentItem.title.split(" ");
@@ -150,30 +159,30 @@ export default function SolutionsShowcase() {
   return (
     <section className="relative w-full h-[calc(100vh-80px)] min-h-[700px] bg-[#0b0f17] text-[#ffffff] flex flex-col md:flex-row overflow-hidden border-b-2 border-[#1e1e28]">
       
-      {/* --- LEFT SIDEBAR (Menu & Selection) --- */}
+      {/* --- LEFT SIDEBAR --- */}
       <div className="w-full md:w-[320px] lg:w-[380px] bg-[#1e1e28] border-r border-[#ffffff]/10 flex flex-col justify-between p-6 lg:p-8 z-20 shrink-0">
         <div>
           <div className="mb-8">
             <span className="text-[10px] font-mono tracking-widest text-[#f8f9fa] uppercase block mb-3">
               DIRECTORY
             </span>
-            <div className="flex bg-[#000000]/40 border border-[#ffffff]/10 rounded-lg p-1">
+            <div className="bg-[#0b0f17] p-1.5 border border-[#ffffff]/15 rounded-full flex gap-1 shadow-inner">
               <button
                 onClick={() => handleSectorSwitch("public")}
-                className={`flex-1 py-1.5 text-[11px] font-bold uppercase tracking-wider rounded transition-all ${
-                  sector === "public"
-                    ? "bg-[#f97316] text-[#ffffff] shadow"
-                    : "text-[#ffffff]/50 hover:text-[#ffffff]"
+                className={`flex-1 py-2.5 px-4 text-[11px] font-black uppercase tracking-wider rounded-full transition-all text-center ${
+                  activeSector === "public"
+                    ? "bg-[#f97316] text-[#ffffff] shadow-md"
+                    : "bg-transparent text-[#ffffff]/60 hover:text-[#ffffff]"
                 }`}
               >
                 Public Sector
               </button>
               <button
                 onClick={() => handleSectorSwitch("private")}
-                className={`flex-1 py-1.5 text-[11px] font-bold uppercase tracking-wider rounded transition-all ${
-                  sector === "private"
-                    ? "bg-[#f97316] text-[#ffffff] shadow"
-                    : "text-[#ffffff]/50 hover:text-[#ffffff]"
+                className={`flex-1 py-2.5 px-4 text-[11px] font-black uppercase tracking-wider rounded-full transition-all text-center ${
+                  activeSector === "private"
+                    ? "bg-[#f97316] text-[#ffffff] shadow-md"
+                    : "bg-transparent text-[#ffffff]/60 hover:text-[#ffffff]"
                 }`}
               >
                 Private Sector
