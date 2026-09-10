@@ -8,39 +8,25 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-serif: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+
+  /* Define animations inside the theme */
+  --animate-marquee: marquee 7s linear infinite;
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-/* --- Marquee Animation Fix --- */
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
+/* Base styles only use variables. No hardcoded fonts. */
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
   }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 07s linear infinite;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
 }

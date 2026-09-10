@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, /*Playfair_Display*/ } from "next/font/google";
 import "./globals.css";
 
-// Import your newly structured components
-import Navbar from "@/components/Navbar"; 
+import Navbar from "@/components/Navbar/Navbar"; 
 import Footer from "@/components/Footer";
 import Deadshot from "@/components/Deadshot";
 
@@ -17,6 +16,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+/*const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+}); */
+
 export const metadata: Metadata = {
   title: "Techno Brain",
   description: "Enterprise Solutions",
@@ -24,25 +28,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${geistSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#f8f9fa]">
-        {/* Persistent UI across all routes */}
+      <body className="font-sans min-h-full flex flex-col bg-[#f8f9fa]">
         <Deadshot />
         <Navbar />
-        
-        {/* Page Content */}
-        <main className="flex-grow">
-          {children}
-        </main>
-
-        {/* Persistent Footer */}
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
