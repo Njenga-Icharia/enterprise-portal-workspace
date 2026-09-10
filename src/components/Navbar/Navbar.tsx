@@ -3,8 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-
-// Updated to use relative paths for sibling components
 import Logo from "./Logo";
 import MegaMenu from "./MegaMenu/MegaMenu";
 import MobileMenuDrawer from "./MobileMenuDrawer";
