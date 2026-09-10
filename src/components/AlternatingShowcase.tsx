@@ -23,7 +23,7 @@ export default function AlternatingShowcaseSolutions({
   items,
 }: AlternatingShowcaseSolutionsProps) {
   return (
-    <section className="bg-[#f2f4f4] py-16 px-4 md:px-8 overflow-hidden font-sans">
+    <section className="bg-[#f2f4f4] py-16 px-4 md:px-8 overflow-hidden">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12">
         {items.map((item, index) => (
           <SolutionCard key={item.id} item={item} index={index} />
