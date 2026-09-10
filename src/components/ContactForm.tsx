@@ -59,7 +59,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="w-full bg-[#e8ebe9] text-[#1c201a] py-24 px-6 sm:px-12 lg:px-24 border-t-2 border-[#1e1e28] font-sans">
+    <section id="contact" className="w-full bg-[#e8ebe9] text-[#1c201a] py-24 px-6 sm:px-12 lg:px-24 border-t-2 border-[#1e1e28] ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         
         {/* Left Column Info */}
@@ -101,7 +101,7 @@ export default function ContactForm() {
             </a>.
           </p>
 
-          {/* Render the Custom Logo Component */}
+          {/* the Custom Logo Component */}
           <div className="pt-10 transform scale-90 origin-left">
             <Logo />
           </div>
