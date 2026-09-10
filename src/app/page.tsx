@@ -3,10 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import AlternatingShowcaseSolutions from "@/components/AlternatingShowcaseSolutions"
+// import AlternatingShowcaseSolutions2 from "@/components/AlternatingShowcaseSolutions2"
 import ContactForm from "@/components/ContactForm";
 import SolutionsShowcase from "@/components/SolutionsShowcase";
 import SlidingPicturesSolutions from "@/components/SlidingPicturesSolutions";
 import SlidingPicturesEngineering from "@/components/SlidingPicturesEngineering";
+// import SlidingPicturesEngineering2 from "@/components/SlidingPicturesEngineering2";
 
 // ---------- Data for the grid below the showcase ----------
 interface SolutionItem {
@@ -90,9 +92,11 @@ export default function SolutionsPage() {
         activeSector={activeTab} 
         onSectorChange={setActiveTab} 
       />
+      {/* <AlternatingShowcaseSolutions2 activeSector={activeTab} /> */}
       <AlternatingShowcaseSolutions activeSector={activeTab} />
 
       <div className="relative overflow-x-hidden">
+        {/* <SlidingPicturesEngineering2 /> */}
         <SlidingPicturesEngineering />
           </div>
 
