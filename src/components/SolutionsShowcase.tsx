@@ -313,7 +313,7 @@ export default function SolutionsShowcase({ activeSector, onSectorChange }: Solu
                 animate="visible"
                 exit="exit"
                 custom={0.25}
-                className="font-semibold text-[#f97316] font-sans text-sm uppercase tracking-wider mb-2 block"
+                className="font-semibold text-[#f97316] text-sm uppercase tracking-wider mb-2 block"
               >
                 {currentItem.subtitle}
               </motion.span>
