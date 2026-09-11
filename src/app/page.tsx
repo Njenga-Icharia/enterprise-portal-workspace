@@ -5,6 +5,8 @@ import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
 import EngineeringCardCarousel from "@/components/CardCarouselEnigineering";
 import ToolsWeUse from "@/components/ToolsWeUse";
+import BlurryCarouselEngineering from "@/components/BlurryCarouselEngineering";
+import HeroEngineering from "@/components/HeroEngineering";
 
 
 // Client-only import — prevents the spiral's heavy math/DOM from blocking initial render
@@ -57,20 +59,8 @@ export default function EngineeringPage() {
       <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-16">
 
         {/* --- SPIRAL: right under the navbar --- */}
+        <HeroEngineering />
         <EngineeringSpiral />
-
-        {/* Hero Section - Scaled down for balanced visual hierarchy */}
-        <div className="text-center max-w-3xl mx-auto mb-8">
-          <span className="inline-block border-2 border-[#1e1e28] rounded-full px-3 py-0.5 text-[11px] font-extrabold tracking-widest uppercase mb-3 bg-[#e8ebe9]">
-            Software Engineering Division
-          </span>
-          <h1 className="text-3xl sm:text-4xl font-serif font-black tracking-tight mb-4 leading-snug">
-            World Class Software Engineering Delivered From The Silicon Savannah
-          </h1>
-          <p className="text-sm sm:text-base font-medium text-[#1e1e28]/70 max-w-xl mx-auto">
-            Rigorous quality assurance, automated workflows, and enterprise-grade engineering standards.
-          </p>
-        </div>
 
         {/* --- CARD CAROUSEL INTEGRATION (Primary Focus) --- */}
         <div className="mb-4">
@@ -86,7 +76,8 @@ export default function EngineeringPage() {
 
         <div className="relative overflow-x-hidden">
           <ToolsWeUse/>
-        </div>
+          <BlurryCarouselEngineering/>
+         </div>
 
       
         <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-20">
@@ -103,21 +94,6 @@ export default function EngineeringPage() {
               <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-xl border-2 border-[#1e1e28] shadow-[2px_2px_0px_0px_#1e1e28]">
                 <span className="bg-[#1e1e28] text-white text-xs font-bold px-2 py-0.5 rounded">✓</span>
                 <p className="text-sm font-semibold text-[#1e1e28]">{highlight}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Managed Services */}
-        <div className="mb-24">
-          <div className="text-center mb-12">
-            <span className="text-xs font-black uppercase tracking-widest text-[#f97316] block mb-2">Operations</span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold">Managed Services</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {MANAGED_SERVICES.map((service, index) => (
-              <div key={index} className="border-2 border-[#1e1e28] rounded-2xl p-6 bg-white shadow-[4px_4px_0px_0px_#1e1e28] text-center font-serif font-bold text-lg">
-                {service}
               </div>
             ))}
           </div>
