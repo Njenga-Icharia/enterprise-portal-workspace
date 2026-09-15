@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Logo from "@/components/technobrainlogo";
 
 export default function Footer() {
   return (
@@ -8,7 +9,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10">
           <div className="lg:col-span-2 space-y-6">
             <Link href="/" className="font-black text-2xl tracking-tight flex items-center gap-2 text-white">
-              <span className="text-3xl">🧠</span> TechnoBrain
+              {/* <span className="text-3xl">🧠</span> TechnoBrain */}
+              <Logo isDark={true} />
             </Link>
             <p className="text-white/70 text-sm font-medium max-w-sm leading-relaxed">
               Global leaders in next-generation digital solutions, cloud systems, and consulting services operating across 15 countries.
