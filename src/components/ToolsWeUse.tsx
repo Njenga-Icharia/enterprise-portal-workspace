@@ -13,21 +13,21 @@ const TOOLS_LOGOS: ToolItem[] = [
   { id: "owasp-html", name: "OWASP", src: "/logos/engineeringtools/OWASP.png", url: "https://owasp.org" },
   { id: "skipfish", name: "Skipfish", src: "/logos/engineeringtools/skipfish.svg", url: "https://github.com/spinkham/skipfish" },
   { id: "sonarqube-html", name: "SonarQube", src: "/logos/engineeringtools/sonarqube.svg", url: "https://www.sonarsource.com/products/sonarqube" },
-  { id: "securityessentials", name: "Security Essentials", src: "/logos/engineeringtools/SecurityEssentials.jpg", url: "https://www.microsoft.com" },
+  // { id: "securityessentials", name: "Security Essentials", src: "/logos/engineeringtools/SecurityEssentials.jpg", url: "https://www.microsoft.com" },
   { id: "acunetix", name: "Acunetix", src: "/logos/engineeringtools/Acunetix.png", url: "https://www.acunetix.com" },
-  { id: "azure", name: "Azure", src: "/logos/engineeringtools/Azure.png", url: "https://azure.microsoft.com" },
+  // { id: "azure", name: "Azure", src: "/logos/engineeringtools/Azure.png", url: "https://azure.microsoft.com" },
   { id: "burpsuite2", name: "Burp Suite", src: "/logos/engineeringtools/burpsuite2.png", url: "https://portswigger.net/burp" },
-  { id: "metasploit-png", name: "Metasploit", src: "/logos/engineeringtools/Metasploit.png", url: "https://www.metasploit.com" },
+  // { id: "metasploit-png", name: "Metasploit", src: "/logos/engineeringtools/Metasploit.png", url: "https://www.metasploit.com" },
   { id: "nessus", name: "Nessus", src: "/logos/engineeringtools/Nessus.png", url: "https://www.tenable.com/products/nessus" },
   { id: "nmap", name: "Nmap", src: "/logos/engineeringtools/nmap.png", url: "https://nmap.org" },
   { id: "openvas", name: "OpenVAS", src: "/logos/engineeringtools/OpenVAS.png", url: "https://www.openvas.org" },
   { id: "owaspzap", name: "OWASP ZAP", src: "/logos/engineeringtools/OWASPZap.png", url: "https://www.zaproxy.org" },
-  { id: "tiptap", name: "Tiptap", src: "/logos/engineeringtools/Tiptap.png", url: "https://tiptap.dev" },
-  { id: "veracode2", name: "Veracode", src: "/logos/engineeringtools/Veracode2.png", url: "https://www.veracode.com" },
+  // { id: "tiptap", name: "Tiptap", src: "/logos/engineeringtools/Tiptap.png", url: "https://tiptap.dev" },
+  // { id: "veracode2", name: "Veracode", src: "/logos/engineeringtools/Veracode2.png", url: "https://www.veracode.com" },
 ];
 
 const WALL_GRADIENT =
-  "linear-gradient(to right, #e91e8c 0%, #a855f7 45%, #2563eb 100%)";
+  "linear-gradient(to right,  #4b456f 0%, #a855f7 30%, #f97316 100%)";
 
 const CYCLE_MS = 14000;
 
@@ -93,9 +93,9 @@ export default function ToolsWeUse() {
   }, []);
 
   return (
-    <section className="relative w-full bg-[#0d0d13] py-24 overflow-hidden">
+    <section className="relative w-full bg-[#e8ebe9] py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-14 text-center">
-        <span className="text-xs font-black uppercase tracking-widest text-[#f97316] block mb-3">
+        <span className="text-xs font-black uppercase tracking-widest text-white block mb-3">
           Powered by modern technologies, frameworks, and engineering tools
         </span>
         <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
@@ -108,9 +108,6 @@ export default function ToolsWeUse() {
         onMouseEnter={() => (pausedRef.current = true)}
         onMouseLeave={() => (pausedRef.current = false)}
       >
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-40 z-10 bg-gradient-to-r from-[#0d0d13] via-[#0d0d13]/80 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-40 z-10 bg-gradient-to-l from-[#0d0d13] via-[#0d0d13]/80 to-transparent" />
-
         <div
           ref={trackRef}
           className="flex gap-24 items-center py-6 will-change-transform"
