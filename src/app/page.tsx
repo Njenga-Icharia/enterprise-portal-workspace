@@ -7,6 +7,12 @@ import EngineeringCardCarousel from "@/components/CardCarouselEnigineering";
 import ToolsWeUse from "@/components/ToolsWeUse";
 import BlurryCarouselEngineering from "@/components/BlurryCarouselEngineering";
 import HeroEngineering from "@/components/HeroEngineering";
+import AlternatingShowcaseSolutions from "@/components/AlternatingShowcaseSolutions";
+import SlidingPicturesSolutions from "@/components/SlidingPicturesSolutions";
+import HighlightsEngineering from "@/components/HighlightsEngineering";
+import ScrollStackEngineering from "@/components/ScrollStackEngineering";
+import ResponsiveWindowEngineering from "@/components/ResponsiveWindowEngineering"; 
+import ScrollCurtainEngineering from "@/components/ScrollCurtainEngineering";
 
 
 // Client-only import — prevents the spiral's heavy math/DOM from blocking initial render
@@ -55,12 +61,15 @@ const SUCCESS_STORIES = [
 
 export default function EngineeringPage() {
   return (
-    <div className="relative min-h-screen bg-[#f8f9fa] text-[#1e1e28] overflow-x-hidden font-sans">
+    <div className="relative min-h-screen bg-[#f8f9fa] text-[#1e1e28] overflow-x-clip font-sans">
       <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-16">
 
         {/* --- SPIRAL: right under the navbar --- */}
         <HeroEngineering />
         <EngineeringSpiral />
+        
+        {/* <AlternatingShowcaseSolutions/>
+        <SlidingPicturesSolutions/> */}
 
         {/* --- CARD CAROUSEL INTEGRATION (Primary Focus) --- */}
         <div className="mb-4">
@@ -77,28 +86,17 @@ export default function EngineeringPage() {
         <div className="relative overflow-x-hidden">
           <ToolsWeUse/>
           <BlurryCarouselEngineering/>
-         </div>
+          <HighlightsEngineering/>
+        </div>
+
+         {/* <div className="w-full relative">
+            <ScrollCurtainEngineering />
+         </div> */}
 
       
         <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-20">
         {/* Highlights Section */}
-        <div className="border-2 border-[#1e1e28] rounded-3xl p-8 sm:p-12 bg-[#e8ebe9] shadow-[8px_8px_0px_0px_#1e1e28] mb-24 mt-16">
-          <span className="text-xs font-black uppercase tracking-widest text-[#f97316] block mb-2">
-            Our Edge
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-8">
-            Engineering Highlights & Standards
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {HIGHLIGHTS.map((highlight, index) => (
-              <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-xl border-2 border-[#1e1e28] shadow-[2px_2px_0px_0px_#1e1e28]">
-                <span className="bg-[#1e1e28] text-white text-xs font-bold px-2 py-0.5 rounded">✓</span>
-                <p className="text-sm font-semibold text-[#1e1e28]">{highlight}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
+       
         {/* Success Stories */}
         <div className="mb-12">
           <div className="text-center mb-12">
@@ -125,9 +123,12 @@ export default function EngineeringPage() {
         </div>          
 
       </main>
-      <div className="relative overflow-x-hidden">
+      <div className="w-full relative">
+            <ResponsiveWindowEngineering/>
+            <ScrollCurtainEngineering />
+            {/* <ScrollStackEngineering /> */}
+        </div>
         <ContactForm />
       </div>
-    </div>
   );
 }
