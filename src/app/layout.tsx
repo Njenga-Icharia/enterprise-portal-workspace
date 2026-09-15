@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, /*Playfair_Display*/ } from "next/font/google";
 import "./globals.css";
 
-// Import your newly structured components
-import Navbar from "@/components/Navbar"; 
+import Navbar from "@/components/Navbar/Navbar"; 
 import Footer from "@/components/Footer";
 import Deadshot from "@/components/Deadshot";
 
@@ -16,6 +15,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+/*const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+}); */
 
 export const metadata: Metadata = {
   title: "Techno Brain",
@@ -37,12 +41,11 @@ export default function RootLayout({
         <Deadshot />
         <Navbar />
         
-        {/* Page Content */}
+        {/* Engineering Page Content */}
         <main className="flex-grow">
           {children}
         </main>
 
-        {/* Persistent Footer */}
         <Footer />
       </body>
     </html>
