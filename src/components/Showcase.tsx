@@ -21,7 +21,7 @@ const cleanTextSlide: Variants = {
   visible: (customDelay: number) => ({
     opacity: 1,
     x: 0,
-    transition: { duration: 0.5, ease: [0.25, 1, 0.5, 1], delay: customDelay }
+    transition: { duration: 0.5, ease: [0.25, 1, 0.5, 1] as const, delay: customDelay }
   }),
   exit: { opacity: 0, transition: { duration: 0.2 } }
 };
@@ -32,7 +32,7 @@ const scopeVariants: Variants = {
   visible: { 
     y: 0, 
     opacity: 1, 
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.45 } 
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const, delay: 0.45 } 
   },
   exit: { y: 15, opacity: 0, transition: { duration: 0.2 } }
 };
