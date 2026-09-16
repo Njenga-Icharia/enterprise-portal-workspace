@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { BlurryCarousel, CarouselItem } from './BlurryCarousel';
+import { BlurryCarousel, CarouselItem } from '@/components/BlurryCarousel';
 
 const managedServicesData: CarouselItem[] = [
   {

@@ -1,5 +1,5 @@
 import React from 'react';
-import ScrollCurtain, { ScrollCurtainItem } from './ScrollCurtain';
+import ScrollCurtain, { ScrollCurtainItem } from '@/components/ScrollCurtain';
 
 const ENGINEERING_IMAGES: ScrollCurtainItem[] = [
   { id: 'img1', imageUrl: 'https://msftstories.thesourcemediaassets.com/sites/133/2018/06/MTC-2-960x640.jpg' },

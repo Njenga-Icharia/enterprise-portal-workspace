@@ -1,5 +1,5 @@
 import React from 'react';
-import Highlights, { HighlightItem } from './Highlights';
+import Highlights, { HighlightItem } from '@/components/Highlights';
 
 const ENGINEERING_HIGHLIGHTS: HighlightItem[] = [
   {
@@ -64,7 +64,7 @@ export default function HighlightsEngineering() {
       paragraphs={RIGHT_SIDE_PARAGRAPHS}
       items={ENGINEERING_HIGHLIGHTS} 
       watermarkText="HIGHLIGHTS" 
-      bgColor="bg-[#f97316]" // Passed the purple background here
+      bgColor="bg-[#f97316]" 
     />
   );
 }

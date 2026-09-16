@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
-interface Offering {
+export interface Offering {
   title: string;
   orangeText: string;
   action: string;
@@ -25,91 +25,6 @@ interface PopupAnchor {
    */
   onRightHalf: boolean;
 }
-
-
-const ENGINEERING_OFFERINGS: Offering[] = [
-  {
-    title: "App & Software ",
-    orangeText: "Compatibility",
-    action: "We resolve",
-    description:
-      "We employ innovative data-centric methods to detect & resolve application compatibility issues across various platforms & devices.",
-    badge: "01",
-    slug: "compatibility",
-  },
-  {
-    title: "Security ",
-    orangeText: "Testing",
-    action: "We safeguard",
-    description:
-      "We perform vulnerability tests across platforms apps, databases & networks to take proactive measures that safeguard your assets",
-    badge: "02",
-    slug: "security-testing",
-  },
-  {
-    title: "Privacy ",
-    orangeText: "Compliance",
-    action: "We validate",
-    description:
-      "We perform privacy validation and compliance tests to ensure adherence to GDPR, CDPA or other local & global privacy regulations.",
-    badge: "03",
-    slug: "privacy-compliance",
-  },
-  {
-    title: "Dev",
-    orangeText: "Ops",
-    action: "We accelerate",
-    description:
-      "We accelerate delivery of higher quality applications and services through continuous delivery and automation making the process more efficient, faster and reliable.",
-    badge: "04",
-    slug: "devops",
-  },
-  {
-    title: "Data ",
-    orangeText: "Analytics",
-    action: "We analyze",
-    description:
-      "We build machine learning models, analyze structured and unstructured data, utilizing AI & visualization tools to derive actionable insights that inform your business decisions.",
-    badge: "05",
-    slug: "data-analytics",
-  },
-  {
-    title: "Accessibility ",
-    orangeText: "Testing",
-    action: "We include",
-    description:
-      "We validate the accessibility of digital products to ensure inclusivity broadening your reach to a wider audience.",
-    badge: "06",
-    slug: "accessibility-testing",
-  },
-  {
-    title: "Development ",
-    orangeText: "Services",
-    action: "We build",
-    description:
-      "We develop tailored software solutions that drive growth, streamline operations utilizing innovative technology and practices.",
-    badge: "07",
-    slug: "development-services",
-  },
-  {
-    title: "Support ",
-    orangeText: "Services",
-    action: "We maintain",
-    description:
-      "We provide help desk support for smooth operations, offering 24/7 coverage and quick solutions, specializing in various platforms for maximum productivity.",
-    badge: "08",
-    slug: "support-services",
-  },
-  {
-    title: "Test ",
-    orangeText: "Automation",
-    action: "We automate",
-    description:
-      "We automate test processes across platforms to increase efficiency and productivity thus reducing operational cost.",
-    badge: "09",
-    slug: "test-automation",
-  },
-];
 
 function seededRandom(seed: number) {
   let t = seed;
@@ -136,7 +51,6 @@ const SIZE = 800;
 const CENTER = SIZE / 2;
 const OUTER_RADIUS = 360;
 const INNER_RADIUS = 300;
-const COUNT = ENGINEERING_OFFERINGS.length;
 const INNER_ROTATION_SECONDS = 70;
 const OUTER_ROTATION_SECONDS = 110;
 
@@ -173,7 +87,29 @@ function useMediaQuery(query: string) {
   return matches;
 }
 
-export default function EngineeringSpiral() {
+interface SpiralProps {
+  items: Offering[];
+  headerText: string;
+  headerHighlight: string;
+  countLabel: string;
+  coreLine1: string;
+  coreLine2: string;
+  coreHighlight: string;
+  footerText: string;
+}
+
+export default function Spiral({
+  items,
+  headerText,
+  headerHighlight,
+  countLabel,
+  coreLine1,
+  coreLine2,
+  coreHighlight,
+  footerText,
+}: SpiralProps) {
+  const count = items.length;
+
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   /**
@@ -187,8 +123,8 @@ export default function EngineeringSpiral() {
   const isDesktop = useMediaQuery(SIDE_PANEL_MEDIA_QUERY);
 
   const nodes = useMemo(() => {
-    return ENGINEERING_OFFERINGS.map((item, i) => {
-      const angle = (360 / COUNT) * i - 90;
+    return items.map((item, i) => {
+      const angle = (360 / count) * i - 90;
       const rad = (angle * Math.PI) / 180;
       const x = CENTER + INNER_RADIUS * Math.cos(rad);
       const y = CENTER + INNER_RADIUS * Math.sin(rad);
@@ -197,7 +133,7 @@ export default function EngineeringSpiral() {
       const py = y + pointerLen * Math.sin(rad);
       return { ...item, x, y, angle, px, py, index: i };
     });
-  }, []);
+  }, [items, count]);
 
   const outerTicks = useMemo(() => {
     return Array.from({ length: 32 }).map((_, i) => {
@@ -291,11 +227,11 @@ export default function EngineeringSpiral() {
       {/* Header */}
       <div className="flex items-center justify-between px-8 sm:px-12 pt-8 pb-6 border-b border-white/10">
         <h3 className="text-2xl sm:text-3xl font-serif text-white">
-          Engineering Capabilities Built Around <span className="text-[#f97316]">Your Needs.</span>
+          {headerText} <span className="text-[#f97316]">{headerHighlight}</span>
         </h3>
         <div className="text-right shrink-0 ml-6">
-          <div className="text-2xl font-serif font-bold text-white">{String(COUNT).padStart(2, "0")}</div>
-          <div className="text-[10px] font-black uppercase tracking-widest text-white/40">Capabilities</div>
+          <div className="text-2xl font-serif font-bold text-white">{String(count).padStart(2, "0")}</div>
+          <div className="text-[10px] font-black uppercase tracking-widest text-white/40">{countLabel}</div>
         </div>
       </div>
 
@@ -342,9 +278,9 @@ export default function EngineeringSpiral() {
 
               {nodes.map((node) => {
                 const isHovered = hoveredIndex === node.index;
-                const next = nodes[(node.index + 1) % COUNT];
-                const prev = nodes[(node.index - 1 + COUNT) % COUNT];
-                const arcHalf = 360 / COUNT / 2 - 2;
+                const next = nodes[(node.index + 1) % count];
+                const prev = nodes[(node.index - 1 + count) % count];
+                const arcHalf = 360 / count / 2 - 2;
                 const arcPath = describeArc(CENTER, CENTER, INNER_RADIUS, node.angle - arcHalf, node.angle + arcHalf);
 
                 const rad = (node.angle * Math.PI) / 180;
@@ -455,11 +391,11 @@ export default function EngineeringSpiral() {
           {/* Core message — kept outside the rotating group and above the SVG plane. */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10 pointer-events-none px-8">
             <h4 className="text-xl sm:text-2xl font-serif font-bold text-white leading-relaxed drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-              We build.
+              {coreLine1}
               <br />
-              We secure.
+              {coreLine2}
               <br />
-              <span className="text-[#f97316]">We innovate.</span>
+              <span className="text-[#f97316]">{coreHighlight}</span>
             </h4>
           </div>
 
@@ -544,7 +480,7 @@ export default function EngineeringSpiral() {
       <div className="text-center items-center justify-between px-8 sm:px-12 pb-8 pt-6 border-t border-white/10">
         
         <h3 className="text-xl font-serif text-white">
-          Rigorous quality assurance, automated workflows & enterprise-grade engineering standards <span className="text-[#f97316]">.</span>
+          {footerText} <span className="text-[#f97316]">.</span>
         </h3>
         
       </div>

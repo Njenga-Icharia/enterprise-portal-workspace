@@ -5,18 +5,58 @@ import Image from "next/image";
 /** Navbar height. Kept in one place so hero and any sibling section agree. */
 const NAVBAR_OFFSET = "6rem";
 
-export default function HeroEngineering() {
+interface HeroCta {
+  href: string;
+  label: string;
+}
+
+interface HeroStat {
+  label: string;
+  value: string;
+}
+
+interface HeroProps {
+  ariaLabel: string;
+  imageSrc: string;
+  imageAlt?: string;
+  eyebrow: string;
+  headingLine1: string;
+  headingLine2: string;
+  headingHighlight: string;
+  description: string;
+  primaryCta: HeroCta;
+  secondaryCta: HeroCta;
+  stats: {
+    first: HeroStat;
+    second: HeroStat;
+    third: HeroStat;
+  };
+}
+
+export default function Hero({
+  ariaLabel,
+  imageSrc,
+  imageAlt = "",
+  eyebrow,
+  headingLine1,
+  headingLine2,
+  headingHighlight,
+  description,
+  primaryCta,
+  secondaryCta,
+  stats,
+}: HeroProps) {
   return (
     <section
-      aria-label="Engineering hero"
+      aria-label={ariaLabel}
       className="relative left-1/2 w-screen -translate-x-1/2"
       style={{ minHeight: `calc(100vh - ${NAVBAR_OFFSET})` }}
     >
       {/* Bias background photo to the right */}
       <div className="absolute inset-0 overflow-hidden bg-[#0d0d13]">
         <Image
-          src="/savanna.png"
-          alt=""
+          src={imageSrc}
+          alt={imageAlt}
           fill
           priority
           sizes="100vw"
@@ -38,35 +78,35 @@ export default function HeroEngineering() {
           <div className="flex items-center gap-3 mb-6">
             <span className="h-px w-10 bg-[#f97316]" />
             <span className="text-[11px] font-black uppercase tracking-[0.28em] text-[#f97316]">
-              Engineering
+              {eyebrow}
             </span>
           </div>
 
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] text-white">
-            World-class software engineering,
+            {headingLine1}
             <br />
-             delivered from the
+            {headingLine2}
             <br />
-            <span className="text-[#f97316]"> Silicon Savannah </span>
+            <span className="text-[#f97316]">{headingHighlight}</span>
           </h1>
 
           <p className="mt-8 max-w-xl text-base sm:text-lg leading-relaxed text-white/70">
-            Turning Complex Business Challenges Into Working Enterprise Solutions.
+            {description}
           </p>
           {/* Primary actions */}
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="/engineering/method"
+              href={primaryCta.href}
               className="inline-flex items-center gap-2 border-2 border-[#f97316] bg-[#f97316] px-6 py-3 text-xs font-black uppercase tracking-wider text-[#0d0d13] transition-colors hover:bg-transparent hover:text-[#f97316]"
             >
-              Talk to an expert
+              {primaryCta.label}
               <span aria-hidden="true">→</span>
             </a>
             <a
-              href="/engineering/capabilities"
+              href={secondaryCta.href}
               className="inline-flex items-center gap-2 border-2 border-white/20 px-6 py-3 text-xs font-black uppercase tracking-wider text-white transition-colors hover:border-[#f97316] hover:text-[#f97316]"
             >
-              View case studies
+              {secondaryCta.label}
             </a>
           </div>
 
@@ -74,21 +114,21 @@ export default function HeroEngineering() {
           <dl className="mt-16 grid max-w-lg grid-cols-3 gap-6 border-t border-white/10 pt-6">
             <div>
               <dt className="text-[10px] font-black uppercase tracking-widest text-white/40">
-                
+                {stats.first.label}
               </dt>
-              <dd className="mt-1 font-serif text-2xl font-bold text-white"> {/*09*/} </dd>
+              <dd className="mt-1 font-serif text-2xl font-bold text-white"> {stats.first.value} </dd>
             </div>
             <div>
               <dt className="text-[10px] font-black uppercase tracking-widest text-white/40">
-               
+                {stats.second.label}
               </dt>
-              <dd className="mt-1 font-serif text-2xl font-bold text-white"> {/*Level 05*/} </dd> 
+              <dd className="mt-1 font-serif text-2xl font-bold text-white"> {stats.second.value} </dd> 
             </div>
             <div>
               <dt className="text-[10px] font-black uppercase tracking-widest text-white/40">
-               
+                {stats.third.label}
               </dt>
-              <dd className="mt-1 font-serif text-2xl font-bold text-[#f97316]">{/* 35 */}</dd>
+              <dd className="mt-1 font-serif text-2xl font-bold text-[#f97316]">{stats.third.value}</dd>
             </div>
           </dl>
         </div>

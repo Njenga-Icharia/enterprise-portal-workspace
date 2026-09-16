@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponsiveWindow, { IndustryItem } from './ResponsiveWindow';
+import ResponsiveWindow, { IndustryItem } from '@/components/ResponsiveWindow';
 
 const TECHNO_BRAIN_INDUSTRIES: IndustryItem[] = [
   {

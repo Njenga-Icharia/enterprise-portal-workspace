@@ -3,20 +3,16 @@
 import dynamic from "next/dynamic";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
-import EngineeringCardCarousel from "@/components/CardCarouselEnigineering";
 import ToolsWeUse from "@/components/ToolsWeUse";
-import BlurryCarouselEngineering from "@/components/BlurryCarouselEngineering";
-import HeroEngineering from "@/components/HeroEngineering";
-import AlternatingShowcaseSolutions from "@/components/AlternatingShowcaseSolutions";
-import SlidingPicturesSolutions from "@/components/SlidingPicturesSolutions";
-import HighlightsEngineering from "@/components/HighlightsEngineering";
-import ScrollStackEngineering from "@/components/ScrollStackEngineering";
-import ResponsiveWindowEngineering from "@/components/ResponsiveWindowEngineering"; 
-import ScrollCurtainEngineering from "@/components/ScrollCurtainEngineering";
-
+import HeroEngineering from "@/components/LocalComponentsEngineering/HeroEngineering";
+import EngineeringCardCarousel from "@/components/LocalComponentsEngineering/CardCarouselEnigineering";
+import BlurryCarouselEngineering from "@/components/LocalComponentsEngineering/BlurryCarouselEngineering";
+import HighlightsEngineering from "@/components/LocalComponentsEngineering/HighlightsEngineering";
+import ResponsiveWindowEngineering from "@/components/LocalComponentsEngineering/ResponsiveWindowEngineering"; 
+import ScrollCurtainEngineering from "@/components/LocalComponentsEngineering/ScrollCurtainEngineering";
 
 // Client-only import that prevents the spiral's heavy math/DOM from blocking initial render
-const EngineeringSpiral = dynamic(() => import("@/components/EngineeringSpiral"), {
+const EngineeringSpiral = dynamic(() => import("@/components/LocalComponentsEngineering/SpiralEngineering"), {
   ssr: false,
   loading: () => <div className="h-[800px]" />,
 });
@@ -103,7 +99,7 @@ export default function EngineeringPage() {
       <div className="w-full relative">
             <ResponsiveWindowEngineering/>
             <ScrollCurtainEngineering />
-            {/* <ScrollStackEngineering /> */}
+
         </div>
         <ContactForm />
       </div>
