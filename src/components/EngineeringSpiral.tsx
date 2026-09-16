@@ -26,11 +26,7 @@ interface PopupAnchor {
   onRightHalf: boolean;
 }
 
-/**
- * Descriptions are transcribed verbatim from the published "What We Offer" copy.
- * Do not paraphrase — the disclosure surfaces are the only place this text appears
- * on the page, and legal/marketing review expects a 1:1 match with the source.
- */
+
 const ENGINEERING_OFFERINGS: Offering[] = [
   {
     title: "App & Software ",

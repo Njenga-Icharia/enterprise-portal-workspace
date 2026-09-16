@@ -7,7 +7,7 @@ const salesContent: SlideData[] = [
     title: 'SCANIA\nRENTAL',
     description: 'Scania Rental provides short-term or long-term hire for truck operators and is an ideal back-up facility for businesses that work contract-to-contract.',
     buttonText: 'Request for a Quote',
-    imageUrl: '/images/scania-rental.jpg', // Replace with your actual image paths
+    imageUrl: '/images/scania-rental.jpg', 
   },
   {
     id: 'driver-training',

@@ -13,15 +13,15 @@ export interface CarouselItem {
 interface BlurryCarouselProps {
   items: CarouselItem[];
   sectionTitle?: string;
-  bgColor?: string;      // prop for background color
-  titleColor?: string;   // prop for title color
+  bgColor?: string;      
+  titleColor?: string;   
 }
 
 export const BlurryCarousel: React.FC<BlurryCarouselProps> = ({ 
   items, 
   sectionTitle,
-  bgColor = "bg-white dark:bg-slate-950", // Default fallback
-  titleColor = "text-slate-900 dark:text-white" // Default fallback
+  bgColor = "bg-white dark:bg-slate-950", // Default 
+  titleColor = "text-slate-900 dark:text-white" // default 
 }) => {
   const [carouselItems, setCarouselItems] = useState<CarouselItem[]>(items);
 
@@ -48,7 +48,7 @@ export const BlurryCarousel: React.FC<BlurryCarouselProps> = ({
   return (
     <div className={`relative w-full py-12 ${bgColor}`}>
 
-      {/* Wall-mounted arrows. Absolute so they consume no layout width. */}
+      {/* pointer arrows */}
       <button
         onClick={handlePrev}
         className="absolute left-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full border border-slate-300 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"

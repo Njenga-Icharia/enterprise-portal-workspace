@@ -38,12 +38,12 @@ export default function Highlights({
         ))}
       </div>
 
-      {/* --- THE EXACT CURVE --- */}
+      {/* CURVE*/}
       <div className="absolute -bottom-[400px] -right-[200px] w-[800px] h-[800px] bg-white/40 rounded-full z-0 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         
-        {/* --- MOBILE/TABLET WATERMARK (Horizontal, Top, Over everything) --- */}
+        {/*MOBILE/TABLET WATERMARK */}
         <div className="flex xl:hidden w-full justify-center mb-10 relative z-20">
           <span className="text-6xl sm:text-7xl font-black text-white/40 uppercase tracking-[0.2em] drop-shadow-md text-center">
             {watermarkText}
@@ -52,7 +52,7 @@ export default function Highlights({
 
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-12 xl:gap-16 items-start">
           
-          {/* LEFT COLUMN: The Cards */}
+          {/*Cards */}
           <div className="xl:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {items.map((item) => (
               <div key={item.id} className="bg-white rounded-2xl p-6 shadow-lg flex flex-col h-full">
@@ -80,7 +80,7 @@ export default function Highlights({
             ))}
           </div>
 
-          {/* RIGHT COLUMN: The Text */}
+          {/* Text */}
           <div className="xl:col-span-5 flex flex-col justify-center xl:pt-12">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-[#1e1e28] leading-[1.15] mb-8">
               {title}

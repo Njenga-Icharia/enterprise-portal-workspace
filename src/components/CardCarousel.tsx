@@ -2,8 +2,7 @@
 
 import React, { useRef } from "react";
 
-// 1. Define the exact shape of the data you want to pass in.
-// This guarantees modularity across different pages.
+
 export interface StaggeredCardItem {
   id: string | number;
   imageSrc: string;
@@ -65,7 +64,7 @@ export default function StaggeredCarousel({ items }: StaggeredCarouselProps) {
                   {item.title}
                 </h3>
                 
-                {/* Chevron Icon - Rotates on hover */}
+                {/* Chevron Icon*/}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-5 h-5 text-white/60 transform transition-transform duration-300 group-hover:rotate-180 shrink-0 mb-1"
@@ -78,7 +77,7 @@ export default function StaggeredCarousel({ items }: StaggeredCarouselProps) {
                 </svg>
               </div>
 
-              {/* Expandable Description using CSS Grid for perfectly smooth animation */}
+              {/* Description*/}
               <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out">
                 <div className="overflow-hidden">
                   <p className="text-sm text-gray-300 pt-3 leading-relaxed">
@@ -100,7 +99,7 @@ export default function StaggeredCarousel({ items }: StaggeredCarouselProps) {
         ))}
       </div>
 
-      {/* Navigation Buttons (Left/Right) - tightened top margin */}
+      {/* Navigation Buttons (Left/Right)*/}
       <div className="flex gap-3 mt-2">
         <button
           onClick={() => scroll("left")}

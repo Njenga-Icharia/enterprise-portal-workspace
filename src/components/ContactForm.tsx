@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Logo from "@/components/technobrainlogo"; // Adjust this path if your Logo file is named differently
+import Logo from "@/components/technobrainlogo";
 
 interface FormData {
   firstName: string;

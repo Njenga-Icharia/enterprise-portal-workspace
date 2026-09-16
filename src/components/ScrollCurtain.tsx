@@ -41,9 +41,7 @@ export default function ScrollCurtain({ items }: ScrollCurtainProps) {
         {items.map((item, i) => {
           const isLast = i === n - 1;
 
-          // Each layer only animates during its own slice of the scroll range.
-          // Before its turn: stays at 0 (hidden behind the layer above).
-          // After its turn: fully retracted to -100% (off the top).
+
           let translateY = 0;
           if (!isLast) {
             const segStart = i / segments;
@@ -65,7 +63,7 @@ export default function ScrollCurtain({ items }: ScrollCurtainProps) {
 
               {/* Placeholder for words later */}
               <div className="absolute inset-0 flex items-center justify-center text-white p-8">
-                {/* words go here */}
+                
               </div>
             </div>
           );

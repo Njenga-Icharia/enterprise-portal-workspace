@@ -35,7 +35,7 @@ export default function ResponsiveWindow({
       onMouseLeave={() => setHoveredIndex(null)}
     >
       
-      {/* --- BACKGROUND IMAGES & GLOBAL OVERLAY --- */}
+      {/* BACKGROUND IMAGES & GLOBAL OVERLAY*/}
       <div className="absolute inset-0 z-0">
         {items.map((item, index) => (
           <div
@@ -49,12 +49,12 @@ export default function ResponsiveWindow({
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
       </div>
 
-      {/* --- TITLE --- */}
+      {/* TITLE */}
       <h2 className="absolute top-12 left-12 z-20 text-7xl md:text-8xl lg:text-9xl font-extrabold text-white tracking-tight drop-shadow-lg">
         <span className="text-[#f97316]"> {ColoredSectionTitle} </span>{sectionTitle}
       </h2>
 
-      {/* --- NAVIGATION ARROWS --- */}
+      {/* NAVIGATION ARROWS */}
       <button 
         className="absolute left-8 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-colors duration-300 pointer-events-none"
         aria-hidden="true"
@@ -73,7 +73,7 @@ export default function ResponsiveWindow({
         </svg>
       </button>
 
-      {/* --- 4 EQUAL WIDTH FLOOR-TO-CEILING STICKS --- */}
+      {/*Barriers*/}
       <div className="absolute inset-0 w-full z-20 flex h-full">
         {items.slice(0, 4).map((item, index) => {
           const isHovered = index === hoveredIndex;
@@ -86,7 +86,7 @@ export default function ResponsiveWindow({
                 index === 0 ? 'border-l-0' : ''
               }`}
             >
-              {/* Anchored to bottom, only rises slightly on hover */}
+              {/* On hover */}
               <div 
                 className={`absolute left-8 right-8 bottom-16 transition-all duration-500 ease-in-out ${
                   isHovered ? '-translate-y-24' : 'translate-y-0'

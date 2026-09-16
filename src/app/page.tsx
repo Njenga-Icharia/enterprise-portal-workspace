@@ -15,7 +15,7 @@ import ResponsiveWindowEngineering from "@/components/ResponsiveWindowEngineerin
 import ScrollCurtainEngineering from "@/components/ScrollCurtainEngineering";
 
 
-// Client-only import — prevents the spiral's heavy math/DOM from blocking initial render
+// Client-only import that prevents the spiral's heavy math/DOM from blocking initial render
 const EngineeringSpiral = dynamic(() => import("@/components/EngineeringSpiral"), {
   ssr: false,
   loading: () => <div className="h-[800px]" />,
@@ -71,14 +71,14 @@ export default function EngineeringPage() {
         {/* <AlternatingShowcaseSolutions/>
         <SlidingPicturesSolutions/> */}
 
-        {/* --- CARD CAROUSEL INTEGRATION (Primary Focus) --- */}
+        {/* CARD CAROUSEL */}
         <div className="mb-4">
           <div className="text-center mb-4">
             <span className="text-xs font-black uppercase tracking-widest text-[#f97316] block mb-1">Our Method</span>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold">Standards We Follow</h2>
           </div>
           
-          {/* Renders the floating staggered cards with alternating layout and hover expansion */}
+
           <EngineeringCardCarousel />
         </div>
         </main>
@@ -97,30 +97,7 @@ export default function EngineeringPage() {
         <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-20">
         {/* Highlights Section */}
        
-        {/* Success Stories */}
-        <div className="mb-12">
-          <div className="text-center mb-12">
-            <span className="text-xs font-black uppercase tracking-widest text-[#f97316] block mb-2">Case Studies</span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold">Success Stories</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {SUCCESS_STORIES.map((story, index) => (
-              <div key={index} className="border-2 border-[#1e1e28] rounded-2xl p-8 bg-white shadow-[4px_4px_0px_0px_#1e1e28] flex flex-col justify-between">
-                <div>
-                  <span className="text-xs font-extrabold uppercase tracking-widest text-[#f97316] block mb-2">{story.date}</span>
-                  <h3 className="text-xl font-serif font-bold mb-4">{story.title}</h3>
-                  <p className="text-sm font-medium text-[#1e1e28]/70 mb-6">{story.description}</p>
-                </div>
-                <Link
-                  href="/contact"
-                  className="inline-block text-center bg-[#1e1e28] text-white py-2 px-4 rounded-lg font-extrabold text-xs uppercase tracking-wider hover:bg-[#f97316] hover:text-[#1e1e28] border border-[#1e1e28] transition-colors"
-                >
-                  Read More
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>          
+                 
 
       </main>
       <div className="w-full relative">

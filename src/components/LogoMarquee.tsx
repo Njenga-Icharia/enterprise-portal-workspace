@@ -13,7 +13,6 @@ interface LogoItem {
   customClass?: string;
 }
 
-// Configuration array for partner logos with URLs and optional scaling overrides
 const PARTNER_LOGOS: LogoItem[] = [
   { id: "dogecoin", name: "Dogecoin", src: "/logos/dogecoin.svg", url: "https://dogecoin.com" },
   { id: "burgerking", name: "Burger King", src: "/logos/burgerking.svg", url: "https://www.bk.com" },
@@ -53,7 +52,7 @@ export default function LogoMarquee() {
         </p>
       </div>
 
-      {/* Marquee Viewport Container with 'group' to handle hover pausing */}
+      {/* Marquee Viewport Container, handle hover pausing */}
       <div className="relative w-full overflow-hidden flex group">
         <div className="flex animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap gap-16 items-center">
           

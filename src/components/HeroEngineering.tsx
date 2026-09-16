@@ -2,18 +2,7 @@
 
 import Image from "next/image";
 
-/**
- * Engineering branch hero.
- *
- * Occupies the full viewport minus the fixed navbar (6rem — matches the offset
- * used by EngineeringSpiral so the two sections stack without a seam).
- *
- * Visual language is deliberately aligned with EngineeringSpiral: dark gradient
- * shell, hairline borders, #f97316 accent, serif display type, and the same
- * brutalist 8px-offset shadow on the inner frame.
- */
-
-/** Navbar height. Kept in one place so the hero and any sibling section agree. */
+/** Navbar height. Kept in one place so hero and any sibling section agree. */
 const NAVBAR_OFFSET = "6rem";
 
 export default function HeroEngineering() {
@@ -53,7 +42,6 @@ export default function HeroEngineering() {
             </span>
           </div>
 
-          {/* Headline */}
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] text-white">
             World-class software engineering,
             <br />
@@ -62,7 +50,6 @@ export default function HeroEngineering() {
             <span className="text-[#f97316]"> Silicon Savannah </span>
           </h1>
 
-          {/* Deck */}
           <p className="mt-8 max-w-xl text-base sm:text-lg leading-relaxed text-white/70">
             Turning Complex Business Challenges Into Working Enterprise Solutions.
           </p>
@@ -87,19 +74,19 @@ export default function HeroEngineering() {
           <dl className="mt-16 grid max-w-lg grid-cols-3 gap-6 border-t border-white/10 pt-6">
             <div>
               <dt className="text-[10px] font-black uppercase tracking-widest text-white/40">
-                {/* Capabilities */}
+                
               </dt>
               <dd className="mt-1 font-serif text-2xl font-bold text-white"> {/*09*/} </dd>
             </div>
             <div>
               <dt className="text-[10px] font-black uppercase tracking-widest text-white/40">
-                {/* CMMI */}
+               
               </dt>
               <dd className="mt-1 font-serif text-2xl font-bold text-white"> {/*Level 05*/} </dd> 
             </div>
             <div>
               <dt className="text-[10px] font-black uppercase tracking-widest text-white/40">
-                {/* Countries */}
+               
               </dt>
               <dd className="mt-1 font-serif text-2xl font-bold text-[#f97316]">{/* 35 */}</dd>
             </div>
@@ -107,7 +94,7 @@ export default function HeroEngineering() {
         </div>
       </div>
 
-      {/* Scroll affordance, hidden on short viewports. */}
+      
       <div className="pointer-events-none absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex">
         <span className="text-[10px] font-black uppercase tracking-[0.28em] text-white/40">
           Scroll
