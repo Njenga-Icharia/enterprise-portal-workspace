@@ -9,7 +9,7 @@ export function EngineeringContent() {
         <span className="text-xs font-extrabold tracking-wider uppercase text-white mb-2">
           ENGINEERING
         </span>
-        <Link href="/engineering" className="group inline-block mb-2 w-max">
+        <Link href="/engineering2" className="group inline-block mb-2 w-max">
           <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight transform group-hover:translate-x-2 transition-transform duration-300">
             Engineering
           </h2>
@@ -18,9 +18,9 @@ export function EngineeringContent() {
           Delivered from the Silicon Savannah
         </p>
         <div className="border-t border-black/20 pt-6 space-y-3">
-          <MegaMenuLink href="/engineering" label="App & Software Compatibility" />
-          <MegaMenuLink href="/engineering" label="Security & Privacy Validation" />
-          <MegaMenuLink href="/engineering" label="DevOps & Automation" />
+          <MegaMenuLink href="/engineering2" label="App & Software Compatibility" />
+          <MegaMenuLink href="/engineering2" label="Security & Privacy Validation" />
+          <MegaMenuLink href="/engineering2" label="DevOps & Automation" />
         </div>
       </div>
 
@@ -29,9 +29,9 @@ export function EngineeringContent() {
           CAPABILITIES
         </span>
         <div className="grid grid-cols-3 gap-6">
-          <MegaMenuCard href="/engineering" imageSrc="/dataanalytics.svg" title="Data Analytics" subtitle="ML & Actionable Insights" />
-          <MegaMenuCard href="/engineering" imageSrc="/development.svg" title="Development" subtitle="Tailored software solutions" />
-          <MegaMenuCard href="/engineering" imageSrc="/access2.svg" title="Accessibility Testing" subtitle="Inclusive digital products" />
+          <MegaMenuCard href="/engineering2" imageSrc="/dataanalytics.svg" title="Data Analytics" subtitle="ML & Actionable Insights" />
+          <MegaMenuCard href="/engineering2" imageSrc="/development.svg" title="Development" subtitle="Tailored software solutions" />
+          <MegaMenuCard href="/engineering2" imageSrc="/access2.svg" title="Accessibility Testing" subtitle="Inclusive digital products" />
         </div>
       </div>
     </div>
