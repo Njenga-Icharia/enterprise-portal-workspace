@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 
 export interface SolutionItem {
   id: string;
@@ -16,7 +16,7 @@ export interface SolutionItem {
 }
 
 // Subtitle & Description sliding
-const cleanTextSlide = {
+const cleanTextSlide: Variants = {
   hidden: { opacity: 0, x: -20 },
   visible: (customDelay: number) => ({
     opacity: 1,
@@ -27,7 +27,7 @@ const cleanTextSlide = {
 };
 
 // Scope Slide Up from Bottom
-const scopeVariants = {
+const scopeVariants: Variants = {
   hidden: { y: 30, opacity: 0 },
   visible: { 
     y: 0, 
