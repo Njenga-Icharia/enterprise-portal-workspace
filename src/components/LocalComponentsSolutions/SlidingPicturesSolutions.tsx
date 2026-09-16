@@ -1,5 +1,5 @@
 import React from 'react';
-import SlidingPictures, { SlideData } from './SlidingPictures';
+import SlidingPictures, { SlideData } from '@/components/SlidingPictures';
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -104,11 +104,10 @@ const engineeringContent: SlideData[] = [
 },
 ];
 
-
 export default function SlidingPicturesEngineering() {
   return (
     <section className="w-full">
       <SlidingPictures slides={engineeringContent} />
     </section>
   );
-}
+} 

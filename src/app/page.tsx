@@ -2,15 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import AlternatingShowcaseSolutions from "@/components/AlternatingShowcaseSolutions"
-// import AlternatingShowcaseSolutions2 from "@/components/AlternatingShowcaseSolutions2"
 import ContactForm from "@/components/ContactForm";
-import SolutionsShowcase from "@/components/SolutionsShowcase";
-import SlidingPicturesSolutions from "@/components/SlidingPicturesSolutions";
-import SlidingPicturesEngineering from "@/components/SlidingPicturesEngineering";
-// import SlidingPicturesEngineering2 from "@/components/SlidingPicturesEngineering2";
+import ShowcaseSolutions from "@/components/LocalComponentsSolutions/ShowcaseSolutions";
+import AlternatingShowcaseSolutions from "@/components/LocalComponentsSolutions/AlternatingShowcaseSolutions";
+import SlidingPicturesSolutions from "@/components/LocalComponentsSolutions/SlidingPicturesSolutions";
 
-// ---------- Data for the grid below the showcase ----------
+
+
 interface SolutionItem {
   title: string;
   tagline: string;
@@ -78,34 +76,24 @@ const PRIVATE_SECTOR_SOLUTIONS: SolutionItem[] = [
   },
 ];
 
-// ---------- Page Component ----------
 export default function SolutionsPage() {
   const [activeTab, setActiveTab] = useState<"public" | "private">("public");
   const currentList = activeTab === "public" ? PUBLIC_SECTOR_SOLUTIONS : PRIVATE_SECTOR_SOLUTIONS;
 
   return (
     <div className="relative min-h-screen bg-[#f8f9fa] text-[#1e1e28] overflow-x-hidden font-sans">
-      {/* <Navbar /> */}
 
-      {/* === FULL-SCREEN SHOWCASE HERO === */}
-      <SolutionsShowcase 
-        activeSector={activeTab} 
-        onSectorChange={setActiveTab} 
-      />
-      {/* <AlternatingShowcaseSolutions2 activeSector={activeTab} /> */}
+      <ShowcaseSolutions activeSector={activeTab} onSectorChange={setActiveTab} />
+
       <AlternatingShowcaseSolutions activeSector={activeTab} />
 
       <div className="relative overflow-x-hidden">
-        {/* <SlidingPicturesEngineering2 /> */}
-        <SlidingPicturesEngineering />
+        <SlidingPicturesSolutions />
           </div>
-
 
        <div className="relative overflow-x-hidden">
           <ContactForm />
           </div>
-
-      {/* <Footer /> */}
     </div>
   );
 }

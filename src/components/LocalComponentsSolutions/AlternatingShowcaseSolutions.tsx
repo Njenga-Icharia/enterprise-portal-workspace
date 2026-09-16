@@ -163,7 +163,7 @@ interface AlternatingShowcaseSolutionsProps {
 }
 
 export default function AlternatingShowcaseSolutions({ activeSector }: AlternatingShowcaseSolutionsProps) {
-  // Filter the array so it only maps items belonging to the active tab
+
   const filteredSolutions = solutions.filter((item) =>
     activeSector === "public"
       ? item.badge === "PUBLIC SECTOR"

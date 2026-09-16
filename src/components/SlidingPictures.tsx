@@ -38,7 +38,7 @@ export default function SlidingPictures({ slides }: SlidingPicturesProps) {
     }
   };
 
-  // This guarantees strictly 4 panels are rendered, preserving the flex-grow math
+  // Only 4 panels are rendered
   const visibleSlides = slides.slice(startIndex, startIndex + maxVisible);
 
   return (
@@ -94,7 +94,7 @@ export default function SlidingPictures({ slides }: SlidingPicturesProps) {
         })}
       </div>
 
-      {/* White Space Navigation Controls (Only renders if there are more than 4 items) */}
+      {/* Navigation Controls */}
       {slides.length > maxVisible && (
         <div className="flex justify-end items-center px-12 py-8 bg-white gap-4">
           <button
@@ -103,7 +103,7 @@ export default function SlidingPictures({ slides }: SlidingPicturesProps) {
             aria-label="Previous slide"
             className="w-12 h-12 flex items-center justify-center rounded-full bg-[#002a5c] text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#001f44] transition-all duration-300 shadow-md"
           >
-            {/* SVG Left Arrow */}
+            {/* Left Arrow */}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
@@ -115,7 +115,7 @@ export default function SlidingPictures({ slides }: SlidingPicturesProps) {
             aria-label="Next slide"
             className="w-12 h-12 flex items-center justify-center rounded-full bg-[#002a5c] text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#001f44] transition-all duration-300 shadow-md"
           >
-            {/* SVG Right Arrow */}
+            {/*Right Arrow */}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>

@@ -22,7 +22,7 @@ export default function Logo({ isDark = false }: LogoProps) {
         </div>
       </div>
 
-      {/* TAGLINE: Uses text size and even letter spacing to stretch naturally */}
+      
       <div className={`text-[14px] italic font-medium tracking-[0.15em] pl-[130px] mt-1 transition-colors ${isDark ? "text-white/80" : "text-[#56536b]"}`}>
         Empowering Lives
       </div>

@@ -28,16 +28,24 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${geistSans.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="font-sans min-h-full flex flex-col bg-[#f8f9fa]">
+      <body className="min-h-full flex flex-col bg-[#f8f9fa]">
+        {/* Persistent UI across all routes */}
         <Deadshot />
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        
+        {/* Engineering Page Content */}
+        <main className="flex-grow">
+          {children}
+        </main>
+
         <Footer />
       </body>
     </html>
