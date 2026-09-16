@@ -62,7 +62,7 @@ export default function Deadshot() {
     };
   }, [isMounted]);
 
-  // If we are still on the server, render nothing. Prevents SSR hydration mismatch completely!
+  // If still on the server, render nothing. Prevents SSR hydration mismatch
   if (!isMounted) {
     return null;
   }

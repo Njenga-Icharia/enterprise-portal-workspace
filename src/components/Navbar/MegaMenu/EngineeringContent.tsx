@@ -18,9 +18,9 @@ export function EngineeringContent() {
           Delivered from the Silicon Savannah
         </p>
         <div className="border-t border-black/20 pt-6 space-y-3">
-          <MegaMenuLink href="/engineering/compatibility" label="App & Software Compatibility" />
-          <MegaMenuLink href="/engineering/security-testing" label="Security & Privacy Validation" />
-          <MegaMenuLink href="/engineering/devops" label="DevOps & Automation" />
+          <MegaMenuLink href="/engineering" label="App & Software Compatibility" />
+          <MegaMenuLink href="/engineering" label="Security & Privacy Validation" />
+          <MegaMenuLink href="/engineering" label="DevOps & Automation" />
         </div>
       </div>
 
@@ -29,9 +29,9 @@ export function EngineeringContent() {
           CAPABILITIES
         </span>
         <div className="grid grid-cols-3 gap-6">
-          <MegaMenuCard href="/engineering/data-analytics" imageSrc="/dataanalytics.svg" title="Data Analytics" subtitle="ML & Actionable Insights" />
-          <MegaMenuCard href="/engineering/development" imageSrc="/development.svg" title="Development" subtitle="Tailored software solutions" />
-          <MegaMenuCard href="/engineering/accessibility" imageSrc="/access2.svg" title="Accessibility Testing" subtitle="Inclusive digital products" />
+          <MegaMenuCard href="/engineering" imageSrc="/dataanalytics.svg" title="Data Analytics" subtitle="ML & Actionable Insights" />
+          <MegaMenuCard href="/engineering" imageSrc="/development.svg" title="Development" subtitle="Tailored software solutions" />
+          <MegaMenuCard href="/engineering" imageSrc="/access2.svg" title="Accessibility Testing" subtitle="Inclusive digital products" />
         </div>
       </div>
     </div>

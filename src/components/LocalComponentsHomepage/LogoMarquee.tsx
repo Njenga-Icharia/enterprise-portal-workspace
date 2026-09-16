@@ -2,9 +2,6 @@
 
 import React from "react";
 
-/**
- * Interface defining the structure of a marquee logo item.
- */
 interface LogoItem {
   id: string;
   name: string;
@@ -13,7 +10,6 @@ interface LogoItem {
   customClass?: string;
 }
 
-// Configuration array for partner logos with URLs and optional scaling overrides
 const PARTNER_LOGOS: LogoItem[] = [
   { id: "dogecoin", name: "Dogecoin", src: "/logos/dogecoin.svg", url: "https://dogecoin.com" },
   { id: "burgerking", name: "Burger King", src: "/logos/burgerking.svg", url: "https://www.bk.com" },
@@ -53,7 +49,7 @@ export default function LogoMarquee() {
         </p>
       </div>
 
-      {/* Marquee Viewport Container with 'group' to handle hover pausing */}
+      {/* Marquee Viewport Container for hover pausing */}
       <div className="relative w-full overflow-hidden flex group">
         <div className="flex animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap gap-16 items-center">
           
@@ -75,7 +71,7 @@ export default function LogoMarquee() {
             </a>
           ))}
 
-          {/* Secondary Loop for Seamless Infinite Scroll Illusion */}
+          {/* Secondary Loop for Infinite Scroll*/}
           {PARTNER_LOGOS.map((logo) => (
             <a
               key={`duplicate-${logo.id}`}

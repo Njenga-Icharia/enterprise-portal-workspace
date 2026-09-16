@@ -18,9 +18,9 @@ export function BpoContent() {
           Managed under one roof in Kenya
         </p>
         <div className="border-t border-black/20 pt-6 space-y-3">
-          <MegaMenuLink href="/bpo/solutions" label="BPO Solutions" />
-          <MegaMenuLink href="/bpo/compliance" label="BPO Compliance" />
-          <MegaMenuLink href="/bpo/industry-verticals" label="Industry Verticals" />
+          <MegaMenuLink href="/bpo" label="BPO Solutions" />
+          <MegaMenuLink href="/bpo" label="BPO Compliance" />
+          <MegaMenuLink href="/bpo" label="Industry Verticals" />
         </div>
       </div>
 
@@ -29,9 +29,9 @@ export function BpoContent() {
           ADVANTAGE
         </span>
         <div className="grid grid-cols-3 gap-6">
-          <MegaMenuCard href="/bpo/impact-sourcing" imageSrc="/impactsourcing.svg" title="Impact Sourcing" subtitle="Socially Responsible BPO" />
-          <MegaMenuCard href="/bpo/process-automation" imageSrc="/automation.svg" title="Process Automation" subtitle="Increased Efficiency" />
-          <MegaMenuCard href="/bpo/quality" imageSrc="/quality.svg" title="World Class Quality" subtitle="Standardized processes" />
+          <MegaMenuCard href="/bpo" imageSrc="/impactsourcing.svg" title="Impact Sourcing" subtitle="Socially Responsible BPO" />
+          <MegaMenuCard href="/bpo" imageSrc="/automation.svg" title="Process Automation" subtitle="Increased Efficiency" />
+          <MegaMenuCard href="/bpo" imageSrc="/quality.svg" title="World Class Quality" subtitle="Standardized processes" />
         </div>
       </div>
     </div>

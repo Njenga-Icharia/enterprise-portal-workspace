@@ -1,17 +1,15 @@
-import Hero from "@/components/Hero";
-import Logo from "@/components/technobrainlogo";
-import StatsAbout from "@/components/StatsAbout";
-import ClientImpact from "@/components/ClientImpact";
-import LogoMarquee from "@/components/LogoMarquee";
-import CtaSection from "@/components/CtaSection";
 import ContactForm from "@/components/ContactForm";
-import ScenerySection from "@/components/ScenerySection";
+import HeroVideoHomepage from "@/components/LocalComponentsHomepage/HeroVideoHomepage";
+import StatsAbout from "@/components/LocalComponentsHomepage/StatsAbout";
+import ClientImpact from "@/components/LocalComponentsHomepage/ClientImpact";
+import LogoMarquee from "@/components/LocalComponentsHomepage/LogoMarquee";
+import CtaSection from "@/components/LocalComponentsHomepage/CtaSection";
+import ScenerySection from "@/components/LocalComponentsHomepage/ScenerySection";
 
 export default function Page() {
   return (
     <div className="relative overflow-x-hidden">
-      <Hero />
-      <Logo />
+      <HeroVideoHomepage />
       <StatsAbout />
       <LogoMarquee />
       <ClientImpact />

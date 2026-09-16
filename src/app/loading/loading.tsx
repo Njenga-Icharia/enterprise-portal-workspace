@@ -13,14 +13,14 @@ export default function Loading() {
         </div>
 
         {/* Status Text */}
-        <div className="space-y-2">
+        {/* <div className="space-y-2">
           <h2 className="font-serif font-bold text-2xl text-[#1e1e28] tracking-tight">
             ACQUIRING TARGET...
           </h2>
           <p className="text-xs font-extrabold uppercase tracking-widest text-[#1e1e28]/60">
             Establishing Secure Link
           </p>
-        </div>
+        </div> */}
 
         {/* Progress Bar / Barcode Aesthetic */}
         <div className="w-full bg-[#f8f9fa] border border-[#1e1e28] h-3 rounded-full overflow-hidden p-0.5">
