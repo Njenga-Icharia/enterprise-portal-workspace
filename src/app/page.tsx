@@ -3,19 +3,19 @@
 import dynamic from "next/dynamic";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
-import ToolsWeUse from "@/components/ToolsWeUse";
-import HeroEngineering from "@/components/LocalComponentsEngineering/HeroEngineering";
-import EngineeringCardCarousel from "@/components/LocalComponentsEngineering/CardCarouselEnigineering";
-import BlurryCarouselEngineering from "@/components/LocalComponentsEngineering/BlurryCarouselEngineering";
-import HighlightsEngineering from "@/components/LocalComponentsEngineering/HighlightsEngineering";
-import ResponsiveWindowEngineering from "@/components/LocalComponentsEngineering/ResponsiveWindowEngineering"; 
-import ScrollCurtainEngineering from "@/components/LocalComponentsEngineering/ScrollCurtainEngineering";
+// import ToolsWeUse from "@/components/ToolsWeUse";
+import HeroCloud from "@/components/LocalComponentsCloud/HeroCloud";
+// import CloudCardCarousel from "@/components/LocalComponentsCloud/CardCarouselCloud";
+import BlurryCarouselCloud from "@/components/LocalComponentsCloud/BlurryCarouselCloud";
+// import HighlightsCloud from "@/components/LocalComponentsCloud/HighlightsCloud";
+import ResponsiveWindowCloud from "@/components/LocalComponentsCloud/ResponsiveWindowCloud"; 
+// import ScrollCurtainCloud from "@/components/LocalComponentsCloud/ScrollCurtainCloud";
 
 // Client-only import that prevents the spiral's heavy math/DOM from blocking initial render
-const EngineeringSpiral = dynamic(() => import("@/components/LocalComponentsEngineering/SpiralEngineering"), {
-  ssr: false,
-  loading: () => <div className="h-[800px]" />,
-});
+// const CloudSpiral = dynamic(() => import("@/components/LocalComponentsCloud/CloudSpiral"), {
+//   ssr: false,
+//   loading: () => <div className="h-[800px]" />,
+// });
 
 const MANAGED_SERVICES = [
   "Robotic Process Automation",
@@ -27,81 +27,70 @@ const MANAGED_SERVICES = [
 ];
 
 const HIGHLIGHTS = [
-  "Years of experience in Manual and Automated testing",
-  "Expertise in Web, Mobile applications in both Desktop and Cloud platforms",
+  "Years of experience in Cloud infrastructure and migration",
+  "Expertise in multi-cloud platforms across AWS, Azure, and GCP",
   "Compliant with ISO 27001, ISO 9001 and CMMI Level 5 processes",
-  "Core competency in Software Testing Life Cycle from design to execution",
+  "Core competency in cloud deployment, monitoring, and scaling",
   "Projects deployed worldwide across 35 countries",
-  "ISTQB certified resources following internationally recognized standards",
+  "Certified cloud architecture professionals following international standards",
   "Practicing Agile methodology in project delivery management",
-  "Equipped and experience in quick ramp up & down of resources for short projects"
+  "Equipped and experienced in quick ramp up & down of resources for short projects"
 ];
 
 const SUCCESS_STORIES = [
   {
-    title: "Microsoft Software Testing Centre In Africa",
-    date: "Kenya - 2 May, 2018",
-    description: "Techno Brain has partnered with Microsoft Corporation to launch Africa's first-ever testing and quality assurance center."
+    title: "Cloud Migration & Enterprise Modernization",
+    date: "Global - Enterprise Scale",
+    description: "Migrating legacy core applications to scalable multi-cloud environments with high availability and automated failovers."
   },
   {
-    title: "Feedback Triage & LLM Analytics",
+    title: "Automated Infrastructure & DevOps Pipelines",
     date: "Enterprise Scale",
-    description: "Leveraging insights derived from customer feedback to identify application bugs and analyze diagnostic data using machine learning & LLMs."
+    description: "Leveraging infrastructure-as-code (IaC) and automated CI/CD pipelines to streamline cloud operations and reduce deployment times."
   },
   {
-    title: "Privacy & Compliance Validation",
-    date: "American Multinational Tech Corporation",
-    description: "Validated software against international and local standards, resulting in 18 successful releases, 244 privacy bugs fixed, and a 98% completion rate."
+    title: "Cloud Security & Compliance Validation",
+    date: "Multinational Enterprise",
+    description: "Validating cloud architecture against international security frameworks, resulting in zero-trust compliance and high availability."
   }
 ];
 
-export default function EngineeringPage() {
+export default function CloudPage() {
   return (
     <div className="relative min-h-screen bg-[#f8f9fa] text-[#1e1e28] overflow-x-clip font-sans">
       <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-16">
-
-        {/* --- SPIRAL: right under the navbar --- */}
-        <HeroEngineering />
-        <EngineeringSpiral />
+    </main>
         
-        {/* <AlternatingShowcaseSolutions/>
-        <SlidingPicturesSolutions/> */}
+        <div className="w-full relative">
+        <ResponsiveWindowCloud />
+      </div>       
+        
+        <main>
+        <HeroCloud />
+
 
         {/* CARD CAROUSEL */}
         <div className="mb-4">
           <div className="text-center mb-4">
             <span className="text-xs font-black uppercase tracking-widest text-[#f97316] block mb-1">Our Method</span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold">Standards We Follow</h2>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold">Cloud Standards We Follow</h2>
           </div>
           
 
-          <EngineeringCardCarousel />
         </div>
-        </main>
-
-        <div className="relative overflow-x-hidden">
-          <ToolsWeUse/>
-          <BlurryCarouselEngineering/>
-          <HighlightsEngineering/>
-        </div>
-
-         {/* <div className="w-full relative">
-            <ScrollCurtainEngineering />
-         </div> */}
-
-      
-        <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-20">
-        {/* Highlights Section */}
-       
-                 
-
       </main>
-      <div className="w-full relative">
-            <ResponsiveWindowEngineering/>
-            <ScrollCurtainEngineering />
 
-        </div>
-        <ContactForm />
+      <div className="relative overflow-x-hidden">
+
+        <BlurryCarouselCloud />
+        {/* <HighlightsCloud /> */}
       </div>
+
+      <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-20">
+        {/* Highlights Section */}
+      </main>      
+
+      <ContactForm />
+    </div>
   );
 }
