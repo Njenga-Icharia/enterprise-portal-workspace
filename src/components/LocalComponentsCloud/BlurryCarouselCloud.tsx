@@ -3,42 +3,51 @@
 import React from 'react';
 import { BlurryCarousel, CarouselItem } from '@/components/BlurryCarousel';
 
+// ─── Footer text shown at the bottom of each card ────────────────────────────
+// Edit this string to change the label on every card.
+// Set it to "" (empty quotes) to hide the footer row entirely.
+const FOOTER_TEXT = "Read the case study";
+// ─────────────────────────────────────────────────────────────────────────────
+
 const cloudManagedServicesData: CarouselItem[] = [
   {
-    id: 'cloud-migration',
-    title: 'Cloud Migration & Modernization',
-    description: 'Seamlessly transition core legacy workloads to secure, high-performance cloud environments with minimum downtime and maximum optimization.',
-    imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1542&auto=format&fit=crop',
+    id: 'cloud-migration-deployment',
+    title: 'Cloud Migration & Deployment',
+    description: 'Move applications, data, and workloads to AWS with proven methods — planned, executed, and validated end to end.',
+    imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1170&auto=format&fit=crop',
   },
   {
-    id: 'multi-cloud',
-    title: 'Multi-Cloud Architecture',
-    description: 'Design and deploy resilient multi-cloud strategies across AWS, Azure, and Google Cloud Platform to prevent vendor lock-in and optimize costs.',
+    id: 'cloud-infra-management',
+    title: 'Cloud Infrastructure Management',
+    description: 'Provisioning, patching, scaling, and resource monitoring — continuous management of your AWS infrastructure.',
     imageUrl: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1170&auto=format&fit=crop',
   },
   {
-    id: 'devops-iac',
-    title: 'DevOps & Infrastructure as Code',
-    description: 'Automate release lifecycles and environment provisioning using modern IaC frameworks, containerization, and continuous integration pipelines.',
-    imageUrl: 'https://images.unsplash.com/photo-1618401471353-b98aedd04e11?q=80&w=1170&auto=format&fit=crop',
-  },
-  {
-    id: 'iaas',
-    title: 'Infrastructure-as-a-Service (IaaS)',
-    description: 'Scale your enterprise rapidly with highly resilient, cloud-based computing resources, storage, and networking capabilities designed for scale.',
-    imageUrl: 'https://freerangestock.com/_next/image?url=%2Fimages%2Fsample%2F137546%2FCloud_Infrastructure_-_Infrastructure_as_a_Service_-_IaaS.jpg&w=3840&q=75',
-  },
-  {
-    id: 'cloud-security',
+    id: 'cloud-security-compliance',
     title: 'Cloud Security & Compliance',
-    description: 'Implement robust cloud-native security postures, identity and access management (IAM), and continuous threat monitoring for public sectors.',
-    imageUrl: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1170&auto=format&fit=crop',
+    description: 'Security controls, access management, and compliance monitoring mapped to the regulations your industry requires.',
+    //imageUrl: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1170&auto=format&fit=crop',
+    imageUrl: '/privacysecurity.png',
   },
   {
-    id: 'soc',
-    title: 'Cloud Operations Center (SOC)',
-    description: 'Continuous, proactive cloud monitoring and threat hunting utilizing automated heuristics to safeguard enterprise workloads against threats.',
-    imageUrl: 'https://datacipher.com/wp-content/uploads/2024/06/l85a1k-xqh8-768x513.jpg',
+    id: 'backup-disaster-recovery',
+    title: 'Backup & Disaster Recovery',
+    description: 'Backup and recovery strategies built for business continuity — tested, documented, and repeatable.',
+    // imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1170&auto=format&fit=crop',
+    imageUrl: '/backup.png',
+  },
+  {
+    id: 'cost-optimization',
+    title: 'Cloud Cost Optimization',
+    description: 'Reserved instances, rightsizing, and architecture reviews — continuous monitoring to reduce AWS spend.',
+    //imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1170&auto=format&fit=crop',
+    imageUrl: '/costoptimization.jpg',
+  },
+  {
+    id: 'support-monitoring',
+    title: '24/7 Support & Monitoring',
+    description: 'Round-the-clock monitoring and support for the availability, performance, and security of your cloud environment.',
+    imageUrl:'/monitoring.png', 
   }
 ];
 
@@ -47,9 +56,10 @@ export default function BlurryCarouselCloud() {
     <section className="w-full">
       <BlurryCarousel 
         items={cloudManagedServicesData} 
-        sectionTitle="Cloud Managed Services" 
-        bgColor="bg-[#f97316]"
+        sectionTitle="Managed Cloud Services" 
+        bgColor="bg-[#4b456f]"
         titleColor="text-white"
+        footerText=" "
       />
     </section>
   );
