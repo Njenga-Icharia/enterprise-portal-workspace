@@ -15,10 +15,7 @@ interface BlurryCarouselProps {
   sectionTitle?: string;
   bgColor?: string;      
   titleColor?: string;   
-  /**
-   * Bottom-of-card footer text. Renders as `{text} →`.
-   * Pass "" (empty string) to hide the footer row entirely.
-   */
+  
   footerText?: string;
 }
 
@@ -119,7 +116,7 @@ export const BlurryCarousel: React.FC<BlurryCarouselProps> = ({
                   </p>
                 </div>
 
-                {/* Bottom block — hidden when footerText is empty */}
+                {/* Bottom block*/}
                 {footerText && (
                   <div className="flex items-center gap-2 text-[#4b456f] text-sm font-semibold">
                     {footerText} 

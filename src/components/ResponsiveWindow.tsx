@@ -6,13 +6,10 @@ export interface IndustryItem {
   id: string;
   title: string;
   description: string;
-  /** A full remote URL, e.g. 'https://images.unsplash.com/...' */
   imageUrl?: string;
-  /** A local file already sitting in your /public folder, e.g. '/devops.jpg' */
   imageSrc?: string;
 }
 
-// If both are given, the local /public image wins. At least one must exist.
 function resolveImage(item: IndustryItem): string {
   return item.imageSrc || item.imageUrl || '';
 }
@@ -37,17 +34,13 @@ export default function ResponsiveWindow({
   const itemsPerPage = 4;
   const n = items.length;
 
-  // If we have more items than fit on screen, pad a buffer of `itemsPerPage`
-  // items on each side (copied from the front/back of the real list) so the
-  // track can keep sliding in one direction forever without ever visibly
-  // "teleporting" back to the start.
   const canLoop = n > itemsPerPage;
   const offset = canLoop ? itemsPerPage : 0;
   const extendedItems = canLoop
     ? [...items.slice(-itemsPerPage), ...items, ...items.slice(0, itemsPerPage)]
     : items;
 
-  // trackIndex = which extendedItems index is currently left-most in view
+  // trackIndex for current left-most in view
   const [trackIndex, setTrackIndex] = useState<number>(offset);
   const [transition, setTransition] = useState<boolean>(true);
 
@@ -63,7 +56,7 @@ export default function ResponsiveWindow({
     setHoveredIndex(null);
   };
 
-  // Automatic conveyor belt effect: only runs while nothing is really hovered
+  // Automatic conveyor belt effect, only runs when nothing is hovered
   useEffect(() => {
     if (hoveredIndex !== null) return;
     if (!canLoop) return;
@@ -74,12 +67,9 @@ export default function ResponsiveWindow({
     return () => clearInterval(interval);
   }, [hoveredIndex, canLoop]);
 
-  // After the track slides into the buffer zone, snap (with no animation)
-  // back to the equivalent real position so it can keep sliding forever.
+  // repeat conveyor belt effect.
   const handleTrackTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
-    // transitionend bubbles up from every child animation (hover text, fades,
-    // color changes, etc). Only react to the track's own horizontal slide,
-    // or the belt gets interrupted mid-slide by unrelated child transitions.
+    // hover text, fades, color changes, etc)
     if (e.target !== e.currentTarget || e.propertyName !== 'transform') return;
     if (!canLoop) return;
     if (trackIndex >= offset + n) {
@@ -91,7 +81,6 @@ export default function ResponsiveWindow({
     }
   };
 
-  // Re-enable the transition on the next frame after a silent snap
   useEffect(() => {
     if (!transition) {
       const id = requestAnimationFrame(() => setTransition(true));
@@ -99,7 +88,7 @@ export default function ResponsiveWindow({
     }
   }, [transition]);
 
-  // When nothing is really hovered, the left-most tile (position 0) acts as if it is
+  // Behavior when nothing is hovered (the left-most tile (position 0)) 
   const effectiveHoverIndex = hoveredIndex !== null ? hoveredIndex : 0;
 
   // Real (non-extended) index of the left-most visible item, for the background image
@@ -132,8 +121,7 @@ export default function ResponsiveWindow({
         <span className="text-[#f97316]"> {ColoredSectionTitle} </span>{sectionTitle}
       </h2>
 
-      {/* NAVIGATION ARROWS — z-30 so they sit ABOVE the sliding track (z-20)
-          and can actually receive clicks instead of the column beneath them. */}
+      {/* NAVIGATION ARROWS */}
       <button 
         onClick={handlePrevSlide}
         className="absolute left-8 top-1/2 -translate-y-1/2 z-30 p-2 text-white/70 hover:text-white transition-colors duration-300"

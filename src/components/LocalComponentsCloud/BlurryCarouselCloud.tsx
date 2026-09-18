@@ -3,11 +3,8 @@
 import React from 'react';
 import { BlurryCarousel, CarouselItem } from '@/components/BlurryCarousel';
 
-// ─── Footer text shown at the bottom of each card ────────────────────────────
-// Edit this string to change the label on every card.
-// Set it to "" (empty quotes) to hide the footer row entirely.
 const FOOTER_TEXT = "Read the case study";
-// ─────────────────────────────────────────────────────────────────────────────
+
 
 const cloudManagedServicesData: CarouselItem[] = [
   {
@@ -59,7 +56,7 @@ export default function BlurryCarouselCloud() {
         sectionTitle="Managed Cloud Services" 
         bgColor="bg-[#4b456f]"
         titleColor="text-white"
-        footerText=" "
+        footerText=""
       />
     </section>
   );
