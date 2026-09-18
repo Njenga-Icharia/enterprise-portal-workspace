@@ -6,8 +6,15 @@ export interface IndustryItem {
   id: string;
   title: string;
   description: string;
-  imageUrl: string;
-  imageSrc: string;
+  /** A full remote URL, e.g. 'https://images.unsplash.com/...' */
+  imageUrl?: string;
+  /** A local file already sitting in your /public folder, e.g. '/devops.jpg' */
+  imageSrc?: string;
+}
+
+// If both are given, the local /public image wins. At least one must exist.
+function resolveImage(item: IndustryItem): string {
+  return item.imageSrc || item.imageUrl || '';
 }
 
 interface ResponsiveWindowProps {
@@ -114,7 +121,7 @@ export default function ResponsiveWindow({
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out ${
               index === bgIndex ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ backgroundImage: `url(${item.imageUrl})` }}
+            style={{ backgroundImage: `url(${resolveImage(item)})` }}
           />
         ))}
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
@@ -125,10 +132,11 @@ export default function ResponsiveWindow({
         <span className="text-[#f97316]"> {ColoredSectionTitle} </span>{sectionTitle}
       </h2>
 
-      {/* NAVIGATION ARROWS */}
+      {/* NAVIGATION ARROWS — z-30 so they sit ABOVE the sliding track (z-20)
+          and can actually receive clicks instead of the column beneath them. */}
       <button 
         onClick={handlePrevSlide}
-        className="absolute left-8 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-colors duration-300"
+        className="absolute left-8 top-1/2 -translate-y-1/2 z-30 p-2 text-white/70 hover:text-white transition-colors duration-300"
         aria-label="Previous Slide"
       >
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -138,7 +146,7 @@ export default function ResponsiveWindow({
 
       <button 
         onClick={handleNextSlide}
-        className="absolute right-8 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-colors duration-300"
+        className="absolute right-8 top-1/2 -translate-y-1/2 z-30 p-2 text-white/70 hover:text-white transition-colors duration-300"
         aria-label="Next Slide"
       >
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
