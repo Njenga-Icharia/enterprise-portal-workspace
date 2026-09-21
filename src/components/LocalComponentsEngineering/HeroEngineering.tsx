@@ -8,16 +8,22 @@ export default function HeroEngineering() {
       imageAlt=""
       eyebrow="Engineering"
       headingLine1="World-class software engineering,"
-      headingLine2=" delivered from the"
-      headingHighlight=" Silicon Savannah "
-      description="Turning Complex Business Challenges Into Working Enterprise Solutions."
+      headingLine2="delivered from the"
+      headingHighlight="Silicon Savannah"
+      description="Enterprise software engineering and quality assurance — development, DevOps, and security, privacy, and accessibility testing at scale."
       primaryCta={{ href: "/engineering/method", label: "Talk to an expert" }}
       secondaryCta={{ href: "/engineering/capabilities", label: "View case studies" }}
       stats={{
-        first: { label: "", value: "" }, // 09
-        second: { label: "", value: "" }, // Level 05
-        third: { label: "", value: "" }, // 35
+        first:  { label: "Countries served",       value: "35+" },
+        second: { label: "CMMI maturity",          value: "Level 05" },
+        third:  { label: "Microsoft Testing Center", value: "1st in Africa" },
       }}
+      credentials={[
+        "ISO 27001",
+        "ISO 9001",
+        "CMMI Level 5",
+        "ISTQB Certified Resources",
+      ]}
     />
   );
 }

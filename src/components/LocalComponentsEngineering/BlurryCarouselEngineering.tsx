@@ -45,11 +45,12 @@ const managedServicesData: CarouselItem[] = [
 export default function BlurryCarouselEngineering() {
   return (
     <section className="w-full">
-      <BlurryCarousel 
-        items={managedServicesData} 
-        sectionTitle="Managed Services" 
+      <BlurryCarousel
+        items={managedServicesData}
+        sectionTitle="Managed Services"
         bgColor="bg-[#4b456f]"
         titleColor="text-white"
+        footerText="═════════════════════════════"
       />
     </section>
   );
