@@ -13,7 +13,7 @@ interface HighlightsProps {
   paragraphs: string[];
   items: HighlightItem[];
   watermarkText?: string; 
-  bgColor?: string; // New optional prop for background color
+  bgColor?: string; 
 }
 
 export default function Highlights({ 
@@ -24,9 +24,10 @@ export default function Highlights({
   bgColor = "bg-[#f97316]" // Defaults to orange if not passed
 }: HighlightsProps) {
   return (
+  <section className="no-orange-cursor w-full bg-[#f97316] border-t-2 border-[#1e1e28]"> //Deadshot color
     <div className={`relative w-full ${bgColor} py-20 overflow-hidden`}>
       
-      {/* --- DESKTOP WATERMARK (Vertical, Left Side, Behind everything) --- */}
+      {/*DESKTOP WATERMARK*/}
       <div className="hidden xl:flex flex-col items-center justify-center absolute left-10 top-1/2 -translate-y-1/2 z-0 pointer-events-none">
         {watermarkText.split("").map((char, index) => (
           <span 
@@ -98,5 +99,6 @@ export default function Highlights({
         </div>
       </div>
     </div>
+    </section>
   );
 }
