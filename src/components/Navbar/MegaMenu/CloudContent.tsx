@@ -9,7 +9,7 @@ export function CloudContent() {
         <span className="text-xs font-extrabold tracking-wider uppercase text-white mb-2">
           CLOUD EXPERTISE
         </span>
-        <Link href="/cloud-services" className="group inline-block mb-2 w-max">
+        <Link href="/cloud" className="group inline-block mb-2 w-max">
           <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight transform group-hover:translate-x-2 transition-transform duration-300">
             Cloud Innovation
           </h2>
@@ -18,9 +18,9 @@ export function CloudContent() {
           AWS & Microsoft Azure Partnerships
         </p>
         <div className="border-t border-black/20 pt-6 space-y-3">
-          <MegaMenuLink href="/cloud-services/managed" label="Managed Cloud Services" />
-          <MegaMenuLink href="/cloud-services/migration" label="Cloud Migration" />
-          <MegaMenuLink href="/cloud-services/finops" label="FinOps & Optimization" />
+          <MegaMenuLink href="/cloud" label="Managed Cloud Services" />
+          <MegaMenuLink href="/cloud" label="Cloud Migration" />
+          <MegaMenuLink href="/cloud" label="FinOps & Optimization" />
         </div>
       </div>
 
@@ -29,9 +29,9 @@ export function CloudContent() {
           INNOVATION
         </span>
         <div className="grid grid-cols-3 gap-6">
-          <MegaMenuCard href="/cloud-services/gen-ai" imageSrc="/generativeAI.svg" title="Generative AI" subtitle="Gen-AI Solutions" />
-          <MegaMenuCard href="/cloud-services/devops-cloud" imageSrc="/devops.svg" title="DevOps Cloud" subtitle="Streamlined Pipelines" />
-          <MegaMenuCard href="/cloud-services/microsoft-workload" imageSrc="/workload.svg" title="Microsoft Workload" subtitle="Dedicated Solutions" />
+          <MegaMenuCard href="/cloud" imageSrc="/generativeAI.svg" title="Generative AI" subtitle="Gen-AI Solutions" />
+          <MegaMenuCard href="/cloud" imageSrc="/devops.svg" title="DevOps Cloud" subtitle="Streamlined Pipelines" />
+          <MegaMenuCard href="/cloud" imageSrc="/workload.svg" title="Microsoft Workload" subtitle="Dedicated Solutions" />
         </div>
       </div>
     </div>
