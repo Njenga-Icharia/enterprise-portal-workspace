@@ -1,4 +1,3 @@
-// components/Logo.tsx
 interface LogoProps {
   isDark?: boolean;
 }
