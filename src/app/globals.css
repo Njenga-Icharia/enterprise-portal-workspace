@@ -11,6 +11,23 @@
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
   --font-serif: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+
+  /* Techno Brain Official primary brand palette */
+  --color-tbl-orange: #fa7d38;
+  --color-[#1e1e28]: #595278;
+  /* --color-[#1e1e28]-mid: #4b456f;
+  --color-[#1e1e28]-dark: #3b3852; */
+
+  /* Official Business unit Colors */
+  --color-unit-pfm: #0072bc;
+  --color-unit-idm: #7a5992;
+  --color-unit-tc: #f38a20;
+  --color-unit-oracle: #d11e2a;
+  --color-unit-microsoft: #01143e;
+  --color-unit-training: #9cbd3c;
+  --color-unit-bpo: #09807a;
+  --color-unit-digital: #ffdd00;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,10 +61,11 @@
   }
 }
 
+/*Marquee Speed */
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 07s linear infinite;
+  animation: marquee 7s linear infinite;
 }
 
 .animate-marquee:hover {

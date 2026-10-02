@@ -7,8 +7,8 @@ export default function NotFound() {
 
         {/* 404 marker */}
         <div className="relative w-16 h-16 mx-auto flex items-center justify-center">
-          <div className="absolute inset-0 border-2 border-dashed border-[#f97316] rounded-full"></div>
-          <span className="font-serif font-bold text-2xl text-[#f97316]">404</span>
+          <div className="absolute inset-0 border-2 border-dashed border-tbl-orange rounded-full"></div>
+          <span className="font-serif font-bold text-2xl text-tbl-orange">404</span>
         </div>
 
         <div className="space-y-2">
@@ -22,7 +22,7 @@ export default function NotFound() {
 
         <Link
           href="/"
-          className="inline-flex items-center justify-center border-2 border-[#1e1e28] bg-[#f97316] px-6 py-3 text-xs font-black uppercase tracking-wider text-white transition-colors hover:bg-transparent hover:text-[#f97316]"
+          className="inline-flex items-center justify-center border-2 border-[#1e1e28] bg-tbl-orange px-6 py-3 text-xs font-black uppercase tracking-wider text-white transition-colors hover:bg-transparent hover:text-tbl-orange"
         >
           Return 
         </Link>

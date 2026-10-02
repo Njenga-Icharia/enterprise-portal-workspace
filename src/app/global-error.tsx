@@ -17,7 +17,7 @@ export default function GlobalError({
             </h2>
             <button
               onClick={reset}
-              className="border-2 border-[#1e1e28] bg-[#f97316] px-6 py-3 text-xs font-black uppercase tracking-wider text-white"
+              className="border-2 border-[#1e1e28] bg-tbl-orange px-6 py-3 text-xs font-black uppercase tracking-wider text-white"
             >
               Reload
             </button>

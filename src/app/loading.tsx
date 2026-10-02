@@ -6,10 +6,10 @@ export default function Loading() {
         {/* Animated Scope*/}
         <div className="relative w-16 h-16 mx-auto flex items-center justify-center">
           {/* Outer ring */}
-          <div className="absolute inset-0 border-2 border-dashed border-[#f97316] rounded-full animate-spin"></div>
+          <div className="absolute inset-0 border-2 border-dashed border-tbl-orange rounded-full animate-spin"></div>
 
           {/* Inner core */}
-          <div className="w-6 h-6 bg-[#f97316] rounded-full shadow-[0_0_10px_#f97316] animate-pulse"></div>
+          <div className="w-6 h-6 bg-tbl-orange rounded-full shadow-[0_0_10px_#f97316] animate-pulse"></div>
         </div>
 
 
@@ -23,7 +23,7 @@ export default function Loading() {
         </div>
 
         <div className="w-full bg-[#f8f9fa] border border-[#1e1e28] h-3 rounded-full overflow-hidden p-0.5">
-          <div className="bg-[#f97316] h-full rounded-full w-2/3 animate-pulse"></div>
+          <div className="bg-tbl-orange h-full rounded-full w-2/3 animate-pulse"></div>
         </div>
 
       </div>

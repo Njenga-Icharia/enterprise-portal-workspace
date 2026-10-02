@@ -12,8 +12,8 @@ export default function Error({
       <div className="border-2 border-[#1e1e28] bg-white p-8 rounded-2xl shadow-[6px_6px_0px_0px_#1e1e28] max-w-md w-full text-center space-y-6">
 
         <div className="relative w-16 h-16 mx-auto flex items-center justify-center">
-          <div className="absolute inset-0 border-2 border-dashed border-[#f97316] rounded-full"></div>
-          <span className="font-serif font-bold text-3xl text-[#f97316]">!</span>
+          <div className="absolute inset-0 border-2 border-dashed border-tbl-orange rounded-full"></div>
+          <span className="font-serif font-bold text-3xl text-tbl-orange">!</span>
         </div>
 
         <div className="space-y-2">
@@ -28,7 +28,7 @@ export default function Error({
         <div className="flex gap-3 justify-center">
           <button
             onClick={reset}
-            className="inline-flex items-center justify-center border-2 border-[#1e1e28] bg-[#f97316] px-6 py-3 text-xs font-black uppercase tracking-wider text-white transition-colors hover:bg-transparent hover:text-[#f97316]"
+            className="inline-flex items-center justify-center border-2 border-[#1e1e28] bg-tbl-orange px-6 py-3 text-xs font-black uppercase tracking-wider text-white transition-colors hover:bg-transparent hover:text-tbl-orange"
           >
             Try Again
           </button>
