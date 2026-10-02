@@ -6,7 +6,7 @@ export default function StatsAbout() {
     <section className="w-full bg-[#1e1e28] text-[#f8f9fa] py-24 px-6 sm:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="border border-white/20 rounded-3xl p-8 md:p-12 mb-20 flex flex-col md:flex-row items-center gap-8 md:gap-16">
-          <h2 className="text-7xl md:text-9xl font-black text-[#f97316] tracking-tighter">
+          <h2 className="text-7xl md:text-9xl font-black text-tbl-orange tracking-tighter">
             18M+
           </h2>
           <div className="max-w-xl">
@@ -41,7 +41,7 @@ export default function StatsAbout() {
           <div className="space-y-6">
             <div className="border border-white/20 rounded-2xl p-8 bg-white/5 hover:bg-white/10 transition-colors">
               <div className="flex items-start gap-4">
-                <span className="text-[#f97316] font-black text-sm pt-1">01</span>
+                <span className="text-tbl-orange font-black text-sm pt-1">01</span>
                 <div>
                   <h4 className="text-2xl font-serif font-bold mb-3 text-white">CMMI Maturity Level 5</h4>
                   <p className="text-white/70 text-sm font-medium leading-relaxed">Appraised at the highest maturity level, ensuring our development and delivery processes meet strict, world-class quality standards.</p>
@@ -51,7 +51,7 @@ export default function StatsAbout() {
 
             <div className="border border-white/20 rounded-2xl p-8 bg-white/5 hover:bg-white/10 transition-colors">
               <div className="flex items-start gap-4">
-                <span className="text-[#f97316] font-black text-sm pt-1">02</span>
+                <span className="text-tbl-orange font-black text-sm pt-1">02</span>
                 <div>
                   <h4 className="text-2xl font-serif font-bold mb-3 text-white">1st Microsoft Testing Center</h4>
                   <p className="text-white/70 text-sm font-medium leading-relaxed">We launched Africa’s first-ever Microsoft software testing and quality assurance center, pioneering technical excellence on the continent.</p>
@@ -61,7 +61,7 @@ export default function StatsAbout() {
 
             <div className="border border-white/20 rounded-2xl p-8 bg-white/5 hover:bg-white/10 transition-colors">
               <div className="flex items-start gap-4">
-                <span className="text-[#f97316] font-black text-sm pt-1">03</span>
+                <span className="text-tbl-orange font-black text-sm pt-1">03</span>
                 <div>
                   <h4 className="text-2xl font-serif font-bold mb-3 text-white">Great Place To Work®</h4>
                   <p className="text-white/70 text-sm font-medium leading-relaxed">Officially certified for back-to-back years, clinching top spots for Gen-Z engagement and cultivating a thriving global engineering culture.</p>

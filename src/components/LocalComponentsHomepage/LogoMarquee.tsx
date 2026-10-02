@@ -7,42 +7,62 @@ interface LogoItem {
   name: string;
   src: string;
   url: string;
-  customClass?: string;
+  customClass?: string; //custom size
+  cardClass?: string; //custom bg color
 }
 
 const PARTNER_LOGOS: LogoItem[] = [
-  { id: "dogecoin", name: "Dogecoin", src: "/logos/dogecoin.svg", url: "https://dogecoin.com" },
-  { id: "burgerking", name: "Burger King", src: "/logos/burgerking.svg", url: "https://www.bk.com" },
-  { id: "crunchyroll", name: "Crunchyroll", src: "/logos/crunchyroll.svg", url: "https://www.crunchyroll.com" },
-  { id: "cw", name: "CW", src: "/logos/cw.svg", url: "https://www.cwtv.com" },
-  { id: "dc", name: "DC", src: "/logos/dc.svg", url: "https://www.dc.com" },
-  { id: "dominos", name: "Dominos", src: "/logos/dominos.svg", url: "https://www.dominos.com" },
-  { id: "drpepper", name: "Dr Pepper", src: "/logos/drpepper.svg", url: "https://www.drpepper.com" },
-  { id: "fenty", name: "Fenty", src: "/logos/fenty.svg", url: "https://fentybeauty.com" },
-  { id: "instagram", name: "Instagram", src: "/logos/instagram.svg", url: "https://www.instagram.com" },
-  { id: "kfc", name: "KFC", src: "/logos/kfc-kentucky-fried-chicken.svg", url: "https://www.kfc.com" },
-  { id: "kitkat", name: "KitKat", src: "/logos/kitkat.svg", url: "https://www.kitkat.com" },
-  { id: "lamborghini", name: "Lamborghini", src: "/logos/lamborghini.svg", url: "https://www.lamborghini.com" },
-  { id: "loreal", name: "L'Oreal", src: "/logos/l-oreal.svg", url: "https://www.loreal.com", customClass: "scale-150" },
-  { id: "marvel", name: "Marvel", src: "/logos/marvel.svg", url: "https://www.marvel.com" },
-  { id: "mercedesbenz", name: "Mercedes-Benz", src: "/logos/mercedesbenz.svg", url: "https://www.mercedes-benz.com" },
+
   { id: "microsoft", name: "Microsoft", src: "/logos/microsoft.svg", url: "https://www.microsoft.com" },
-  { id: "pokemon", name: "Pokemon", src: "/logos/pokemon.svg", url: "https://www.pokemon.com" },
-  { id: "rovio", name: "Rovio", src: "/logos/rovio.svg", url: "https://www.rovio.com" },
-  { id: "steam", name: "Steam", src: "/logos/steam.svg", url: "https://store.steampowered.com" },
-  { id: "twitch", name: "Twitch", src: "/logos/twitch.svg", url: "https://www.twitch.tv" },
-  { id: "redbull", name: "Red Bull", src: "/logos/redbulle.svg", url: "https://www.redbull.com" },
-  { id: "suzuki", name: "Suzuki", src: "/logos/suzuki.svg", url: "https://global.suzuki.com" },
-  { id: "tacobell", name: "Taco Bell", src: "/logos/tacobell.svg", url: "https://www.tacobell.com" },
-  { id: "tiktok", name: "TikTok", src: "/logos/tiktok.svg", url: "https://www.tiktok.com" },
-  { id: "totalenergies", name: "TotalEnergies", src: "/logos/totalenergies.svg", url: "https://www.totalenergies.com" },
-  { id: "visa", name: "Visa", src: "/logos/visa.svg", url: "https://www.visa.com" },
-  { id: "weeklyshonenjump", name: "Weekly Shonen Jump", src: "/logos/weeklyshonenjump.svg", url: "https://www.viz.com/shonenjump" },
+  { id: "oracle", name: "Oracle", src: "/logos/oracle.svg", url: "https://www.oracle.com/africa/" },
+  { id: "aws", name: "AWS", src: "/logos/aws.svg", url: "https://aws.amazon.com" },
+  { id: "serenic", name: "Serenic", src: "/logos/serenic.png", url: "https://www.devex.com/organizations/serenic-software-38647" , customClass: "scale-245" },
+  { id: "newhorizons", name: "New Horizons", src: "/logos/newhorizons.png", url: "https://www.newhorizons.com/" , customClass: "scale-110" },
+  { id: "safaricom", name: "Safaricom", src: "/logos/safaricom.svg", url: "https://www.safaricom.co.ke/" , customClass: "scale-245" },
+  { id: "generation", name: "Generations Kenya", src: "/logos/generationkenya.png", url: "https://kenya.generation.org/"  , customClass: "scale-110" },
+  { id: "cocacola", name: "Coca-Cola", src: "/logos/cocacola.svg", url: "https://www.coca-cola.com/ke/en", customClass: "scale-110" }, 
+  { id: "huawei", name: "Huawei", src: "/logos/huawei.svg", url: "https://www.huawei.com/africa/" },
+  { id: "sap", name: "SAP", src: "/logos/sap.svg", url: "https://www.sap.com/africa/index.html" },
+  { id: "cisco", name: "Cisco", src: "/logos/cisco.svg", url: "https://www.cisco.com" },
+  { id: "utu", name: "Utu", src: "/logos/utu.jpg", url: "https://utu.io/" , customClass: "scale-130" },
+  { id: "awash", name: "Awash", src: "/logos/awash.svg", url: "https://awashbank.com", customClass: "scale-130" },
+  { id: "ictkenya", name: "Ictkenya", src: "/logos/ictkenya.png", url: "https://ict.go.ke"  , customClass: "scale-120" },
+  { id: "childline", name: "Childline", src: "/logos/childline.png", url: "https://childlinekenya.co.ke"  , customClass: "scale-110" },
+  { id: "worldvision", name: "Worldvision", src: "/logos/worldvision.svg", url: "https://www.wvi.org/kenya" , cardClass: "bg-[#1e1e28]" },
+  { id: "rockefeller", name: "Rockefeller", src: "/logos/rockefeller.png", url: "https://www.rockefellerfoundation.org/offices/nairobi-kenya/" },
+  { id: "sama", name: "Sama", src: "/logos/sama.svg", url: "https://www.sama.com" },
+  
+  // { id: "dogecoin", name: "Dogecoin", src: "/logos/dogecoin.svg", url: "https://dogecoin.com" },
+  // { id: "burgerking", name: "Burger King", src: "/logos/burgerking.svg", url: "https://www.bk.com" },
+  // { id: "crunchyroll", name: "Crunchyroll", src: "/logos/crunchyroll.svg", url: "https://www.crunchyroll.com" },
+  // { id: "cw", name: "CW", src: "/logos/cw.svg", url: "https://www.cwtv.com" },
+  // { id: "dc", name: "DC", src: "/logos/dc.svg", url: "https://www.dc.com" },
+  // { id: "dominos", name: "Dominos", src: "/logos/dominos.svg", url: "https://www.dominos.com" },
+  // { id: "drpepper", name: "Dr Pepper", src: "/logos/drpepper.svg", url: "https://www.drpepper.com" },
+  // { id: "fenty", name: "Fenty", src: "/logos/fenty.svg", url: "https://fentybeauty.com" },
+  // { id: "instagram", name: "Instagram", src: "/logos/instagram.svg", url: "https://www.instagram.com" },
+  // { id: "kfc", name: "KFC", src: "/logos/kfc-kentucky-fried-chicken.svg", url: "https://www.kfc.com" },
+  // { id: "kitkat", name: "KitKat", src: "/logos/kitkat.svg", url: "https://www.kitkat.com" },
+  // { id: "lamborghini", name: "Lamborghini", src: "/logos/lamborghini.svg", url: "https://www.lamborghini.com" },
+  // { id: "loreal", name: "L'Oreal", src: "/logos/l-oreal.svg", url: "https://www.loreal.com", customClass: "scale-150" },
+  // { id: "marvel", name: "Marvel", src: "/logos/marvel.svg", url: "https://www.marvel.com" },
+  // { id: "mercedesbenz", name: "Mercedes-Benz", src: "/logos/mercedesbenz.svg", url: "https://www.mercedes-benz.com" },
+  // { id: "pokemon", name: "Pokemon", src: "/logos/pokemon.svg", url: "https://www.pokemon.com" },
+  // { id: "rovio", name: "Rovio", src: "/logos/rovio.svg", url: "https://www.rovio.com" },
+  // { id: "steam", name: "Steam", src: "/logos/steam.svg", url: "https://store.steampowered.com" },
+  // { id: "twitch", name: "Twitch", src: "/logos/twitch.svg", url: "https://www.twitch.tv" },
+  // { id: "redbull", name: "Red Bull", src: "/logos/redbulle.svg", url: "https://www.redbull.com" },
+  // { id: "suzuki", name: "Suzuki", src: "/logos/suzuki.svg", url: "https://global.suzuki.com" },
+  // { id: "tacobell", name: "Taco Bell", src: "/logos/tacobell.svg", url: "https://www.tacobell.com" },
+  // { id: "tiktok", name: "TikTok", src: "/logos/tiktok.svg", url: "https://www.tiktok.com" },
+  // { id: "totalenergies", name: "TotalEnergies", src: "/logos/totalenergies.svg", url: "https://www.totalenergies.com" },
+  // { id: "visa", name: "Visa", src: "/logos/visa.svg", url: "https://www.visa.com" },
+  // { id: "weeklyshonenjump", name: "Weekly Shonen Jump", src: "/logos/weeklyshonenjump.svg", url: "https://www.viz.com/shonenjump" },
 ];
 
 export default function LogoMarquee() {
   return (
-    <section className="w-full bg-[#4b456f] py-20 border-t-2 border-[#1e1e28] overflow-hidden">
+    <section className="w-full  bg-[#595278] py-20 border-t-2 border-[#1e1e28] overflow-hidden"> {/* bg-[#4b456f] bg-[#504c6a] */}
       <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
         <p className="text-sm font-extrabold uppercase tracking-widest text-[#f8f9fa]/70">
           Trusted by global leaders, enterprises, and partners worldwide
@@ -61,7 +81,7 @@ export default function LogoMarquee() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visit ${logo.name}`}
-              className="flex items-center justify-center p-6 border-3 border-[#1e1e28] rounded-3xl bg-white shadow-[6px_6px_0px_0px_#1e1e28] shrink-0 h-36 w-64 overflow-hidden group/card"
+              className="flex items-center justify-center p-4 border-3 border-[#1e1e28] rounded-3xl bg-white shadow-[6px_6px_0px_0px_#1e1e28] shrink-0 h-36 w-64 overflow-hidden group/card"
             >
               <img 
                 src={logo.src} 

@@ -13,7 +13,7 @@ export default function SpotlightGridBpo() {
       gridBaseColor="text-[rgba(255,255,255,0.08)]"
       gridHighlightColor="text-orange-500/80"
       bgColor="bg-[#030303]"
-      buttonColor="bg-[#f97316] hover:bg-orange-600"
+      buttonColor="bg-tbl-orange hover:bg-orange-600"
       buttonGlow="shadow-[0_0_45px_-5px_rgba(249,115,22,0.6)]"
 
 

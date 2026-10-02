@@ -22,7 +22,7 @@ export default function ClientImpact() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="border-2 border-[#1e1e28] rounded-2xl p-8 bg-[#f8f9fa] shadow-[4px_4px_0px_0px_#1e1e28] hover:translate-y-[-4px] hover:shadow-[6px_6px_0px_0px_#1e1e28] transition-all flex flex-col">
-            <span className="bg-[#f97316] text-white text-xs font-black px-2.5 py-1 rounded mb-6 w-max">01</span>
+            <span className="bg-tbl-orange text-white text-xs font-black px-2.5 py-1 rounded mb-6 w-max">01</span>
             <h3 className="text-xl font-serif font-bold mb-4">Scalability & Automation</h3>
             <p className="text-[#1e1e28]/70 text-sm font-medium leading-relaxed italic mb-4">
               "Good to see the investments in automation are enhancing our scalability. This advancement streamlines our processes for our engineering team."
@@ -31,7 +31,7 @@ export default function ClientImpact() {
           </div>
 
           <div className="border-2 border-[#1e1e28] rounded-2xl p-8 bg-[#f8f9fa] shadow-[4px_4px_0px_0px_#1e1e28] hover:translate-y-[-4px] hover:shadow-[6px_6px_0px_0px_#1e1e28] transition-all flex flex-col">
-            <span className="bg-[#f97316] text-white text-xs font-black px-2.5 py-1 rounded mb-6 w-max">02</span>
+            <span className="bg-tbl-orange text-white text-xs font-black px-2.5 py-1 rounded mb-6 w-max">02</span>
             <h3 className="text-xl font-serif font-bold mb-4">Inclusive Accessibility</h3>
             <p className="text-[#1e1e28]/70 text-sm font-medium leading-relaxed italic mb-4">
               "Great to see the partnership Techno Brain has with Accessibility organizations in Kenya... making our products more accessible and inclusive."
@@ -40,7 +40,7 @@ export default function ClientImpact() {
           </div>
 
           <div className="border-2 border-[#1e1e28] rounded-2xl p-8 bg-[#f8f9fa] shadow-[4px_4px_0px_0px_#1e1e28] hover:translate-y-[-4px] hover:shadow-[6px_6px_0px_0px_#1e1e28] transition-all flex flex-col">
-            <span className="bg-[#f97316] text-white text-xs font-black px-2.5 py-1 rounded mb-6 w-max">03</span>
+            <span className="bg-tbl-orange text-white text-xs font-black px-2.5 py-1 rounded mb-6 w-max">03</span>
             <h3 className="text-xl font-serif font-bold mb-4">Unmatched Efficiency</h3>
             <p className="text-[#1e1e28]/70 text-sm font-medium leading-relaxed italic mb-4">
               "Great to see a vendor partner focused on improving overall efficiency... aware of the need to get accurate results as fast as possible."
@@ -49,12 +49,12 @@ export default function ClientImpact() {
           </div>
 
           <div className="border-2 border-[#1e1e28] rounded-2xl p-8 bg-[#f8f9fa] shadow-[4px_4px_0px_0px_#1e1e28] hover:translate-y-[-4px] hover:shadow-[6px_6px_0px_0px_#1e1e28] transition-all flex flex-col">
-            <span className="bg-[#f97316] text-white text-xs font-black px-2.5 py-1 rounded mb-6 w-max">04</span>
+            <span className="bg-tbl-orange text-white text-xs font-black px-2.5 py-1 rounded mb-6 w-max">04</span>
             <h3 className="text-xl font-serif font-bold mb-4">Proven Enterprise Impact</h3>
             <p className="text-[#1e1e28]/70 text-sm font-medium leading-relaxed mb-4">
               Successfully driving core infrastructure from IFMIS platforms in Ethiopia to RPA implementations for Safaricom and Tax systems in Malawi.
             </p>
-            <p className="text-xs font-extrabold uppercase mt-auto text-[#f97316]">View Case Studies →</p>
+            <p className="text-xs font-extrabold uppercase mt-auto text-tbl-orange">View Case Studies →</p>
           </div>
         </div>
       </div>
