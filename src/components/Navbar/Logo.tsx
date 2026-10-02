@@ -8,7 +8,7 @@ export default function Logo({ isOpen }: NavStateProps) {
     <Link href="/" className="flex flex-col select-none py-1 group">
       <div className="flex gap-1.5 mb-1.5">
         <div className={`w-5 h-5 transition-colors ${isOpen ? "bg-white/80" : "bg-[#f97316]"}`}></div>
-        <div className={`w-5 h-5 transition-colors ${isOpen ? "bg-white/80" : "bg-[#56536b]"}`}></div>
+        <div className={`w-5 h-5 transition-colors ${isOpen ? "bg-white/80" : "bg-[#595278]"}`}></div>
       </div>
       <div className="flex gap-1.5 items-start">
         <div className={`w-5 h-5 transition-colors ${isOpen ? "bg-white/80" : "bg-[#56536b]"}`}></div>

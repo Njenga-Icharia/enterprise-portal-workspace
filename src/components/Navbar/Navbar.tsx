@@ -43,7 +43,7 @@ export default function Navbar() {
   const isOpen = activeDropdown !== null || mobileMenuOpen;
 
   return (
-    <header className={`no-orange-cursor sticky top-0 z-50 border-b-2 border-[#1e1e28] transition-colors duration-300 ${isOpen ? "bg-[#f97316]" : "bg-[#f8f9fa]"}`}>
+    <header className={`no-orange-cursor sticky top-0 z-50 border-b-2 border-[#1e1e28] transition-colors duration-300 ${isOpen ? "bg-tbl-orange" : "bg-[#f8f9fa]"}`}>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-24 flex items-center justify-between relative z-20">
         
         <Logo isOpen={isOpen} />
@@ -58,7 +58,7 @@ export default function Navbar() {
             >
               <button className={`relative group py-2 text-sm font-extrabold tracking-wider uppercase transition-colors ${activeDropdown === key ? "text-white" : isOpen ? "text-white/90" : "text-[#1e1e28]"}`}>
                 {label}
-                <span className={`absolute bottom-0 left-0 w-full h-[3px] transform transition-transform duration-300 origin-left ${activeDropdown === key ? "scale-x-100 bg-white" : isOpen ? "scale-x-0 bg-white" : "scale-x-0 group-hover:scale-x-100 bg-[#f97316]"}`}></span>
+                <span className={`absolute bottom-0 left-0 w-full h-[3px] transform transition-transform duration-300 origin-left ${activeDropdown === key ? "scale-x-100 bg-white" : isOpen ? "scale-x-0 bg-white" : "scale-x-0 group-hover:scale-x-100 bg-tbl-orange"}`}></span>
               </button>
             </div>
           ))}
@@ -67,7 +67,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link 
             href="/contact" 
-            className={`hidden lg:inline-block px-6 py-3 rounded-full border-2 border-[#1e1e28] font-extrabold text-sm tracking-wider uppercase shadow-[3px_3px_0px_0px_#1e1e28] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_0px_#1e1e28] transition-all ${isOpen ? "bg-white text-[#1e1e28]" : "bg-[#f97316] text-white"}`}
+            className={`hidden lg:inline-block px-6 py-3 rounded-full border-2 border-[#1e1e28] font-extrabold text-sm tracking-wider uppercase shadow-[3px_3px_0px_0px_#1e1e28] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_0px_#1e1e28] transition-all ${isOpen ? "bg-white text-[#1e1e28]" : "bg-tbl-orange text-white"}`}
           >
             Contact Us
           </Link>

@@ -24,7 +24,7 @@ export default function MobileAccordion({
         className="w-full flex items-center justify-between font-serif font-bold text-2xl text-[#1e1e28]"
       >
         <span className="flex items-center gap-3">
-          <span className={`text-xs font-extrabold text-white px-2.5 py-1 rounded-full ${isOpen ? "bg-[#f97316] border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>
+          <span className={`text-xs font-extrabold text-white px-2.5 py-1 rounded-full ${isOpen ? "bg-tbl-orange border border-[#1e1e28]" : "bg-[#1e1e28]"}`}>
             {badgeNumber}
           </span>
           {title}
