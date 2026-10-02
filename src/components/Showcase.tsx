@@ -75,7 +75,7 @@ export default function Showcase({ items, activeSector, onSectorChange }: Showca
                 onClick={() => handleSectorSwitch("public")}
                 className={`flex-1 py-2.5 px-4 text-[11px] font-black uppercase tracking-wider rounded-full transition-all text-center ${
                   activeSector === "public"
-                    ? "bg-[#f97316] text-[#ffffff] shadow-md"
+                    ? "bg-tbl-orange text-[#ffffff] shadow-md"
                     : "bg-transparent text-[#ffffff]/60 hover:text-[#ffffff]"
                 }`}
               >
@@ -85,7 +85,7 @@ export default function Showcase({ items, activeSector, onSectorChange }: Showca
                 onClick={() => handleSectorSwitch("private")}
                 className={`flex-1 py-2.5 px-4 text-[11px] font-black uppercase tracking-wider rounded-full transition-all text-center ${
                   activeSector === "private"
-                    ? "bg-[#f97316] text-[#ffffff] shadow-md"
+                    ? "bg-tbl-orange text-[#ffffff] shadow-md"
                     : "bg-transparent text-[#ffffff]/60 hover:text-[#ffffff]"
                 }`}
               >
@@ -107,7 +107,7 @@ export default function Showcase({ items, activeSector, onSectorChange }: Showca
                   onClick={() => setSelectedIndex(index)}
                   className={`w-full text-left px-4 py-3 rounded-xl transition-all flex items-center justify-between group ${
                     isSelected
-                      ? "bg-[#ffffff]/10 text-[#ffffff] font-semibold shadow-inner border-l-4 border-[#f97316]"
+                      ? "bg-[#ffffff]/10 text-[#ffffff] font-semibold shadow-inner border-l-4 border-tbl-orange"
                       : "text-[#ffffff]/50 hover:text-[#ffffff] hover:bg-[#ffffff]/5"
                   }`}
                 >
@@ -116,7 +116,7 @@ export default function Showcase({ items, activeSector, onSectorChange }: Showca
                     <span className="text-sm tracking-wide truncate">{item.title}</span>
                   </div>
                   {isSelected && (
-                    <span className="text-xs text-[#f97316] opacity-80">→</span>
+                    <span className="text-xs text-tbl-orange opacity-80">→</span>
                   )}
                 </button>
               );
@@ -185,7 +185,7 @@ export default function Showcase({ items, activeSector, onSectorChange }: Showca
                             delay 
                           }
                         }}
-                        className="absolute inset-0 bg-[#f97316] z-30 pointer-events-none"
+                        className="absolute inset-0 bg-tbl-orange z-30 pointer-events-none"
                       />
 
                       {/* Word text revealed by orange block */}
@@ -203,7 +203,7 @@ export default function Showcase({ items, activeSector, onSectorChange }: Showca
                         className="relative z-20 inline-block"
                       >
                         {word}
-                        {isLastWord && <span className="text-[#f97316]">.</span>}
+                        {isLastWord && <span className="text-tbl-orange">.</span>}
                       </motion.span>
                     </span>
                   );
@@ -217,7 +217,7 @@ export default function Showcase({ items, activeSector, onSectorChange }: Showca
                 animate="visible"
                 exit="exit"
                 custom={0.25}
-                className="font-semibold text-[#f97316] text-sm uppercase tracking-wider mb-2 block"
+                className="font-semibold text-tbl-orange text-sm uppercase tracking-wider mb-2 block"
               >
                 {currentItem.subtitle}
               </motion.span>
@@ -243,7 +243,7 @@ export default function Showcase({ items, activeSector, onSectorChange }: Showca
                 className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-6 border-t border-[#ffffff]/20"
               >
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="text-[10px] font-mono tracking-widest text-[#f97316] uppercase mr-2">
+                  <span className="text-[10px] font-mono tracking-widest text-tbl-orange uppercase mr-2">
                     SCOPE:
                   </span>
                   {currentItem.scopeTags.map((tag) => (
@@ -253,7 +253,7 @@ export default function Showcase({ items, activeSector, onSectorChange }: Showca
                   ))}
                 </div>
 
-                <Link href={currentItem.link} className="inline-flex items-center justify-center gap-3 px-6 py-3 bg-[#ffffff] text-[#000000] font-semibold text-xs uppercase tracking-wider rounded-lg hover:bg-[#f97316] hover:text-[#ffffff] transition-all shadow-lg hover:shadow-[#f97316]/20 shrink-0">
+                <Link href={currentItem.link} className="inline-flex items-center justify-center gap-3 px-6 py-3 bg-[#ffffff] text-[#000000] font-semibold text-xs uppercase tracking-wider rounded-lg hover:bg-tbl-orange hover:text-[#ffffff] transition-all shadow-lg hover:shadow-tbl-orange/20 shrink-0">
                   <span>Explore Solution</span>
                   <span>→</span>
                 </Link>

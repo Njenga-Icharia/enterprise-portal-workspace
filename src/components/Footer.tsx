@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#f97316]">Solutions</h4>
+            <h4 className="text-xs font-extrabold uppercase tracking-widest text-tbl-orange">Solutions</h4>
             <ul className="space-y-3 text-sm font-medium text-white/80">
               <li><Link href="/solutions/public-sector" className="hover:text-white transition-colors">Public Sector</Link></li>
               <li><Link href="/solutions/private-sector" className="hover:text-white transition-colors">Private Sector</Link></li>
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#f97316]">Expertise</h4>
+            <h4 className="text-xs font-extrabold uppercase tracking-widest text-tbl-orange">Expertise</h4>
             <ul className="space-y-3 text-sm font-medium text-white/80">
               <li><Link href="/engineering" className="hover:text-white transition-colors">Engineering & QA</Link></li>
               <li><Link href="/cloud-services" className="hover:text-white transition-colors">Cloud Services</Link></li>
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#f97316]">Company</h4>
+            <h4 className="text-xs font-extrabold uppercase tracking-widest text-tbl-orange">Company</h4>
             <ul className="space-y-3 text-sm font-medium text-white/80">
               <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/about/history" className="hover:text-white transition-colors">Company History</Link></li>
@@ -75,7 +75,7 @@ export default function Footer() {
         <div className="pt-12 pb-8 border-b border-white/10">
           <div className="flex items-center justify-between mb-6">
             <h5 className="text-xs font-extrabold uppercase tracking-widest text-white/60">Core Capabilities</h5>
-            <Link href="/services" className="text-xs font-bold text-[#f97316] hover:underline">All services →</Link> 
+            <Link href="/services" className="text-xs font-bold text-tbl-orange hover:underline">All services →</Link> 
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-white/70 font-medium">

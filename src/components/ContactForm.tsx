@@ -81,22 +81,22 @@ export default function ContactForm() {
 
           <div className="space-y-3">
             <div className="flex items-center gap-3 text-sm font-semibold text-[#1c201a]">
-              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#f97316] text-[#1c201a] text-xs font-bold">✓</span>
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-tbl-orange text-[#1c201a] text-xs font-bold">✓</span>
               Enterprise & Government Solutions — our specialization
             </div>
             <div className="flex items-center gap-3 text-sm font-semibold text-[#1c201a]">
-              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#f97316] text-[#1c201a] text-xs font-bold">✓</span>
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-tbl-orange text-[#1c201a] text-xs font-bold">✓</span>
               Response within one business day
             </div>
             <div className="flex items-center gap-3 text-sm font-semibold text-[#1c201a]">
-              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#f97316] text-[#1c201a] text-xs font-bold">✓</span>
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-tbl-orange text-[#1c201a] text-xs font-bold">✓</span>
               Free technical consultation available
             </div>
           </div>
 
           <p className="text-sm font-medium text-[#1c201a] pt-2">
             Prefer to talk live?{' '}
-            <a href="#book" className="underline font-semibold decoration-1 underline-offset-2 hover:text-[#f97316] transition-colors">
+            <a href="#book" className="underline font-semibold decoration-1 underline-offset-2 hover:text-tbl-orange transition-colors">
               Book a virtual call
             </a>.
           </p>
@@ -222,7 +222,7 @@ export default function ContactForm() {
                         type="checkbox"
                         checked={isChecked}
                         onChange={() => {}}
-                        className="w-4 h-4 rounded accent-[#F97316] border-[#a8a396]"
+                        className="w-4 h-4 rounded accent-tbl-orange border-[#a8a396]"
                       />
                       {product}
                     </label>
@@ -262,7 +262,7 @@ export default function ContactForm() {
             <div className="pt-2">
               <button
                 type="submit"
-                className="px-8 py-3.5 bg-[#f97316] hover:bg-[#f97316] text-[#1c201a] font-bold text-xs uppercase tracking-wider rounded-full border border-[#1c201a] shadow-[2px_2px_0px_0px_#1c201a] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all"
+                className="px-8 py-3.5 bg-tbl-orange hover:bg-tbl-orange text-[#1c201a] font-bold text-xs uppercase tracking-wider rounded-full border border-[#1c201a] shadow-[2px_2px_0px_0px_#1c201a] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all"
               >
                 SEND MESSAGE
               </button>

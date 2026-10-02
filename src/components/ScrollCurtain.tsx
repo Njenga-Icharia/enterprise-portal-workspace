@@ -160,11 +160,11 @@ export default function ScrollCurtain({ items }: ScrollCurtainProps) {
                         {item.eyebrow && (
                           <div className="flex items-center gap-3 mb-5">
                             <span
-                              className="h-px w-12 bg-[#f97316] origin-left"
+                              className="h-px w-12 bg-tbl-orange origin-left"
                               style={{ transform: `scaleX(${eyebrowR})` }}
                             />
                             <span
-                              className="text-[11px] font-black uppercase tracking-[0.28em] text-[#f97316]"
+                              className="text-[11px] font-black uppercase tracking-[0.28em] text-tbl-orange"
                               style={{
                                 opacity: eyebrowR,
                                 transform: offsetFor(dirEyebrow, eyebrowR, 50),
@@ -225,11 +225,11 @@ export default function ScrollCurtain({ items }: ScrollCurtainProps) {
                             }}
                           >
                             <span
-                              className="absolute left-0 top-0 h-full w-1 bg-[#f97316] origin-top"
+                              className="absolute left-0 top-0 h-full w-1 bg-tbl-orange origin-top"
                               style={{ transform: `scaleY(${statR})` }}
                             />
                             {item.stat && (
-                              <span className="font-serif text-4xl sm:text-5xl font-bold text-[#f97316] drop-shadow-md">
+                              <span className="font-serif text-4xl sm:text-5xl font-bold text-tbl-orange drop-shadow-md">
                                 {item.stat}
                               </span>
                             )}

@@ -118,7 +118,7 @@ export default function ResponsiveWindow({
 
       {/* TITLE */}
       <h2 className="absolute top-12 left-12 z-20 text-7xl md:text-8xl lg:text-9xl font-extrabold text-white tracking-tight drop-shadow-lg">
-        <span className="text-[#f97316]"> {ColoredSectionTitle} </span>{sectionTitle}
+        <span className="text-tbl-orange"> {ColoredSectionTitle} </span>{sectionTitle}
       </h2>
 
       {/* NAVIGATION ARROWS */}

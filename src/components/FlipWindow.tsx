@@ -76,7 +76,7 @@ export const FlipWindow: React.FC<FlipWindowProps> = ({
             <div className="w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               
               <div className="absolute inset-0 bg-white border border-slate-200 flex flex-col items-center justify-center p-6 [backface-visibility:hidden]">
-                <div className="absolute top-0 right-0 w-0 h-0 border-t-[20px] border-l-[20px] border-t-[#4b456f] border-l-transparent transition-colors duration-300 group-hover:border-t-[#f97316]" />
+                <div className="absolute top-0 right-0 w-0 h-0 border-t-[20px] border-l-[20px] border-t-[#4b456f] border-l-transparent transition-colors duration-300 group-hover:border-t-tbl-orange" />
                 {item.frontContent}
               </div>
 
