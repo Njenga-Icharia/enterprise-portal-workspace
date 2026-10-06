@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function StatsAbout() {
   return (
-    <section className="w-full bg-[#1e1e28] text-[#f8f9fa] py-24 px-6 sm:px-8 lg:px-12">
+    <section className="relative z-10 w-full bg-[#1e1e28] text-[#f8f9fa] py-24 px-6 sm:px-8 lg:px-12 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
       <div className="max-w-7xl mx-auto">
         <div className="border border-white/20 rounded-3xl p-8 md:p-12 mb-20 flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <h2 className="text-7xl md:text-9xl font-black text-tbl-orange tracking-tighter">
