@@ -37,6 +37,14 @@
   }
 }
 
+/* tribal Abstract background Pattern */
+.bg-art-pattern {
+  background-color: #595278;
+  background-image: url("/brand-pattern.svg");
+  background-size: 800px 800px;
+  background-repeat: repeat;
+}
+
 /* body {
   background: var(--background);
   color: var(--foreground);
@@ -65,7 +73,7 @@
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 7s linear infinite;
+  animation: marquee 19s linear infinite;
 }
 
 .animate-marquee:hover {

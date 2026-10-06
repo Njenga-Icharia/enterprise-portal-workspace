@@ -1,37 +1,34 @@
 "use client";
 
-import React from "react";
-
 interface LogoItem {
   id: string;
   name: string;
   src: string;
   url: string;
-  customClass?: string; //custom size
-  cardClass?: string; //custom bg color
+  customClass?: string; // Custom size
+  cardClass?: string; // Custom bg color
 }
 
 const PARTNER_LOGOS: LogoItem[] = [
-
   { id: "microsoft", name: "Microsoft", src: "/logos/microsoft.svg", url: "https://www.microsoft.com" },
   { id: "oracle", name: "Oracle", src: "/logos/oracle.svg", url: "https://www.oracle.com/africa/" },
   { id: "aws", name: "AWS", src: "/logos/aws.svg", url: "https://aws.amazon.com" },
-  { id: "serenic", name: "Serenic", src: "/logos/serenic.png", url: "https://www.devex.com/organizations/serenic-software-38647" , customClass: "scale-245" },
-  { id: "newhorizons", name: "New Horizons", src: "/logos/newhorizons.png", url: "https://www.newhorizons.com/" , customClass: "scale-110" },
-  { id: "safaricom", name: "Safaricom", src: "/logos/safaricom.svg", url: "https://www.safaricom.co.ke/" , customClass: "scale-245" },
-  { id: "generation", name: "Generations Kenya", src: "/logos/generationkenya.png", url: "https://kenya.generation.org/"  , customClass: "scale-110" },
-  { id: "cocacola", name: "Coca-Cola", src: "/logos/cocacola.svg", url: "https://www.coca-cola.com/ke/en", customClass: "scale-110" }, 
+  { id: "serenic", name: "Serenic", src: "/logos/serenic.png", url: "https://www.devex.com/organizations/serenic-software-38647", customClass: "scale-245" },
+  { id: "newhorizons", name: "New Horizons", src: "/logos/newhorizons.png", url: "https://www.newhorizons.com/", customClass: "scale-110" },
+  { id: "safaricom", name: "Safaricom", src: "/logos/safaricom.svg", url: "https://www.safaricom.co.ke/", customClass: "scale-245" },
+  { id: "generation", name: "Generations Kenya", src: "/logos/generationkenya.png", url: "https://kenya.generation.org/", customClass: "scale-110" },
+  { id: "cocacola", name: "Coca-Cola", src: "/logos/cocacola.svg", url: "https://www.coca-cola.com/ke/en", customClass: "scale-110" },
   { id: "huawei", name: "Huawei", src: "/logos/huawei.svg", url: "https://www.huawei.com/africa/" },
   { id: "sap", name: "SAP", src: "/logos/sap.svg", url: "https://www.sap.com/africa/index.html" },
   { id: "cisco", name: "Cisco", src: "/logos/cisco.svg", url: "https://www.cisco.com" },
-  { id: "utu", name: "Utu", src: "/logos/utu.jpg", url: "https://utu.io/" , customClass: "scale-130" },
+  { id: "utu", name: "Utu", src: "/logos/utu.jpg", url: "https://utu.io/", customClass: "scale-130" },
   { id: "awash", name: "Awash", src: "/logos/awash.svg", url: "https://awashbank.com", customClass: "scale-130" },
-  { id: "ictkenya", name: "Ictkenya", src: "/logos/ictkenya.png", url: "https://ict.go.ke"  , customClass: "scale-120" },
-  { id: "childline", name: "Childline", src: "/logos/childline.png", url: "https://childlinekenya.co.ke"  , customClass: "scale-110" },
-  { id: "worldvision", name: "Worldvision", src: "/logos/worldvision.svg", url: "https://www.wvi.org/kenya" , cardClass: "bg-[#1e1e28]" },
+  { id: "ictkenya", name: "Ictkenya", src: "/logos/ictkenya.png", url: "https://ict.go.ke", customClass: "scale-120" },
+  { id: "childline", name: "Childline", src: "/logos/childline.png", url: "https://childlinekenya.co.ke", customClass: "scale-110" },
+  { id: "worldvision", name: "Worldvision", src: "/logos/worldvision.svg", url: "https://www.wvi.org/kenya", cardClass: "bg-[#1e1e28]" },
   { id: "rockefeller", name: "Rockefeller", src: "/logos/rockefeller.png", url: "https://www.rockefellerfoundation.org/offices/nairobi-kenya/" },
   { id: "sama", name: "Sama", src: "/logos/sama.svg", url: "https://www.sama.com" },
-  
+
   // { id: "dogecoin", name: "Dogecoin", src: "/logos/dogecoin.svg", url: "https://dogecoin.com" },
   // { id: "burgerking", name: "Burger King", src: "/logos/burgerking.svg", url: "https://www.bk.com" },
   // { id: "crunchyroll", name: "Crunchyroll", src: "/logos/crunchyroll.svg", url: "https://www.crunchyroll.com" },
@@ -62,7 +59,7 @@ const PARTNER_LOGOS: LogoItem[] = [
 
 export default function LogoMarquee() {
   return (
-    <section className="w-full  bg-[#595278] py-20 border-t-2 border-[#1e1e28] overflow-hidden"> {/* bg-[#4b456f] bg-[#504c6a] */}
+    <section className="w-full bg-art-pattern py-20 border-t-2 border-[#1e1e28] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
         <p className="text-sm font-extrabold uppercase tracking-widest text-[#f8f9fa]/70">
           Trusted by global leaders, enterprises, and partners worldwide
@@ -72,7 +69,7 @@ export default function LogoMarquee() {
       {/* Marquee Viewport Container for hover pausing */}
       <div className="relative w-full overflow-hidden flex group">
         <div className="flex animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap gap-16 items-center">
-          
+
           {/* Primary Render Loop */}
           {PARTNER_LOGOS.map((logo) => (
             <a
@@ -81,17 +78,17 @@ export default function LogoMarquee() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visit ${logo.name}`}
-              className="flex items-center justify-center p-4 border-3 border-[#1e1e28] rounded-3xl bg-white shadow-[6px_6px_0px_0px_#1e1e28] shrink-0 h-36 w-64 overflow-hidden group/card"
+              className={`flex items-center justify-center p-4 border-3 border-[#1e1e28] rounded-3xl ${logo.cardClass ?? "bg-white"} shadow-[6px_6px_0px_0px_#1e1e28] shrink-0 h-36 w-64 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#1e1e28]`}
             >
-              <img 
-                src={logo.src} 
-                alt={logo.name} 
-                className={`w-full h-full object-contain transition-transform duration-300 group-hover/card:scale-110 ${logo.customClass || ""}`} 
+              <img
+                src={logo.src}
+                alt={logo.name}
+                className={`w-full h-full object-contain ${logo.customClass || ""}`}
               />
             </a>
           ))}
 
-          {/* Secondary Loop for Infinite Scroll*/}
+          {/* Secondary Loop for Infinite Scroll */}
           {PARTNER_LOGOS.map((logo) => (
             <a
               key={`duplicate-${logo.id}`}
@@ -100,12 +97,12 @@ export default function LogoMarquee() {
               rel="noopener noreferrer"
               aria-hidden="true"
               tabIndex={-1}
-              className="flex items-center justify-center p-6 border-3 border-[#1e1e28] rounded-3xl bg-white shadow-[6px_6px_0px_0px_#1e1e28] shrink-0 h-36 w-64 overflow-hidden group/card"
+              className={`flex items-center justify-center p-4 border-3 border-[#1e1e28] rounded-3xl ${logo.cardClass ?? "bg-white"} shadow-[6px_6px_0px_0px_#1e1e28] shrink-0 h-36 w-64 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#1e1e28]`}
             >
-              <img 
-                src={logo.src} 
-                alt="" 
-                className={`w-full h-full object-contain transition-transform duration-300 group-hover/card:scale-110 ${logo.customClass || ""}`} 
+              <img
+                src={logo.src}
+                alt=""
+                className={`w-full h-full object-contain ${logo.customClass || ""}`}
               />
             </a>
           ))}
