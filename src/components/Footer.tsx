@@ -4,7 +4,7 @@ import Logo from "@/components/technobrainlogo";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#1e1e28] text-[#f8f9fa] pt-20 pb-12 px-6 sm:px-8 lg:px-12 border-t-2 border-[#1e1e28]">
+    <footer className="w-full bg-art-pattern text-[#1e1e28] pt-20 pb-12 px-6 sm:px-8 lg:px-12 border-t-2 border-[#1e1e28]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10">
           <div className="lg:col-span-2 space-y-6">
