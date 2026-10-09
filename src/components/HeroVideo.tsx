@@ -25,7 +25,7 @@ export default function HeroVideo({ videoSrc, headingText, headingHighlight, des
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 text-center text-white">
         <h1 className="text-5xl sm:text-7xl font-black uppercase tracking-tight">
-          {headingText} <span className="text-tbl-orange">{headingHighlight}</span>
+          {headingText} <span className="no-orange-cursor text-tbl-orange">{headingHighlight}</span>
         </h1>
         <p className="mt-4 text-lg sm:text-xl font-medium max-w-2xl mx-auto text-gray-200">
           {description}

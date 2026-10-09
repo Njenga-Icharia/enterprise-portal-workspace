@@ -7,7 +7,7 @@ export default function Logo({ isDark = false }: LogoProps) {
     <div className="flex flex-col w-max select-none p-2">
       {/* TOP ROW */}
       <div className="flex gap-1.5 mb-1.5">
-        <div className="w-8 h-8 bg-[#f97316]"></div>
+        <div className="no-orange-cursor w-8 h-8 bg-[#f97316]"></div>
         <div className={`w-8 h-8 transition-colors ${isDark ? "bg-white/80" : "bg-[#595278]"}`}></div>
       </div>
 
@@ -17,7 +17,7 @@ export default function Logo({ isDark = false }: LogoProps) {
         
         <div className="flex items-center font-sans font-extrabold text-[34px] leading-[32px] tracking-tight -mt-[2px]">
           <span className={`transition-colors ${isDark ? "text-white" : "text-[#595278]"}`}>TECHNO</span>
-          <span className="text-[#f97316] ml-2">BRAIN</span>
+          <span className="no-orange-cursor text-[#f97316] ml-2">BRAIN</span>
         </div>
       </div>
 

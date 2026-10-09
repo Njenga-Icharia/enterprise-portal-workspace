@@ -10,6 +10,7 @@ interface FormData {
   companyName: string;
   email: string;
   countryCode: string;
+  customCountryCode: string;
   phone: string;
   message: string;
   interests: string[];
@@ -34,7 +35,8 @@ export default function ContactForm() {
     designation: '',
     companyName: '',
     email: '',
-    countryCode: '+1',
+    countryCode: '+254',
+    customCountryCode: '',
     phone: '',
     message: '',
     interests: [],
@@ -55,14 +57,24 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
+    
+    const resolutionCountryCode = formData.countryCode === 'other' 
+      ? formData.customCountryCode 
+      : formData.countryCode;
+
+    const payload = {
+      ...formData,
+      finalPhoneString: `${resolutionCountryCode}${formData.phone}`
+    };
+
+    console.log('Form Submitted:', payload);
   };
 
   return (
     <section id="contact" className="w-full bg-[#e8ebe9] text-[#1c201a] py-24 px-6 sm:px-12 lg:px-24 border-t-2 border-[#1e1e28] font-sans">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         
-        {/* Left Column Info */}
+        {/* Left Column Info Block */}
         <div className="lg:col-span-5 space-y-6">
           <div className="inline-block border border-[#1c201a] rounded-full px-5 py-1 text-xs font-bold tracking-wider uppercase bg-transparent">
             GET IN TOUCH
@@ -81,35 +93,36 @@ export default function ContactForm() {
 
           <div className="space-y-3">
             <div className="flex items-center gap-3 text-sm font-semibold text-[#1c201a]">
-              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-tbl-orange text-[#1c201a] text-xs font-bold">✓</span>
+              <span className="no-orange-cursor flex items-center justify-center w-5 h-5 rounded-full bg-tbl-orange text-white text-xs font-bold">✓</span>
               Enterprise & Government Solutions — our specialization
             </div>
-            <div className="flex items-center gap-3 text-sm font-semibold text-[#1c201a]">
-              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-tbl-orange text-[#1c201a] text-xs font-bold">✓</span>
+            <div className="no-orange-cursor flex items-center gap-3 text-sm font-semibold text-[#1c201a]">
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-tbl-orange text-white text-xs font-bold">✓</span>
               Response within one business day
             </div>
-            <div className="flex items-center gap-3 text-sm font-semibold text-[#1c201a]">
-              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-tbl-orange text-[#1c201a] text-xs font-bold">✓</span>
+            <div className="no-orange-cursor flex items-center gap-3 text-sm font-semibold text-[#1c201a]">
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-tbl-orange text-white text-xs font-bold">✓</span>
               Free technical consultation available
             </div>
           </div>
 
           <p className="text-sm font-medium text-[#1c201a] pt-2">
             Prefer to talk live?{' '}
-            <a href="#book" className="underline font-semibold decoration-1 underline-offset-2 hover:text-tbl-orange transition-colors">
+            <a href="#book" className="no-orange-cursor underline font-semibold decoration-1 underline-offset-2 hover:text-tbl-orange transition-colors">
               Book a virtual call
             </a>.
           </p>
 
-          {/* Render the Custom Logo Component */}
           <div className="pt-10 transform scale-90 origin-left">
-            <Logo />
+            <Logo/>
           </div>
         </div>
 
-        {/* Right Column Form */}
+        {/* Right Column Form Block */}
         <div className="lg:col-span-7 lg:pl-8">
           <form onSubmit={handleSubmit} className="space-y-6">
+            
+            {/* First Name & Last Name */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
@@ -137,6 +150,7 @@ export default function ContactForm() {
               </div>
             </div>
 
+            {/* Job Title & Organization */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
@@ -163,6 +177,7 @@ export default function ContactForm() {
               </div>
             </div>
 
+            {/* Business Email */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
                 BUSINESS EMAIL <span className="text-[#d9381e]">*</span>
@@ -176,61 +191,99 @@ export default function ContactForm() {
               />
             </div>
 
+            {/* Phone Number with Custom Country Code Ordering */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
                 PHONE/MOBILE
               </label>
-              <div className="flex gap-2">
-                <select
-                  value={formData.countryCode}
-                  onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
-                  className="px-3 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none font-medium text-sm text-[#1c201a]"
-                >
-                  <option value="+1">United States +1</option>
-                  <option value="+254">Kenya +254</option>
-                  <option value="+44">United Kingdom +44</option>
-                  <option value="+91">India +91</option>
-                </select>
-                <input
-                  type="tel"
-                  placeholder="+1 (555) 000-0000"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="flex-1 px-4 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none focus:border-[#1c201a] font-medium transition"
-                />
+              <div className="flex flex-col gap-2">
+                <div className="flex gap-2">
+                  <select
+                    value={formData.countryCode}
+                    onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
+                    className="px-3 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none font-medium text-sm text-[#1c201a]"
+                  >
+                    {/* Default Preselected Option */}
+                    <option value="+254">Kenya +254</option>
+
+                    {/* Numerical Ascending List starting at +1 */}
+                    <option value="+1">United States +1</option>
+                    <option value="+27">South Africa +27</option>
+                    <option value="+44">United Kingdom +44</option>
+                    <option value="+91">India +91</option>
+                    <option value="+211">South Sudan +211</option>
+                    <option value="+233">Ghana +233</option>
+                    <option value="+234">Nigeria +234</option>
+                    <option value="+250">Rwanda +250</option>
+                    <option value="+251">Ethiopia +251</option>
+                    <option value="+254">Kenya +254</option>
+                    <option value="+255">Tanzania +255</option>
+                    <option value="+256">Uganda +256</option>
+                    <option value="+258">Mozambique +258</option>
+                    <option value="+260">Zambia +260</option>
+                    <option value="+263">Zimbabwe +263</option>
+                    <option value="+265">Malawi +265</option>
+                    <option value="+268">Swaziland +268</option>
+                    <option value="+971">UAE +971</option>
+                    <option value="other">Other...</option>
+                  </select>
+
+                  <input
+                    type="tel"
+                    placeholder="700 000 000"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="flex-1 px-4 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none focus:border-[#1c201a] font-medium transition"
+                  />
+                </div>
+
+                {formData.countryCode === 'other' && (
+                  <input
+                    type="text"
+                    required
+                    placeholder="Enter custom country code (e.g., +49)"
+                    value={formData.customCountryCode}
+                    onChange={(e) => setFormData({ ...formData, customCountryCode: e.target.value })}
+                    className="w-full px-4 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-xl focus:outline-none focus:border-[#1c201a] font-medium transition text-sm text-[#1c201a]"
+                  />
+                )}
               </div>
             </div>
 
+            {/* Areas of Interest Checkbox Grid with White Unselected Checkboxes */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider mb-3 text-[#1c201a]">
-                DIGITAL SOLUTIONS/PRODUCTS INTERESTED IN
+                AREAS OF INTEREST
               </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {PRODUCT_OPTIONS.map((product) => {
                   const isChecked = formData.interests.includes(product);
                   return (
-                    <label
+                    <button
+                      type="button"
                       key={product}
                       onClick={() => handleCheckboxChange(product)}
-                      className={`flex items-center gap-3 p-3 border rounded-xl cursor-pointer text-xs font-semibold transition select-none ${
-                        isChecked
-                          ? 'bg-[#1c201a] text-white border-[#1c201a]'
-                          : 'bg-[#ebe6da] border-[#a8a396] text-[#1c201a] hover:border-[#1c201a]'
+                      className={`flex items-center gap-3 px-4 py-3 rounded-xl border text-left text-sm font-medium transition-all bg-[#ebe6da] ${
+                        isChecked 
+                          ? 'border-[#1c201a] shadow-sm' 
+                          : 'border-[#a8a396] hover:border-[#1c201a]'
                       }`}
                     >
-                      <input
-                        type="checkbox"
-                        checked={isChecked}
-                        onChange={() => {}}
-                        className="w-4 h-4 rounded accent-tbl-orange border-[#a8a396]"
-                      />
-                      {product}
-                    </label>
+                      <span className={`w-5 h-5 rounded flex items-center justify-center border text-xs font-bold transition-colors ${
+                        isChecked 
+                          ? 'bg-[#1c201a] border-[#1c201a] text-tbl-orange' 
+                          : 'bg-white border-[#a8a396] text-transparent'
+                      }`}>
+                        ✓
+                      </span>
+                      <span className="text-[#1c201a]">{product}</span>
+                    </button>
                   );
                 })}
               </div>
             </div>
 
+            {/* Message Area */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-[#1c201a]">
                 MESSAGE <span className="text-[#d9381e]">*</span>
@@ -239,13 +292,15 @@ export default function ContactForm() {
                 rows={5}
                 required
                 maxLength={5000}
+                placeholder="Tell us about your project requirements..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 className="w-full px-4 py-3 bg-[#ebe6da] border border-[#a8a396] rounded-2xl focus:outline-none focus:border-[#1c201a] font-medium transition resize-none"
               />
             </div>
 
-            <div className="flex items-center gap-3 pt-1">
+            {/* Privacy Agreement Checkbox */}
+            <div className="flex items-center gap-3">
               <input
                 type="checkbox"
                 id="privacy-check"
@@ -254,21 +309,22 @@ export default function ContactForm() {
                 onChange={(e) => setFormData({ ...formData, agreePrivacy: e.target.checked })}
                 className="w-4 h-4 rounded border-[#a8a396] accent-[#1c201a] cursor-pointer"
               />
-              <label htmlFor="privacy-check" className="text-sm font-semibold text-[#1c201a] cursor-pointer">
-                I agree to the <span className="underline decoration-1 underline-offset-2">Privacy Policy</span>. <span className="text-[#d9381e]">*</span>
+              <label htmlFor="privacy-check" className="text-xs text-[#4a4e46] font-medium cursor-pointer">
+                I agree to the processing of my personal data in accordance with the Privacy Policy. <span className="text-[#d9381e]">*</span>
               </label>
             </div>
 
-            <div className="pt-2">
-              <button
-                type="submit"
-                className="px-8 py-3.5 bg-tbl-orange hover:bg-tbl-orange text-[#1c201a] font-bold text-xs uppercase tracking-wider rounded-full border border-[#1c201a] shadow-[2px_2px_0px_0px_#1c201a] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all"
-              >
-                SEND MESSAGE
-              </button>
-            </div>
+            {/* Submit Action Button */}
+            <button
+              type="submit"
+              className="no-orange-cursor w-full sm:w-auto px-8 py-4 bg-[#1c201a] text-white font-extrabold text-xs tracking-widest uppercase rounded-full hover:bg-tbl-orange transition-colors shadow-lg"
+            >
+              SEND MESSAGE
+            </button>
+
           </form>
         </div>
+
       </div>
     </section>
   );

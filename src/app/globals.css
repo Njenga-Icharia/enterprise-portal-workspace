@@ -39,7 +39,7 @@
 
 /* tribal Abstract background Pattern */
 .bg-art-pattern {
-  background-color: #595278;
+  background-color: var(--pattern-bg, #595278);
   background-image: url("/brand-pattern.svg");
   background-size: 800px 800px;
   background-repeat: repeat;
