@@ -23,11 +23,19 @@ const PARTNER_LOGOS: LogoItem[] = [
   { id: "cisco", name: "Cisco", src: "/logos/cisco.svg", url: "https://www.cisco.com" },
   { id: "utu", name: "Utu", src: "/logos/utu.jpg", url: "https://utu.io/", customClass: "scale-130" },
   { id: "awash", name: "Awash", src: "/logos/awash.svg", url: "https://awashbank.com", customClass: "scale-130" },
-  { id: "ictkenya", name: "Ictkenya", src: "/logos/ictkenya.png", url: "https://ict.go.ke", customClass: "scale-120" },
+  { id: "ictkenya", name: "Ictkenya", src: "/logos/ictkenya2.png", url: "https://ict.go.ke", customClass: "scale-120" },
   { id: "childline", name: "Childline", src: "/logos/childline.png", url: "https://childlinekenya.co.ke", customClass: "scale-110" },
   { id: "worldvision", name: "Worldvision", src: "/logos/worldvision.svg", url: "https://www.wvi.org/kenya", cardClass: "bg-[#1e1e28]" },
   { id: "rockefeller", name: "Rockefeller", src: "/logos/rockefeller.png", url: "https://www.rockefellerfoundation.org/offices/nairobi-kenya/" },
   { id: "sama", name: "Sama", src: "/logos/sama.svg", url: "https://www.sama.com" },
+  { id: "intrahealth", name: "IntraHealth", src: "/logos/intrahealth.png", url: "https://www.intrahealth.org" },
+  { id: "fhi360", name: "FHI 360", src: "/logos/fhi360.png", url: "https://fhi360.org" },
+  { id: "fanrpan", name: "FANRPAN", src: "/logos/fanrpan.png", url: "https://fanrpan.org" },
+  { id: "opensociety", name: "Open Society Foundations", src: "/logos/opensociety.png", url: "https://www.opensocietyfoundations.org" },
+  { id: "sylogist", name: "Sylogist", src: "/logos/sylogist.png", url: "https://www.sylogist.com" },
+  { id: "pact", name: "Pact", src: "/logos/pact.png", url: "https://www.pactworld.org" },
+  { id: "mercycorps", name: "Mercy Corps", src: "/logos/mercycorps.png", url: "https://www.mercycorps.org" },
+  { id: "totalenergies", name: "TotalEnergies", src: "/logos/totalenergies.svg", url: "https://www.totalenergies.com" }
 
   // { id: "dogecoin", name: "Dogecoin", src: "/logos/dogecoin.svg", url: "https://dogecoin.com" },
   // { id: "burgerking", name: "Burger King", src: "/logos/burgerking.svg", url: "https://www.bk.com" },
@@ -52,7 +60,6 @@ const PARTNER_LOGOS: LogoItem[] = [
   // { id: "suzuki", name: "Suzuki", src: "/logos/suzuki.svg", url: "https://global.suzuki.com" },
   // { id: "tacobell", name: "Taco Bell", src: "/logos/tacobell.svg", url: "https://www.tacobell.com" },
   // { id: "tiktok", name: "TikTok", src: "/logos/tiktok.svg", url: "https://www.tiktok.com" },
-  // { id: "totalenergies", name: "TotalEnergies", src: "/logos/totalenergies.svg", url: "https://www.totalenergies.com" },
   // { id: "visa", name: "Visa", src: "/logos/visa.svg", url: "https://www.visa.com" },
   // { id: "weeklyshonenjump", name: "Weekly Shonen Jump", src: "/logos/weeklyshonenjump.svg", url: "https://www.viz.com/shonenjump" },
 ];
