@@ -28,7 +28,7 @@ export default function EngineeringPage() {
         {/* CARD CAROUSEL */}
         <div className="mb-4">
           <div className="text-center mb-4">
-            <span className="text-xs font-black uppercase tracking-widest text-[#f97316] block mb-1">Our Method</span>
+            <span className="text-xs font-black uppercase tracking-widest text-tbl-orange block mb-1">Our Method</span>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold">Standards We Follow</h2>
           </div>
           

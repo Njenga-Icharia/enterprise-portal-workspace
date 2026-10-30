@@ -21,10 +21,10 @@ export default function Highlights({
   paragraphs, 
   items, 
   watermarkText = "HIGHLIGHTS",
-  bgColor = "bg-[#f97316]" // Defaults to orange if not passed
+  bgColor = "bg-tbl-orange" // Defaults to orange if not passed
 }: HighlightsProps) {
   return (
-  <section className="no-orange-cursor w-full bg-[#f97316] border-t-2 border-[#1e1e28]"> //Deadshot color
+  <section className="no-orange-cursor w-full bg-tbl-orange border-t-2 border-[#1e1e28]"> 
     <div className={`relative w-full ${bgColor} py-20 overflow-hidden`}>
       
       {/*DESKTOP WATERMARK*/}
@@ -59,11 +59,11 @@ export default function Highlights({
               <div key={item.id} className="bg-white rounded-2xl p-6 shadow-lg flex flex-col h-full">
                 
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 rounded-full border-[3px] border-[#f97316] bg-white flex items-center justify-center shrink-0">
+                  <div className="w-16 h-16 rounded-full border-[3px] border-tbl-orange bg-white flex items-center justify-center shrink-0">
                     {item.icon ? (
                       item.icon
                     ) : (
-                      <span className="text-lg font-bold text-[#f97316] text-center leading-tight px-1">
+                      <span className="text-lg font-bold text-tbl-orange text-center leading-tight px-1">
                         {item.value}
                       </span>
                     )}

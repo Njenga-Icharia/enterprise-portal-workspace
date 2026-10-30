@@ -227,7 +227,7 @@ export default function Spiral({
       {/* Header */}
       <div className="flex items-center justify-between px-8 sm:px-12 pt-8 pb-6 border-b border-white/10">
         <h3 className="text-2xl sm:text-3xl font-serif text-white">
-          {headerText} <span className="text-[#f97316]">{headerHighlight}</span>
+          {headerText} <span className="text-tbl-orange">{headerHighlight}</span>
         </h3>
         <div className="text-right shrink-0 ml-6">
           <div className="text-2xl font-serif font-bold text-white">{String(count).padStart(2, "0")}</div>
@@ -348,19 +348,19 @@ export default function Spiral({
                         <div className="relative flex items-center justify-center w-10 h-10 -translate-x-1/2 -translate-y-1/2">
                           <div
                             className={`absolute rounded-full transition-all duration-300 ${
-                              isHovered ? "w-10 h-10 bg-[#f97316]/20 blur-[2px]" : "w-0 h-0"
+                              isHovered ? "w-10 h-10 bg-tbl-orange/20 blur-[2px]" : "w-0 h-0"
                             }`}
                           />
                           <div
                             className={`rounded-full border transition-all duration-300 ${
-                              isHovered ? "w-3.5 h-3.5 bg-[#f97316] border-[#f97316] shadow-[0_0_12px_2px_rgba(249,115,22,0.8)]" : "w-2.5 h-2.5 bg-[#1e1e28] border-white/60"
+                              isHovered ? "w-3.5 h-3.5 bg-tbl-orange border-tbl-orange shadow-[0_0_12px_2px_rgba(249,115,22,0.8)]" : "w-2.5 h-2.5 bg-[#1e1e28] border-white/60"
                             }`}
                           />
 
                           {/* Label fans outward from the wheel centre, badge leading on the left side. */}
                           <div
                             className={`absolute whitespace-nowrap flex items-center gap-2 transition-all duration-300 pointer-events-none ${
-                              isHovered ? "text-[#f97316] opacity-100 scale-105" : "text-white/60 opacity-80"
+                              isHovered ? "text-tbl-orange opacity-100 scale-105" : "text-white/60 opacity-80"
                             }`}
                             style={{
                               [cos >= 0 ? "left" : "right"]: "50%",
@@ -375,7 +375,7 @@ export default function Spiral({
                             {cos < 0 && <span className="text-[9px] font-black opacity-50 tracking-wider">{node.badge}</span>}
                             <span className="font-serif text-base md:text-lg tracking-wide">
                               {node.title}
-                              <span className="text-[#f97316]">{node.orangeText}</span>
+                              <span className="text-tbl-orange">{node.orangeText}</span>
                             </span>
                             {cos >= 0 && <span className="text-[9px] font-black opacity-50 tracking-wider">{node.badge}</span>}
                           </div>
@@ -395,7 +395,7 @@ export default function Spiral({
               <br />
               {coreLine2}
               <br />
-              <span className="text-[#f97316]">{coreHighlight}</span>
+              <span className="text-tbl-orange">{coreHighlight}</span>
             </h4>
           </div>
 
@@ -415,19 +415,19 @@ export default function Spiral({
             <div
               key={hovered.slug}
               aria-live="polite"
-              className="float-popup pointer-events-none absolute z-[60] w-64 rounded-xl border border-[#f97316]/40 bg-[#0d0d13]/95 p-5 text-left shadow-[0_10px_40px_-10px_rgba(249,115,22,0.55)] backdrop-blur-md"
+              className="float-popup pointer-events-none absolute z-[60] w-64 rounded-xl border border-tbl-orange/40 bg-[#0d0d13]/95 p-5 text-left shadow-[0_10px_40px_-10px_rgba(249,115,22,0.55)] backdrop-blur-md"
               style={{
                 left: `clamp(${FLOATING_CARD_CLAMP_X}, ${popupAnchor.x + outward.x}px, calc(100% - ${FLOATING_CARD_CLAMP_X}))`,
                 top: `clamp(${FLOATING_CARD_CLAMP_Y}, ${popupAnchor.y + outward.y}px, calc(100% - ${FLOATING_CARD_CLAMP_Y}))`,
                 transform: "translate(-50%, -50%)",
               }}
             >
-              <div className="text-[10px] font-black uppercase tracking-widest text-[#f97316] mb-2">
+              <div className="text-[10px] font-black uppercase tracking-widest text-tbl-orange mb-2">
                 {hovered.action}
               </div>
               <h4 className="text-white text-lg font-serif font-bold mb-2 leading-tight">
                 {hovered.title}
-                <span className="text-[#f97316]">{hovered.orangeText}</span>
+                <span className="text-tbl-orange">{hovered.orangeText}</span>
               </h4>
               <p className="text-white/70 text-sm leading-relaxed">{hovered.description}</p>
             </div>
@@ -446,7 +446,7 @@ export default function Spiral({
           <div
             key={hovered.slug}
             aria-live="polite"
-            className={`pointer-events-none absolute top-1/2 z-50 hidden xl:block w-[360px] rounded-none border-2 border-[#f97316]/50 bg-[#0d0d13]/95 backdrop-blur-md p-7 shadow-[0_20px_80px_-20px_rgba(249,115,22,0.5)] ${
+            className={`pointer-events-none absolute top-1/2 z-50 hidden xl:block w-[360px] rounded-none border-2 border-tbl-orange/50 bg-[#0d0d13]/95 backdrop-blur-md p-7 shadow-[0_20px_80px_-20px_rgba(249,115,22,0.5)] ${
               hoveredOnRightHalf
                 ? "right-8 2xl:right-20 side-panel-right"
                 : "left-8 2xl:left-20 side-panel-left"
@@ -454,7 +454,7 @@ export default function Spiral({
             style={{ transform: "translateY(-50%)" }}
           >
             <div className="flex items-center justify-between mb-5">
-              <span className="text-[10px] font-black uppercase tracking-widest text-[#f97316]">
+              <span className="text-[10px] font-black uppercase tracking-widest text-tbl-orange">
                 {hovered.action}
               </span>
               <span className="text-[10px] font-black tracking-widest text-white/40 border border-white/20 px-2 py-0.5">
@@ -464,7 +464,7 @@ export default function Spiral({
 
             <h4 className="text-2xl font-serif font-bold text-white leading-tight mb-4">
               {hovered.title}
-              <span className="text-[#f97316]">{hovered.orangeText}</span>
+              <span className="text-tbl-orange">{hovered.orangeText}</span>
             </h4>
 
             <div className="h-px w-full bg-white/10 mb-4" />
@@ -480,7 +480,7 @@ export default function Spiral({
       <div className="text-center items-center justify-between px-8 sm:px-12 pb-8 pt-6 border-t border-white/10">
         
         <h3 className="text-xl font-serif text-white">
-          {footerText} <span className="text-[#f97316]">.</span>
+          {footerText} <span className="text-tbl-orange">.</span>
         </h3>
         
       </div>

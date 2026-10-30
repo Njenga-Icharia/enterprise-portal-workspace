@@ -64,7 +64,7 @@ export default function HighlightsEngineering() {
       paragraphs={RIGHT_SIDE_PARAGRAPHS}
       items={ENGINEERING_HIGHLIGHTS} 
       watermarkText="HIGHLIGHTS" 
-      bgColor="bg-[#f97316]" 
+      bgColor="bg-tbl-orange" 
     />
   );
 }

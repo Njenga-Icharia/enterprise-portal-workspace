@@ -48,13 +48,13 @@ export default function CTACloud({
           {heading}
           <span className="text-[#4b456f] [text-shadow:1px_1px_0_white,-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white]">{headingHighlight}</span>
           {heading2}
-          <span className="text-[#f97316]">{headingHighlight2}</span>
+          <span className="text-tbl-orange">{headingHighlight2}</span>
           {headingTail}
         </h2>
 
         <Link
           href={ctaHref}
-          className="mt-8 inline-flex items-center justify-center border-2 border-white bg-transparent px-8 py-3 text-xs font-black uppercase tracking-[0.18em] text-white transition-colors hover:border-[#f97316] hover:text-[#f97316]"
+          className="mt-8 inline-flex items-center justify-center border-2 border-white bg-transparent px-8 py-3 text-xs font-black uppercase tracking-[0.18em] text-white transition-colors hover:border-tbl-orange hover:text-tbl-orange"
         >
           {ctaLabel}
         </Link>

@@ -36,8 +36,8 @@ export default function AboutCloud({
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="mb-6 flex items-center gap-3">
-              <span className="h-px w-10 bg-[#f97316]" />
-              <span className="text-[11px] font-black uppercase tracking-[0.28em] text-[#f97316]">
+              <span className="h-px w-10 bg-tbl-orange" />
+              <span className="text-[11px] font-black uppercase tracking-[0.28em] text-tbl-orange">
                 {eyebrow}
               </span>
             </div>

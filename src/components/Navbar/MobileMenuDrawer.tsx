@@ -25,7 +25,7 @@ export default function MobileMenuDrawer({
 
   return (
     <div 
-      className={`lg:hidden fixed top-24 inset-x-0 bottom-0 bg-[#f97316] border-b-2 border-[#1e1e28] shadow-[0px_25px_0px_0px_#1e1e28] px-6 py-8 z-50 flex flex-col overflow-y-auto overscroll-contain transition-all duration-300 ease-in-out ${
+      className={`lg:hidden fixed top-24 inset-x-0 bottom-0 bg-tbl-orange border-b-2 border-[#1e1e28] shadow-[0px_25px_0px_0px_#1e1e28] px-6 py-8 z-50 flex flex-col overflow-y-auto overscroll-contain transition-all duration-300 ease-in-out ${
         mobileMenuOpen 
           ? "opacity-100 translate-y-0 pointer-events-auto" 
           : "opacity-0 translate-y-4 pointer-events-none"
@@ -60,9 +60,9 @@ export default function MobileMenuDrawer({
           isOpen={mobileAccordion === "engineering"} 
           onToggle={() => toggleAccordion("engineering")}
         >
-          <Link href="/engineering/compatibility" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">App & Software Compatibility</Link>
-          <Link href="/engineering/security-testing" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Security Validation</Link>
-          <Link href="/engineering/devops" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">DevOps & Automation</Link>
+          <Link href="/engineering2" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">App & Software Compatibility</Link>
+          <Link href="/engineering2" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Security Validation</Link>
+          <Link href="/engineering2" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">DevOps & Automation</Link>
         </MobileAccordion>
 
         {/* Accordion 3: Cloud Services */}
@@ -72,9 +72,9 @@ export default function MobileMenuDrawer({
           isOpen={mobileAccordion === "cloud"} 
           onToggle={() => toggleAccordion("cloud")}
         >
-          <Link href="/cloud-services/managed" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Managed Cloud Services</Link>
-          <Link href="/cloud-services/migration" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Cloud Migration</Link>
-          <Link href="/cloud-services/finops" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">FinOps & Optimization</Link>
+          <Link href="/cloud" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Managed Cloud Services</Link>
+          <Link href="/cloud" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Cloud Migration</Link>
+          <Link href="/cloud" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">FinOps & Optimization</Link>
         </MobileAccordion>
 
         {/* Accordion 4: BPO */}
@@ -84,9 +84,9 @@ export default function MobileMenuDrawer({
           isOpen={mobileAccordion === "bpo"} 
           onToggle={() => toggleAccordion("bpo")}
         >
-          <Link href="/bpo/solutions" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">BPO Solutions</Link>
-          <Link href="/bpo/compliance" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Compliance</Link>
-          <Link href="/bpo/industry-verticals" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Industry Verticals</Link>
+          <Link href="/bpo" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">BPO Solutions</Link>
+          <Link href="/bpo" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Compliance</Link>
+          <Link href="/bpo" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Industry Verticals</Link>
         </MobileAccordion>
 
         {/* Accordion 5: About Us */}
@@ -96,9 +96,9 @@ export default function MobileMenuDrawer({
           isOpen={mobileAccordion === "about"} 
           onToggle={() => toggleAccordion("about")}
         >
-          <Link href="/about/history" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Company History</Link>
-          <Link href="/about/governance" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Corporate Governance</Link>
-          <Link href="/about/people" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Our People</Link>
+          <Link href="/aboutus" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Company History</Link>
+          <Link href="/aboutus" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Corporate Governance</Link>
+          <Link href="/aboutus" onClick={closeMenu} className="block font-serif text-lg font-bold text-[#1e1e28] hover:underline">Our People</Link>
         </MobileAccordion>
 
         {/* Mobile CTA */}

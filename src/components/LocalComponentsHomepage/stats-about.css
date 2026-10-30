@@ -1,0 +1,121 @@
+/* ==========================================================
+   STATS SECTION — HOVER ANIMATIONS
+   Standalone file: stats-about.css (do not paste into globals.css)
+   ========================================================== */
+
+/* =================== 18M+ BANNER =================== */
+.sx-banner {
+  transition:
+    transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 500ms ease,
+    box-shadow 500ms ease;
+}
+.sx-banner:hover {
+  transform: translateY(-6px);
+  border-color: rgba(250, 125, 56, 0.5);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.sx-accent {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.sx-banner:hover .sx-accent { transform: scaleY(1); }
+
+.sx-sheen {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent);
+  transform: translateX(0) skewX(-20deg);
+  opacity: 0;
+}
+.sx-banner:hover .sx-sheen {
+  opacity: 1;
+  transform: translateX(450%) skewX(-20deg);
+  transition: transform 1100ms cubic-bezier(0.4, 0, 0.2, 1), opacity 200ms ease;
+}
+
+/* Metric: a quiet, staggered lift. No spin, no bounce. */
+.sx-char {
+  display: inline-block;
+  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: calc(var(--i, 0) * 60ms);
+}
+.sx-banner:hover .sx-metric .sx-char { transform: translateY(-6px); }
+
+/* Heading: words settle upward in sequence */
+.sx-heading .sx-word,
+.sx-desc .sx-word {
+  display: inline-block;
+  margin-right: 0.25em;
+}
+.sx-heading .sx-word {
+  transition: transform 550ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: calc(var(--i, 0) * 70ms + 150ms);
+}
+.sx-banner:hover .sx-heading .sx-word { transform: translateY(-3px); }
+
+/* Description: brightens word by word, no movement */
+.sx-desc .sx-word {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 450ms ease;
+  transition-delay: calc(var(--i, 0) * 28ms + 300ms);
+}
+.sx-banner:hover .sx-desc .sx-word { color: rgba(255, 255, 255, 1); }
+
+/* =================== CARDS 01 / 02 / 03 =================== */
+/* Different language from the banner: horizontal motion + a line that draws along the bottom */
+.sx-card {
+  transition:
+    transform 400ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 400ms ease,
+    background-color 400ms ease;
+}
+.sx-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(250, 125, 56, 0.35);
+  background-color: #161620;
+}
+
+/* Orange line draws left to right along the bottom edge */
+.sx-line {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.sx-card:hover .sx-line { transform: scaleX(1); }
+
+/* Number: opens up in tracking, brightens */
+.sx-num {
+  display: inline-block;
+  transition: letter-spacing 400ms ease, color 400ms ease;
+}
+.sx-card:hover .sx-num {
+  letter-spacing: 0.18em;
+  color: #ffad75;
+}
+
+/* Title: slides a few pixels right */
+.sx-title {
+  transition: transform 450ms cubic-bezier(0.2, 0.8, 0.2, 1) 60ms;
+}
+.sx-card:hover .sx-title { transform: translateX(6px); }
+
+/* Description: follows slightly later, gains contrast */
+.sx-text {
+  transition:
+    transform 450ms cubic-bezier(0.2, 0.8, 0.2, 1) 120ms,
+    color 450ms ease 120ms;
+}
+.sx-card:hover .sx-text {
+  transform: translateX(6px);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* =================== ACCESSIBILITY =================== */
+@media (prefers-reduced-motion: reduce) {
+  .sx-banner, .sx-accent, .sx-sheen, .sx-char, .sx-word,
+  .sx-card, .sx-line, .sx-num, .sx-title, .sx-text {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}

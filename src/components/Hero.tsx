@@ -255,8 +255,8 @@ export default function Hero({
             }}
             className="flex items-center gap-3 mb-6"
           >
-            <span className="h-px w-10 bg-[#f97316]" />
-            <span className="text-[11px] font-black uppercase tracking-[0.28em] text-[#f97316]">
+            <span className="h-px w-10 bg-tbl-orange" />
+            <span className="text-[11px] font-black uppercase tracking-[0.28em] text-tbl-orange">
               {eyebrow}
             </span>
           </motion.div>
@@ -266,7 +266,7 @@ export default function Hero({
             <AnimatedLine
               text={headingLine1}
               baseDelay={line1Base}
-              sweep="bg-[#f97316]"
+              sweep="bg-tbl-orange"
               textColor="text-white"
               reduced={reduced}
             />
@@ -274,7 +274,7 @@ export default function Hero({
             <AnimatedLine
               text={headingLine2}
               baseDelay={line2Base}
-              sweep="bg-[#f97316]"
+              sweep="bg-tbl-orange"
               textColor="text-white"
               reduced={reduced}
             />
@@ -283,7 +283,7 @@ export default function Hero({
               text={headingHighlight}
               baseDelay={line3Base}
               sweep="bg-white"
-              textColor="text-[#f97316]"
+              textColor="text-tbl-orange"
               reduced={reduced}
             />
           </h1>
@@ -309,14 +309,14 @@ export default function Hero({
           >
             <a
               href={primaryCta.href}
-              className="inline-flex items-center gap-2 border-2 border-[#4b456f] bg-[#4b456f] px-6 py-3 text-xs font-black uppercase tracking-wider text-white transition-colors hover:bg-transparent hover:border-[#f97316] hover:text-[#f97316]"
+              className="inline-flex items-center gap-2 border-2 border-[#4b456f] bg-[#4b456f] px-6 py-3 text-xs font-black uppercase tracking-wider text-white transition-colors hover:bg-transparent hover:border-tbl-orange hover:text-tbl-orange"
             >
               {primaryCta.label}
               <span aria-hidden="true">→</span>
             </a>
             <a
               href={secondaryCta.href}
-              className="inline-flex items-center gap-2 border-2 border-white/20 px-6 py-3 text-xs font-black uppercase tracking-wider text-white transition-colors hover:border-[#f97316] hover:text-[#f97316]"
+              className="inline-flex items-center gap-2 border-2 border-white/20 px-6 py-3 text-xs font-black uppercase tracking-wider text-white transition-colors hover:border-tbl-orange hover:text-tbl-orange"
             >
               {secondaryCta.label}
             </a>
@@ -347,7 +347,7 @@ export default function Hero({
               </dt>
             </div>
             <div className="py-6 pl-6">
-              <dd className="font-serif text-3xl sm:text-4xl font-bold text-[#f97316]">
+              <dd className="font-serif text-3xl sm:text-4xl font-bold text-tbl-orange">
                 {stats.third.value}
               </dd>
               <dt className="mt-2 text-[10px] font-black uppercase tracking-widest text-white/40">
