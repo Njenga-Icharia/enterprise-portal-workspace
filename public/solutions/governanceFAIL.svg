@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <g fill="none" stroke="#fa7d38" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Connecting Lines -->
+    <line x1="100" y1="70" x2="100" y2="95" />
+    <line x1="40" y1="95" x2="160" y2="95" />
+    <line x1="40" y1="95" x2="40" y2="115" />
+    <line x1="100" y1="95" x2="100" y2="115" />
+    <line x1="160" y1="95" x2="160" y2="115" />
+
+    <!-- Top Person -->
+    <g transform="translate(100, 35)">
+      <circle cx="0" cy="-15" r="12" />
+      <path d="M -20,25 C -20,5 20,5 20,25" />
+      <path d="M -5,10 L 0,25 L 5,10 Z" fill="#fa7d38" />
+    </g>
+
+    <!-- Bottom Left Person -->
+    <g transform="translate(40, 135)">
+      <circle cx="0" cy="-15" r="12" />
+      <path d="M -20,25 C -20,5 20,5 20,25" />
+      <path d="M -5,10 L 0,25 L 5,10 Z" fill="#fa7d38" />
+    </g>
+
+    <!-- Bottom Middle Person -->
+    <g transform="translate(100, 135)">
+      <circle cx="0" cy="-15" r="12" />
+      <path d="M -20,25 C -20,5 20,5 20,25" />
+      <path d="M -5,10 L 0,25 L 5,10 Z" fill="#fa7d38" />
+    </g>
+
+    <!-- Bottom Right Person -->
+    <g transform="translate(160, 135)">
+      <circle cx="0" cy="-15" r="12" />
+      <path d="M -20,25 C -20,5 20,5 20,25" />
+      <path d="M -5,10 L 0,25 L 5,10 Z" fill="#fa7d38" />
+    </g>
+    
+  </g>
+</svg>
