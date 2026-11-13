@@ -4,7 +4,7 @@ export default function ScenerySection() {
   return (
     <section className="relative w-full h-[350px] sm:h-[450px] border-t-2 border-[#1e1e28] overflow-hidden bg-[#e8ebe9]">
       <img 
-        src="better2.jpg" 
+        src="/solutions/security.svg" 
         alt="Scenery" 
         className="absolute inset-0 w-full h-full object-cover"
       />
