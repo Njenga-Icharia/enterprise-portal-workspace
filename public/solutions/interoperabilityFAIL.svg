@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <g transform="translate(100, 100) rotate(15) translate(-100, -100)">
+    <!-- Orange Piece (Top Right) -->
+    <path d="M 100,40 L 160,40 L 160,90 
+             C 150,90 145,95 145,105 C 145,115 150,120 160,120 
+             L 160,160 L 100,160 L 100,140 
+             C 90,140 85,135 85,125 C 85,115 90,110 100,110 
+             Z" fill="#fa7d38" />
+             
+    <!-- Purple Piece (Bottom Left) -->
+    <path d="M 40,40 L 100,40 L 100,110 
+             C 90,110 85,115 85,125 C 85,135 90,140 100,140 
+             L 100,160 L 40,160 L 40,120 
+             C 50,120 55,115 55,105 C 55,95 50,90 40,90 
+             Z" fill="#595278" />
+  </g>
+</svg>

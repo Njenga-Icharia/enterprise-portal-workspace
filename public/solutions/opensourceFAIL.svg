@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <g fill="none" stroke="#fa7d38" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Gear Outer Shape -->
+    <path d="M 86,15 L 114,15 L 117,35 L 135,25 L 152,42 L 142,60 L 162,63 L 162,91 L 142,94 L 152,112 L 135,129 L 117,119 L 114,139 L 86,139 L 83,119 L 65,129 L 48,112 L 58,94 L 38,91 L 38,63 L 58,60 L 48,42 L 65,25 L 83,35 Z" />
+    <!-- Keyhole Inner Shape -->
+    <circle cx="100" cy="85" r="22" />
+    <path d="M 84,100 L 100,150 L 116,100 Z" />
+  </g>
+</svg>
